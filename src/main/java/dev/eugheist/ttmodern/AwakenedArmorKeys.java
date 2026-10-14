@@ -1,0 +1,7 @@
+package dev.eugheist.ttmodern;
+@net.neoforged.fml.common.EventBusSubscriber(modid="ttinkerer",value=net.neoforged.api.distmarker.Dist.CLIENT)
+public final class AwakenedArmorKeys {
+ static final net.minecraft.client.KeyMapping TOGGLE=new net.minecraft.client.KeyMapping("ttmisc.toggleArmor",org.lwjgl.glfw.GLFW.GLFW_KEY_U,"ttmisc.keyCategory");
+ @net.neoforged.fml.common.EventBusSubscriber(modid="ttinkerer",bus=net.neoforged.fml.common.EventBusSubscriber.Bus.MOD,value=net.neoforged.api.distmarker.Dist.CLIENT)public static final class Registration{@net.neoforged.bus.api.SubscribeEvent public static void register(net.neoforged.neoforge.client.event.RegisterKeyMappingsEvent event){event.register(TOGGLE);}}
+ @net.neoforged.bus.api.SubscribeEvent public static void tick(net.neoforged.neoforge.client.event.ClientTickEvent.Post event){var mc=net.minecraft.client.Minecraft.getInstance();while(TOGGLE.consumeClick()){if(mc.player==null||mc.screen!=null)continue;boolean worn=false;for(var stack:mc.player.getArmorSlots())if(stack.getItem() instanceof AwakenedArmorItem)worn=true;if(!worn)continue;boolean next=!AwakenedArmorStatus.enabled(mc.player);AwakenedArmorStatus.set(mc.player,next);mc.player.displayClientMessage(net.minecraft.network.chat.Component.translatable(next?"ttmisc.enableAllArmor":"ttmisc.disableAllArmor"),true);net.neoforged.neoforge.network.PacketDistributor.sendToServer(new AwakenedArmorStatus.Payload(next));}}
+}

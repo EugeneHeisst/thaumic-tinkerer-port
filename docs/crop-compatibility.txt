@@ -1,0 +1,11 @@
+Infused crop OreDictionary bridge (build 164 → 1.21.1)
+
+CropOreTags enumerates loaded item tags. minecraft:logs/planks/saplings and tc4modern:shards map to logWood/plankWood/sapling/shard. c: and forge: ingots, nuggets, ores, storage_blocks, dusts, gears, buckets and rods material sub-tags map to legacy category+Material names; wooden rods map to stickWood. Slime balls, buckets, gears and saplings group tags are recognized.
+
+Additional compatibility item tags use ttinkerer:crop_ores/<legacy_name_in_snake_case>; examples rod_blizz, bucket_ender, ingot_copper, cloud. These map to case-sensitive legacy camel names before the original substring match. Populate via datapacks; no dependency on an optional mod is required. Unrecognized item tags are not silently treated as legacy OreDictionary entries.
+
+Original two-argument expansions repeat twice; count-specific copper4/cloud100 expand once with weight1. Equal items from different tags remain distinct weighted entries, as legacy ItemStack identity keys did. Source stacks are copied. The adapter currently builds the catalog explicitly; harvest runtime construction/reload and full composition remain pending.
+
+Update: complete catalog composition is now connected to crop removal. Per-level catalog caches clear on resource reload; an actual reload regression and integrated client harvest test remain pending.
+
+2026-10-12 — Added actual InfusedCropReloadAudit: warm cache, temporary datapack adds crop_ores/cloud diamond_block100 and replaces crop_books with Unbreaking, reload, verify new catalog/holder/components, remove pack/reload and verify original counts and no stale diamond. First run exposed real stale-tag bug: MappedRegistry.bindTags retains Named sets for absent tags, though holder membership is reset. CropOreTags now filters each source holder with holder.is(tag), rejecting obsolete Named contents after datapack removal. Rebuilt and entire isolated server suite including actual add/remove resource reload PASS (/tmp/tt-crop-reload-{build,server}.log). Temp pack/selected packs restored in finally. No production changes; recipes/potions/integrated crop test pending.

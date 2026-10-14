@@ -1,0 +1,22 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "ttinkerer:block/dislocator_north"
+    },
+    "facing=east": {
+      "model": "ttinkerer:block/dislocator_east"
+    },
+    "facing=south": {
+      "model": "ttinkerer:block/dislocator_south"
+    },
+    "facing=west": {
+      "model": "ttinkerer:block/dislocator_west"
+    },
+    "facing=up": {
+      "model": "ttinkerer:block/dislocator_up"
+    },
+    "facing=down": {
+      "model": "ttinkerer:block/dislocator_down"
+    }
+  }
+}

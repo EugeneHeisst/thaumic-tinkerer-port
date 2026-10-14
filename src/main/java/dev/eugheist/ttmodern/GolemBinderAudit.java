@@ -1,0 +1,18 @@
+package dev.eugheist.ttmodern;
+final class GolemBinderAudit {
+ static void run(net.minecraft.server.level.ServerLevel world,net.minecraft.core.BlockPos pos,GolemConnector.Entity tile,dev.eugheist.tc4modern.StrawGolem golem){
+  var player=net.neoforged.neoforge.common.util.FakePlayerFactory.get(world,new com.mojang.authlib.GameProfile(java.util.UUID.fromString("cc33a661-14f1-4c4e-9abb-c9b1a46c527d"),"TTGolemBinderAudit"));var previous=player.getMainHandItem().copy();var location=player.position();boolean shift=player.isShiftKeyDown();var mode=player.gameMode.getGameModeForPlayer();
+  try{player.setPos(pos.getX()+1,pos.getY(),pos.getZ());
+   for(var gameMode:new net.minecraft.world.level.GameType[]{net.minecraft.world.level.GameType.SURVIVAL,net.minecraft.world.level.GameType.CREATIVE}){
+    player.setGameMode(gameMode);player.setShiftKeyDown(false);tile.connect(null);var stack=new net.minecraft.world.item.ItemStack(ThaumicTinkererModern.CONNECTOR.get());player.setItemInHand(net.minecraft.world.InteractionHand.MAIN_HAND,stack);
+    var hit=new net.minecraft.world.phys.BlockHitResult(net.minecraft.world.phys.Vec3.atCenterOf(pos),net.minecraft.core.Direction.UP,pos,false);var context=new net.minecraft.world.item.context.UseOnContext(player,net.minecraft.world.InteractionHand.MAIN_HAND,hit);
+    if(!stack.useOn(context).consumesAction()||!data(stack).contains("Interface")||data(stack).getLong("Interface")!=pos.asLong())throw new IllegalStateException("Binder native source selection "+gameMode);
+    player.setShiftKeyDown(true);if(!player.interactOn(golem,net.minecraft.world.InteractionHand.MAIN_HAND).consumesAction()||!golem.getUUID().equals(tile.connected())||data(player.getMainHandItem()).contains("Interface"))throw new IllegalStateException("Binder actual player interaction/clear held selection "+gameMode);
+   }
+   var stack=player.getMainHandItem();tile.connect(null);var tag=new net.minecraft.nbt.CompoundTag();var far=new net.minecraft.core.BlockPos(240000,310,240000);if(world.hasChunkAt(far))throw new IllegalStateException("Binder unloaded fixture is loaded");tag.putLong("Interface",far.asLong());tag.putString("Dimension",world.dimension().location().toString());stack.set(net.minecraft.core.component.DataComponents.CUSTOM_DATA,net.minecraft.world.item.component.CustomData.of(tag));player.interactOn(golem,net.minecraft.world.InteractionHand.MAIN_HAND);if(tile.connected()!=null||world.hasChunkAt(far)||!data(player.getMainHandItem()).contains("Interface"))throw new IllegalStateException("Binder unloaded source must retain selection and not load chunk");
+   tag.putLong("Interface",pos.asLong());tag.putString("Dimension","minecraft:the_nether");stack.set(net.minecraft.core.component.DataComponents.CUSTOM_DATA,net.minecraft.world.item.component.CustomData.of(tag));player.interactOn(golem,net.minecraft.world.InteractionHand.MAIN_HAND);if(tile.connected()!=null||!data(player.getMainHandItem()).contains("Interface"))throw new IllegalStateException("Binder cross dimension source gate");
+   System.out.println("TT GOLEM BINDER AUDIT: ALL PASS (native block selection,Player.interactOn survival/creative,held selection consumed once,unloaded source,no chunk load,dimension gate)");
+  }finally{player.setGameMode(mode);player.setShiftKeyDown(shift);player.setPos(location);player.setItemInHand(net.minecraft.world.InteractionHand.MAIN_HAND,previous);tile.connect(null);}
+ }
+ private static net.minecraft.nbt.CompoundTag data(net.minecraft.world.item.ItemStack stack){return stack.getOrDefault(net.minecraft.core.component.DataComponents.CUSTOM_DATA,net.minecraft.world.item.component.CustomData.EMPTY).copyTag();}
+}

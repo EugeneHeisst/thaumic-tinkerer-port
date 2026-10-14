@@ -1,0 +1,43 @@
+{
+  "required": true,
+  "package": "dev.eugheist.ttmodern.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "CrucibleRecipesMixin",
+    "ArcaneRecipesMixin",
+    "InfusionRecipesMixin",
+    "ExperienceOrbAccessor",
+    "FocusUseInvoker",
+    "FlightConnectionAccessor",
+    "TinkererWarpMixin",
+    "MobAspectTagsMixin",
+    "InfusedSeedOutputMixin",
+    "KamiInfusionMixin",
+    "KamiArmorProtectionMixin",
+    "AwakenedLegsFireMixin",
+    "AwakenedBootsAirMixin",
+    "AdvancedMiningHookMixin",
+    "SoulHeartsDamageMixin",
+    "IchorPouchFocusMixin",
+    "CatAvoidGoalAccessor",
+    "CatTargetGoalMixin",
+    "CatMobAccessor",
+    "CatCreeperAccessor",
+    "BedrockDimensionsMixin",
+    "ArcaneEarAccessor",
+    "ArcaneBoreAccessor"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  },
+  "client": [
+    "RecipeBookMixin",
+    "SummonFxMixin",
+    "InfusionFxInvoker",
+    "FocusDepthMixin",
+    "KamiWandTextureMixin",
+    "BedrockLightmapMixin",
+    "IchorPouchRadialMixin",
+    "ShadowbeamOrnamentMixin"
+  ]
+}

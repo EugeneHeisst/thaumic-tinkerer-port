@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "Q",
+    "Q"
+  ],
+  "key": {
+    "Q": {
+      "item": "ttinkerer:dark_quartz_block"
+    }
+  },
+  "result": {
+    "id": "ttinkerer:dark_quartz_pillar",
+    "count": 2
+  }
+}

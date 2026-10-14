@@ -1,0 +1,1114 @@
+{
+  "item.ttinkerer.spell_cloth": {
+    "en_us": "item.spellCloth.name",
+    "ru_ru": "item.spellCloth.name",
+    "de_de": "item.spellCloth.name",
+    "fr_fr": "item.spellCloth.name",
+    "ko_kr": "item.spellCloth.name",
+    "zh_cn": "item.spellCloth.name"
+  },
+  "item.ttinkerer.gaseous_light_bottle": {
+    "en_us": "item.gaseousLightItem.name",
+    "ru_ru": "item.gaseousLight.name",
+    "de_de": "item.gaseousLight.name",
+    "fr_fr": "item.gaseousLightItem.name",
+    "ko_kr": "item.gaseousLightItem.name",
+    "zh_cn": "item.gaseousLightItem.name"
+  },
+  "item.ttinkerer.gaseous_shadow_bottle": {
+    "en_us": "item.gaseousShadowItem.name",
+    "ru_ru": "item.gaseousShadow.name",
+    "de_de": "item.gaseousShadow.name",
+    "fr_fr": "item.gaseousShadowItem.name",
+    "ko_kr": "item.gaseousShadowItem.name",
+    "zh_cn": "item.gaseousShadowItem.name"
+  },
+  "item.ttinkerer.bright_nitor": {
+    "en_us": "item.brightNitor.name",
+    "ru_ru": "item.brightNitor.name",
+    "de_de": "item.brightNitor.name",
+    "fr_fr": "item.brightNitor.name",
+    "ko_kr": "item.brightNitor.name",
+    "zh_cn": "item.brightNitor.name"
+  },
+  "item.ttinkerer.gas_remover": {
+    "en_us": "item.gasRemover.name",
+    "ru_ru": "item.gasRemover.name",
+    "de_de": "item.gasRemover.name",
+    "fr_fr": "item.gasRemover.name",
+    "ko_kr": "item.gasRemover.name",
+    "zh_cn": "item.gasRemover.name"
+  },
+  "item.ttinkerer.cleansing_talisman": {
+    "en_us": "item.cleansingTalisman.name",
+    "ru_ru": "item.cleansingTalisman.name",
+    "de_de": "item.cleansingTalisman.name",
+    "fr_fr": "item.cleansingTalisman.name",
+    "ko_kr": "item.cleansingTalisman.name",
+    "zh_cn": "item.cleansingTalisman.name"
+  },
+  "block.ttinkerer.transvector_interface": {
+    "en_us": "tile.interface.name",
+    "ru_ru": "tile.interface.name",
+    "de_de": "tile.interface.name",
+    "fr_fr": "tile.interface.name",
+    "ko_kr": "tile.interface.name",
+    "zh_cn": "tile.interface.name"
+  },
+  "item.ttinkerer.connector": {
+    "en_us": "item.connector.name",
+    "ru_ru": "item.connector.name",
+    "de_de": "item.connector.name",
+    "fr_fr": "item.connector.name",
+    "ko_kr": "item.connector.name",
+    "zh_cn": "item.connector.name"
+  },
+  "item.ttinkerer.xp_talisman": {
+    "en_us": "item.xpTalisman.name",
+    "ru_ru": "item.xpTalisman.name",
+    "de_de": "item.xpTalisman.name",
+    "fr_fr": "item.xpTalisman.name",
+    "ko_kr": "item.xpTalisman.name",
+    "zh_cn": "item.xpTalisman.name"
+  },
+  "block.ttinkerer.funnel": {
+    "en_us": "tile.funnel.name",
+    "ru_ru": "tile.funnel.name",
+    "de_de": "tile.funnel.name",
+    "fr_fr": "tile.funnel.name",
+    "ko_kr": "tile.funnel.name",
+    "zh_cn": "tile.funnel.name"
+  },
+  "block.ttinkerer.repairer": {
+    "en_us": "tile.repairer.name",
+    "ru_ru": "tile.repairer.name",
+    "de_de": "tile.repairer.name",
+    "fr_fr": "tile.repairer.name",
+    "ko_kr": "tile.repairer.name",
+    "zh_cn": "tile.repairer.name"
+  },
+  "item.ttinkerer.focus_telekinesis": {
+    "en_us": "item.focusTelekinesis.name",
+    "ru_ru": "item.focusTelekinesis.name",
+    "de_de": "item.focusTelekinesis.name",
+    "fr_fr": "item.focusTelekinesis.name",
+    "ko_kr": "item.focusTelekinesis.name",
+    "zh_cn": "item.focusTelekinesis.name"
+  },
+  "block.ttinkerer.magnet": {
+    "en_us": "tile.magnet.name",
+    "ru_ru": "tile.magnet.name",
+    "de_de": "tile.magnet.name",
+    "fr_fr": "tile.magnet.name",
+    "ko_kr": "tile.magnet.name",
+    "zh_cn": "tile.magnet.name"
+  },
+  "block.ttinkerer.mob_magnet": {
+    "en_us": "tile.mobMagnet.name",
+    "ru_ru": "tile.mobMagnet.name",
+    "de_de": "tile.mobMagnet.name",
+    "fr_fr": "tile.mobMagnet.name",
+    "ko_kr": "tile.mobMagnet.name",
+    "zh_cn": "tile.mobMagnet.name"
+  },
+  "item.ttinkerer.soul_mould": {
+    "en_us": "item.soulMould.name",
+    "ru_ru": "item.soulMould.name",
+    "de_de": "item.soulMould.name",
+    "fr_fr": "item.soulMould.name",
+    "ko_kr": "item.soulMould.name",
+    "zh_cn": "item.soulMould.name"
+  },
+  "block.ttinkerer.dislocator": {
+    "en_us": "tile.dislocator.name",
+    "ru_ru": "tile.dislocator.name",
+    "de_de": "tile.dislocator.name",
+    "fr_fr": "tile.dislocator.name",
+    "ko_kr": "tile.dislocator.name",
+    "zh_cn": "tile.dislocator.name"
+  },
+  "item.ttinkerer.share_tome": {
+    "en_us": "item.shareBook.name",
+    "ru_ru": "item.shareBook.name",
+    "de_de": "item.shareBook.name",
+    "fr_fr": "item.shareBook.name",
+    "ko_kr": "item.shareBook.name",
+    "zh_cn": "item.shareBook.name"
+  },
+  "item.ttinkerer.mob_aspect_aqua": {
+    "en_us": "item.mobAspect.name",
+    "ru_ru": "item.mobAspect.name",
+    "de_de": "item.mobAspect.name",
+    "fr_fr": "item.mobAspect.name",
+    "ko_kr": "item.mobAspect.name",
+    "zh_cn": "item.mobAspect.name"
+  },
+  "item.ttinkerer.mob_aspect_aqua_condensed": {
+    "en_us": "item.mobAspect.condensed.name",
+    "ru_ru": "item.mobAspect.condensed.name",
+    "de_de": "item.mobAspect.condensed.name",
+    "fr_fr": "item.mobAspect.condensed.name",
+    "ko_kr": "item.mobAspect.condensed.name",
+    "zh_cn": "item.mobAspect.condensed.name"
+  },
+  "item.ttinkerer.mob_aspect_aqua_infused": {
+    "en_us": "item.mobAspect.infused.name",
+    "ru_ru": "item.mobAspect.infused.name",
+    "de_de": "item.mobAspect.infused.name",
+    "fr_fr": "item.mobAspect.infused.name",
+    "ko_kr": "item.mobAspect.infused.name",
+    "zh_cn": "item.mobAspect.infused.name"
+  },
+  "item.ttinkerer.mob_aspect_humanus": {
+    "en_us": "item.mobAspect.name",
+    "ru_ru": "item.mobAspect.name",
+    "de_de": "item.mobAspect.name",
+    "fr_fr": "item.mobAspect.name",
+    "ko_kr": "item.mobAspect.name",
+    "zh_cn": "item.mobAspect.name"
+  },
+  "item.ttinkerer.mob_aspect_humanus_condensed": {
+    "en_us": "item.mobAspect.condensed.name",
+    "ru_ru": "item.mobAspect.condensed.name",
+    "de_de": "item.mobAspect.condensed.name",
+    "fr_fr": "item.mobAspect.condensed.name",
+    "ko_kr": "item.mobAspect.condensed.name",
+    "zh_cn": "item.mobAspect.condensed.name"
+  },
+  "item.ttinkerer.mob_aspect_humanus_infused": {
+    "en_us": "item.mobAspect.infused.name",
+    "ru_ru": "item.mobAspect.infused.name",
+    "de_de": "item.mobAspect.infused.name",
+    "fr_fr": "item.mobAspect.infused.name",
+    "ko_kr": "item.mobAspect.infused.name",
+    "zh_cn": "item.mobAspect.infused.name"
+  },
+  "item.ttinkerer.mob_aspect_aer": {
+    "en_us": "item.mobAspect.name",
+    "ru_ru": "item.mobAspect.name",
+    "de_de": "item.mobAspect.name",
+    "fr_fr": "item.mobAspect.name",
+    "ko_kr": "item.mobAspect.name",
+    "zh_cn": "item.mobAspect.name"
+  },
+  "item.ttinkerer.mob_aspect_aer_condensed": {
+    "en_us": "item.mobAspect.condensed.name",
+    "ru_ru": "item.mobAspect.condensed.name",
+    "de_de": "item.mobAspect.condensed.name",
+    "fr_fr": "item.mobAspect.condensed.name",
+    "ko_kr": "item.mobAspect.condensed.name",
+    "zh_cn": "item.mobAspect.condensed.name"
+  },
+  "item.ttinkerer.mob_aspect_aer_infused": {
+    "en_us": "item.mobAspect.infused.name",
+    "ru_ru": "item.mobAspect.infused.name",
+    "de_de": "item.mobAspect.infused.name",
+    "fr_fr": "item.mobAspect.infused.name",
+    "ko_kr": "item.mobAspect.infused.name",
+    "zh_cn": "item.mobAspect.infused.name"
+  },
+  "item.ttinkerer.mob_aspect_volatus": {
+    "en_us": "item.mobAspect.name",
+    "ru_ru": "item.mobAspect.name",
+    "de_de": "item.mobAspect.name",
+    "fr_fr": "item.mobAspect.name",
+    "ko_kr": "item.mobAspect.name",
+    "zh_cn": "item.mobAspect.name"
+  },
+  "item.ttinkerer.mob_aspect_volatus_condensed": {
+    "en_us": "item.mobAspect.condensed.name",
+    "ru_ru": "item.mobAspect.condensed.name",
+    "de_de": "item.mobAspect.condensed.name",
+    "fr_fr": "item.mobAspect.condensed.name",
+    "ko_kr": "item.mobAspect.condensed.name",
+    "zh_cn": "item.mobAspect.condensed.name"
+  },
+  "item.ttinkerer.mob_aspect_volatus_infused": {
+    "en_us": "item.mobAspect.infused.name",
+    "ru_ru": "item.mobAspect.infused.name",
+    "de_de": "item.mobAspect.infused.name",
+    "fr_fr": "item.mobAspect.infused.name",
+    "ko_kr": "item.mobAspect.infused.name",
+    "zh_cn": "item.mobAspect.infused.name"
+  },
+  "item.ttinkerer.mob_aspect_ignis": {
+    "en_us": "item.mobAspect.name",
+    "ru_ru": "item.mobAspect.name",
+    "de_de": "item.mobAspect.name",
+    "fr_fr": "item.mobAspect.name",
+    "ko_kr": "item.mobAspect.name",
+    "zh_cn": "item.mobAspect.name"
+  },
+  "item.ttinkerer.mob_aspect_ignis_condensed": {
+    "en_us": "item.mobAspect.condensed.name",
+    "ru_ru": "item.mobAspect.condensed.name",
+    "de_de": "item.mobAspect.condensed.name",
+    "fr_fr": "item.mobAspect.condensed.name",
+    "ko_kr": "item.mobAspect.condensed.name",
+    "zh_cn": "item.mobAspect.condensed.name"
+  },
+  "item.ttinkerer.mob_aspect_ignis_infused": {
+    "en_us": "item.mobAspect.infused.name",
+    "ru_ru": "item.mobAspect.infused.name",
+    "de_de": "item.mobAspect.infused.name",
+    "fr_fr": "item.mobAspect.infused.name",
+    "ko_kr": "item.mobAspect.infused.name",
+    "zh_cn": "item.mobAspect.infused.name"
+  },
+  "item.ttinkerer.mob_aspect_praecantatio": {
+    "en_us": "item.mobAspect.name",
+    "ru_ru": "item.mobAspect.name",
+    "de_de": "item.mobAspect.name",
+    "fr_fr": "item.mobAspect.name",
+    "ko_kr": "item.mobAspect.name",
+    "zh_cn": "item.mobAspect.name"
+  },
+  "item.ttinkerer.mob_aspect_praecantatio_condensed": {
+    "en_us": "item.mobAspect.condensed.name",
+    "ru_ru": "item.mobAspect.condensed.name",
+    "de_de": "item.mobAspect.condensed.name",
+    "fr_fr": "item.mobAspect.condensed.name",
+    "ko_kr": "item.mobAspect.condensed.name",
+    "zh_cn": "item.mobAspect.condensed.name"
+  },
+  "item.ttinkerer.mob_aspect_praecantatio_infused": {
+    "en_us": "item.mobAspect.infused.name",
+    "ru_ru": "item.mobAspect.infused.name",
+    "de_de": "item.mobAspect.infused.name",
+    "fr_fr": "item.mobAspect.infused.name",
+    "ko_kr": "item.mobAspect.infused.name",
+    "zh_cn": "item.mobAspect.infused.name"
+  },
+  "item.ttinkerer.mob_aspect_exanimis": {
+    "en_us": "item.mobAspect.name",
+    "ru_ru": "item.mobAspect.name",
+    "de_de": "item.mobAspect.name",
+    "fr_fr": "item.mobAspect.name",
+    "ko_kr": "item.mobAspect.name",
+    "zh_cn": "item.mobAspect.name"
+  },
+  "item.ttinkerer.mob_aspect_exanimis_condensed": {
+    "en_us": "item.mobAspect.condensed.name",
+    "ru_ru": "item.mobAspect.condensed.name",
+    "de_de": "item.mobAspect.condensed.name",
+    "fr_fr": "item.mobAspect.condensed.name",
+    "ko_kr": "item.mobAspect.condensed.name",
+    "zh_cn": "item.mobAspect.condensed.name"
+  },
+  "item.ttinkerer.mob_aspect_exanimis_infused": {
+    "en_us": "item.mobAspect.infused.name",
+    "ru_ru": "item.mobAspect.infused.name",
+    "de_de": "item.mobAspect.infused.name",
+    "fr_fr": "item.mobAspect.infused.name",
+    "ko_kr": "item.mobAspect.infused.name",
+    "zh_cn": "item.mobAspect.infused.name"
+  },
+  "item.ttinkerer.mob_aspect_corpus": {
+    "en_us": "item.mobAspect.name",
+    "ru_ru": "item.mobAspect.name",
+    "de_de": "item.mobAspect.name",
+    "fr_fr": "item.mobAspect.name",
+    "ko_kr": "item.mobAspect.name",
+    "zh_cn": "item.mobAspect.name"
+  },
+  "item.ttinkerer.mob_aspect_corpus_condensed": {
+    "en_us": "item.mobAspect.condensed.name",
+    "ru_ru": "item.mobAspect.condensed.name",
+    "de_de": "item.mobAspect.condensed.name",
+    "fr_fr": "item.mobAspect.condensed.name",
+    "ko_kr": "item.mobAspect.condensed.name",
+    "zh_cn": "item.mobAspect.condensed.name"
+  },
+  "item.ttinkerer.mob_aspect_corpus_infused": {
+    "en_us": "item.mobAspect.infused.name",
+    "ru_ru": "item.mobAspect.infused.name",
+    "de_de": "item.mobAspect.infused.name",
+    "fr_fr": "item.mobAspect.infused.name",
+    "ko_kr": "item.mobAspect.infused.name",
+    "zh_cn": "item.mobAspect.infused.name"
+  },
+  "item.ttinkerer.mob_aspect_bestia": {
+    "en_us": "item.mobAspect.name",
+    "ru_ru": "item.mobAspect.name",
+    "de_de": "item.mobAspect.name",
+    "fr_fr": "item.mobAspect.name",
+    "ko_kr": "item.mobAspect.name",
+    "zh_cn": "item.mobAspect.name"
+  },
+  "item.ttinkerer.mob_aspect_bestia_condensed": {
+    "en_us": "item.mobAspect.condensed.name",
+    "ru_ru": "item.mobAspect.condensed.name",
+    "de_de": "item.mobAspect.condensed.name",
+    "fr_fr": "item.mobAspect.condensed.name",
+    "ko_kr": "item.mobAspect.condensed.name",
+    "zh_cn": "item.mobAspect.condensed.name"
+  },
+  "item.ttinkerer.mob_aspect_bestia_infused": {
+    "en_us": "item.mobAspect.infused.name",
+    "ru_ru": "item.mobAspect.infused.name",
+    "de_de": "item.mobAspect.infused.name",
+    "fr_fr": "item.mobAspect.infused.name",
+    "ko_kr": "item.mobAspect.infused.name",
+    "zh_cn": "item.mobAspect.infused.name"
+  },
+  "item.ttinkerer.mob_aspect_venenum": {
+    "en_us": "item.mobAspect.name",
+    "ru_ru": "item.mobAspect.name",
+    "de_de": "item.mobAspect.name",
+    "fr_fr": "item.mobAspect.name",
+    "ko_kr": "item.mobAspect.name",
+    "zh_cn": "item.mobAspect.name"
+  },
+  "item.ttinkerer.mob_aspect_venenum_condensed": {
+    "en_us": "item.mobAspect.condensed.name",
+    "ru_ru": "item.mobAspect.condensed.name",
+    "de_de": "item.mobAspect.condensed.name",
+    "fr_fr": "item.mobAspect.condensed.name",
+    "ko_kr": "item.mobAspect.condensed.name",
+    "zh_cn": "item.mobAspect.condensed.name"
+  },
+  "item.ttinkerer.mob_aspect_venenum_infused": {
+    "en_us": "item.mobAspect.infused.name",
+    "ru_ru": "item.mobAspect.infused.name",
+    "de_de": "item.mobAspect.infused.name",
+    "fr_fr": "item.mobAspect.infused.name",
+    "ko_kr": "item.mobAspect.infused.name",
+    "zh_cn": "item.mobAspect.infused.name"
+  },
+  "item.ttinkerer.mob_aspect_terra": {
+    "en_us": "item.mobAspect.name",
+    "ru_ru": "item.mobAspect.name",
+    "de_de": "item.mobAspect.name",
+    "fr_fr": "item.mobAspect.name",
+    "ko_kr": "item.mobAspect.name",
+    "zh_cn": "item.mobAspect.name"
+  },
+  "item.ttinkerer.mob_aspect_terra_condensed": {
+    "en_us": "item.mobAspect.condensed.name",
+    "ru_ru": "item.mobAspect.condensed.name",
+    "de_de": "item.mobAspect.condensed.name",
+    "fr_fr": "item.mobAspect.condensed.name",
+    "ko_kr": "item.mobAspect.condensed.name",
+    "zh_cn": "item.mobAspect.condensed.name"
+  },
+  "item.ttinkerer.mob_aspect_terra_infused": {
+    "en_us": "item.mobAspect.infused.name",
+    "ru_ru": "item.mobAspect.infused.name",
+    "de_de": "item.mobAspect.infused.name",
+    "fr_fr": "item.mobAspect.infused.name",
+    "ko_kr": "item.mobAspect.infused.name",
+    "zh_cn": "item.mobAspect.infused.name"
+  },
+  "item.ttinkerer.mob_aspect_alienis": {
+    "en_us": "item.mobAspect.name",
+    "ru_ru": "item.mobAspect.name",
+    "de_de": "item.mobAspect.name",
+    "fr_fr": "item.mobAspect.name",
+    "ko_kr": "item.mobAspect.name",
+    "zh_cn": "item.mobAspect.name"
+  },
+  "item.ttinkerer.mob_aspect_alienis_condensed": {
+    "en_us": "item.mobAspect.condensed.name",
+    "ru_ru": "item.mobAspect.condensed.name",
+    "de_de": "item.mobAspect.condensed.name",
+    "fr_fr": "item.mobAspect.condensed.name",
+    "ko_kr": "item.mobAspect.condensed.name",
+    "zh_cn": "item.mobAspect.condensed.name"
+  },
+  "item.ttinkerer.mob_aspect_alienis_infused": {
+    "en_us": "item.mobAspect.infused.name",
+    "ru_ru": "item.mobAspect.infused.name",
+    "de_de": "item.mobAspect.infused.name",
+    "fr_fr": "item.mobAspect.infused.name",
+    "ko_kr": "item.mobAspect.infused.name",
+    "zh_cn": "item.mobAspect.infused.name"
+  },
+  "item.ttinkerer.mob_aspect_iter": {
+    "en_us": "item.mobAspect.name",
+    "ru_ru": "item.mobAspect.name",
+    "de_de": "item.mobAspect.name",
+    "fr_fr": "item.mobAspect.name",
+    "ko_kr": "item.mobAspect.name",
+    "zh_cn": "item.mobAspect.name"
+  },
+  "item.ttinkerer.mob_aspect_iter_condensed": {
+    "en_us": "item.mobAspect.condensed.name",
+    "ru_ru": "item.mobAspect.condensed.name",
+    "de_de": "item.mobAspect.condensed.name",
+    "fr_fr": "item.mobAspect.condensed.name",
+    "ko_kr": "item.mobAspect.condensed.name",
+    "zh_cn": "item.mobAspect.condensed.name"
+  },
+  "item.ttinkerer.mob_aspect_iter_infused": {
+    "en_us": "item.mobAspect.infused.name",
+    "ru_ru": "item.mobAspect.infused.name",
+    "de_de": "item.mobAspect.infused.name",
+    "fr_fr": "item.mobAspect.infused.name",
+    "ko_kr": "item.mobAspect.infused.name",
+    "zh_cn": "item.mobAspect.infused.name"
+  },
+  "item.ttinkerer.mob_aspect_metallum": {
+    "en_us": "item.mobAspect.name",
+    "ru_ru": "item.mobAspect.name",
+    "de_de": "item.mobAspect.name",
+    "fr_fr": "item.mobAspect.name",
+    "ko_kr": "item.mobAspect.name",
+    "zh_cn": "item.mobAspect.name"
+  },
+  "item.ttinkerer.mob_aspect_metallum_condensed": {
+    "en_us": "item.mobAspect.condensed.name",
+    "ru_ru": "item.mobAspect.condensed.name",
+    "de_de": "item.mobAspect.condensed.name",
+    "fr_fr": "item.mobAspect.condensed.name",
+    "ko_kr": "item.mobAspect.condensed.name",
+    "zh_cn": "item.mobAspect.condensed.name"
+  },
+  "item.ttinkerer.mob_aspect_metallum_infused": {
+    "en_us": "item.mobAspect.infused.name",
+    "ru_ru": "item.mobAspect.infused.name",
+    "de_de": "item.mobAspect.infused.name",
+    "fr_fr": "item.mobAspect.infused.name",
+    "ko_kr": "item.mobAspect.infused.name",
+    "zh_cn": "item.mobAspect.infused.name"
+  },
+  "item.ttinkerer.mob_aspect_limus": {
+    "en_us": "item.mobAspect.name",
+    "ru_ru": "item.mobAspect.name",
+    "de_de": "item.mobAspect.name",
+    "fr_fr": "item.mobAspect.name",
+    "ko_kr": "item.mobAspect.name",
+    "zh_cn": "item.mobAspect.name"
+  },
+  "item.ttinkerer.mob_aspect_limus_condensed": {
+    "en_us": "item.mobAspect.condensed.name",
+    "ru_ru": "item.mobAspect.condensed.name",
+    "de_de": "item.mobAspect.condensed.name",
+    "fr_fr": "item.mobAspect.condensed.name",
+    "ko_kr": "item.mobAspect.condensed.name",
+    "zh_cn": "item.mobAspect.condensed.name"
+  },
+  "item.ttinkerer.mob_aspect_limus_infused": {
+    "en_us": "item.mobAspect.infused.name",
+    "ru_ru": "item.mobAspect.infused.name",
+    "de_de": "item.mobAspect.infused.name",
+    "fr_fr": "item.mobAspect.infused.name",
+    "ko_kr": "item.mobAspect.infused.name",
+    "zh_cn": "item.mobAspect.infused.name"
+  },
+  "item.ttinkerer.mob_aspect_pannus": {
+    "en_us": "item.mobAspect.name",
+    "ru_ru": "item.mobAspect.name",
+    "de_de": "item.mobAspect.name",
+    "fr_fr": "item.mobAspect.name",
+    "ko_kr": "item.mobAspect.name",
+    "zh_cn": "item.mobAspect.name"
+  },
+  "item.ttinkerer.mob_aspect_pannus_condensed": {
+    "en_us": "item.mobAspect.condensed.name",
+    "ru_ru": "item.mobAspect.condensed.name",
+    "de_de": "item.mobAspect.condensed.name",
+    "fr_fr": "item.mobAspect.condensed.name",
+    "ko_kr": "item.mobAspect.condensed.name",
+    "zh_cn": "item.mobAspect.condensed.name"
+  },
+  "item.ttinkerer.mob_aspect_pannus_infused": {
+    "en_us": "item.mobAspect.infused.name",
+    "ru_ru": "item.mobAspect.infused.name",
+    "de_de": "item.mobAspect.infused.name",
+    "fr_fr": "item.mobAspect.infused.name",
+    "ko_kr": "item.mobAspect.infused.name",
+    "zh_cn": "item.mobAspect.infused.name"
+  },
+  "item.ttinkerer.mob_aspect_messis": {
+    "en_us": "item.mobAspect.name",
+    "ru_ru": "item.mobAspect.name",
+    "de_de": "item.mobAspect.name",
+    "fr_fr": "item.mobAspect.name",
+    "ko_kr": "item.mobAspect.name",
+    "zh_cn": "item.mobAspect.name"
+  },
+  "item.ttinkerer.mob_aspect_messis_condensed": {
+    "en_us": "item.mobAspect.condensed.name",
+    "ru_ru": "item.mobAspect.condensed.name",
+    "de_de": "item.mobAspect.condensed.name",
+    "fr_fr": "item.mobAspect.condensed.name",
+    "ko_kr": "item.mobAspect.condensed.name",
+    "zh_cn": "item.mobAspect.condensed.name"
+  },
+  "item.ttinkerer.mob_aspect_messis_infused": {
+    "en_us": "item.mobAspect.infused.name",
+    "ru_ru": "item.mobAspect.infused.name",
+    "de_de": "item.mobAspect.infused.name",
+    "fr_fr": "item.mobAspect.infused.name",
+    "ko_kr": "item.mobAspect.infused.name",
+    "zh_cn": "item.mobAspect.infused.name"
+  },
+  "item.ttinkerer.blood_sword": {
+    "en_us": "item.bloodSword.name",
+    "ru_ru": "item.bloodSword.name",
+    "de_de": "item.bloodSword.name",
+    "fr_fr": "item.bloodSword.name",
+    "ko_kr": "item.bloodSword.name",
+    "zh_cn": "item.bloodSword.name"
+  },
+  "block.ttinkerer.summon_tablet": {
+    "en_us": "tile.spawner.name",
+    "ru_ru": "tile.spawner.name",
+    "de_de": "tile.spawner.name",
+    "fr_fr": "tile.spawner.name",
+    "ko_kr": "tile.spawner.name",
+    "zh_cn": "tile.spawner.name"
+  },
+  "block.ttinkerer.locomotive": {
+    "en_us": "tile.Levitational Locomotive.name",
+    "ru_ru": "tile.Levitational Locomotive.name",
+    "de_de": "tile.Levitational Locomotive.name",
+    "fr_fr": "tile.Levitational Locomotive.name",
+    "ko_kr": "tile.Levitational Locomotive.name",
+    "zh_cn": "tile.Levitational Locomotive.name"
+  },
+  "block.ttinkerer.locomotive_relay": {
+    "en_us": "tile.Levitational Locomotive Relay.name",
+    "ru_ru": "tile.Levitational Locomotive Relay.name",
+    "de_de": "tile.Levitational Locomotive Relay.name",
+    "fr_fr": "tile.Levitational Locomotive Relay.name",
+    "ko_kr": "tile.Levitational Locomotive Relay.name",
+    "zh_cn": "tile.Levitational Locomotive Relay.name"
+  },
+  "block.ttinkerer.animation_tablet": {
+    "en_us": "tile.animationTablet.name",
+    "ru_ru": "tile.animationTablet.name",
+    "de_de": "tile.animationTablet.name",
+    "fr_fr": "tile.animationTablet.name",
+    "ko_kr": "tile.animationTablet.name",
+    "zh_cn": "tile.animationTablet.name"
+  },
+  "item.ttinkerer.focus_dislocation": {
+    "en_us": "item.focusDislocation.name",
+    "ru_ru": "item.focusDislocation.name",
+    "de_de": "item.focusDislocation.name",
+    "fr_fr": "item.focusDislocation.name",
+    "ko_kr": "item.focusDislocation.name",
+    "zh_cn": "item.focusDislocation.name"
+  },
+  "block.ttinkerer.enchanter": {
+    "en_us": "tile.enchanter.name",
+    "ru_ru": "tile.enchanter.name",
+    "de_de": "tile.enchanter.name",
+    "fr_fr": "tile.enchanter.name",
+    "ko_kr": "tile.enchanter.name",
+    "zh_cn": "tile.enchanter.name"
+  },
+  "item.ttinkerer.revealing_helm": {
+    "en_us": "item.revealingHelm.name",
+    "ru_ru": "item.revealingHelm.name",
+    "de_de": "item.revealingHelm.name",
+    "fr_fr": "item.revealingHelm.name",
+    "ko_kr": "item.revealingHelm.name",
+    "zh_cn": "item.revealingHelm.name"
+  },
+  "block.ttinkerer.platform": {
+    "en_us": "tile.platform.name",
+    "ru_ru": "tile.platform.name",
+    "de_de": "tile.platform.name",
+    "fr_fr": "tile.platform.name",
+    "ko_kr": "tile.platform.name",
+    "zh_cn": "tile.platform.name"
+  },
+  "block.ttinkerer.fire_air": {
+    "en_us": "tile.fireAir.name",
+    "ru_ru": "tile.fireAir.name",
+    "de_de": "tile.fireAir.name",
+    "fr_fr": "tile.fireAir.name",
+    "ko_kr": "tile.fireAir.name",
+    "zh_cn": "tile.fireAir.name"
+  },
+  "block.ttinkerer.fire_water": {
+    "en_us": "tile.fireWater.name",
+    "ru_ru": "tile.fireWater.name",
+    "de_de": "tile.fireWater.name",
+    "fr_fr": "tile.fireWater.name",
+    "ko_kr": "tile.fireWater.name",
+    "zh_cn": "tile.fireWater.name"
+  },
+  "block.ttinkerer.fire_fire": {
+    "en_us": "tile.fireFire.name",
+    "ru_ru": "tile.fireFire.name",
+    "de_de": "tile.fireFire.name",
+    "fr_fr": "tile.fireFire.name",
+    "ko_kr": "tile.fireFire.name",
+    "zh_cn": "tile.fireFire.name"
+  },
+  "block.ttinkerer.fire_earth": {
+    "en_us": "tile.fireEarth.name",
+    "ru_ru": "tile.fireEarth.name",
+    "de_de": "tile.fireEarth.name",
+    "fr_fr": "tile.fireEarth.name",
+    "ko_kr": "tile.fireEarth.name",
+    "zh_cn": "tile.fireEarth.name"
+  },
+  "block.ttinkerer.fire_order": {
+    "en_us": "tile.fireOrder.name",
+    "ru_ru": "tile.fireOrder.name",
+    "de_de": "tile.fireOrder.name",
+    "fr_fr": "tile.fireOrder.name",
+    "ko_kr": "tile.fireOrder.name",
+    "zh_cn": "tile.fireOrder.name"
+  },
+  "block.ttinkerer.fire_entropy": {
+    "en_us": "tile.fireChaos.name",
+    "ru_ru": "tile.fireChaos.name",
+    "de_de": "tile.fireChaos.name",
+    "fr_fr": "tile.fireChaos.name",
+    "ko_kr": "tile.fireChaos.name",
+    "zh_cn": "tile.fireChaos.name"
+  },
+  "item.ttinkerer.infused_seeds": {
+    "en_us": "item.infusedSeeds.name",
+    "ru_ru": "item.infusedSeeds.name",
+    "de_de": "item.infusedSeeds.name",
+    "fr_fr": "item.infusedSeeds.name",
+    "ko_kr": "item.infusedSeeds.name",
+    "zh_cn": "item.infusedSeeds.name"
+  },
+  "item.ttinkerer.ichor": {
+    "en_us": "item.ichor.name",
+    "ru_ru": "item.ichor.name",
+    "de_de": "item.ichor.name",
+    "fr_fr": "item.ichor.name",
+    "ko_kr": "item.ichor.name",
+    "zh_cn": "item.ichor.name"
+  },
+  "item.ttinkerer.ichor_cloth": {
+    "en_us": "item.ichorCloth.name",
+    "ru_ru": "item.ichorCloth.name",
+    "de_de": "item.ichorCloth.name",
+    "fr_fr": "item.ichorCloth.name",
+    "ko_kr": "item.ichorCloth.name",
+    "zh_cn": "item.ichorCloth.name"
+  },
+  "item.ttinkerer.ichorium": {
+    "en_us": "item.ichorium.name",
+    "ru_ru": "item.ichorium.name",
+    "de_de": "item.ichorium.name",
+    "fr_fr": "item.ichorium.name",
+    "ko_kr": "item.ichorium.name",
+    "zh_cn": "item.ichorium.name"
+  },
+  "item.ttinkerer.ichor_nugget": {
+    "en_us": "item.ichorNugget.name",
+    "ru_ru": "item.ichorNugget.name",
+    "de_de": "item.ichorNugget.name",
+    "fr_fr": "item.ichorNugget.name",
+    "ko_kr": "item.ichorNugget.name",
+    "zh_cn": "item.ichorNugget.name"
+  },
+  "item.ttinkerer.ichor_cap": {
+    "en_us": "item.ichorCap.name",
+    "ru_ru": "item.ichorCap.name",
+    "de_de": "item.ichorCap.name",
+    "fr_fr": "item.ichorCap.name",
+    "ko_kr": "item.ichorCap.name",
+    "zh_cn": "item.ichorCap.name"
+  },
+  "item.ttinkerer.ichorcloth_rod": {
+    "en_us": "item.ichorclothRod.name",
+    "ru_ru": "item.ichorclothRod.name",
+    "de_de": "item.ichorclothRod.name",
+    "fr_fr": "item.ichorclothRod.name",
+    "ko_kr": "item.ichorclothRod.name",
+    "zh_cn": "item.ichorclothRod.name"
+  },
+  "item.ttinkerer.nether_shard": {
+    "en_us": "item.netherShard.name",
+    "ru_ru": "item.netherShard.name",
+    "de_de": "item.netherShard.name",
+    "fr_fr": "item.netherShard.name",
+    "ko_kr": "item.netherShard.name",
+    "zh_cn": "item.netherShard.name"
+  },
+  "item.ttinkerer.ender_shard": {
+    "en_us": "item.enderShard.name",
+    "ru_ru": "item.enderShard.name",
+    "de_de": "item.enderShard.name",
+    "fr_fr": "item.enderShard.name",
+    "ko_kr": "item.enderShard.name",
+    "zh_cn": "item.enderShard.name"
+  },
+  "item.ttinkerer.ichor_pick": {
+    "en_us": "item.ichorPick.name",
+    "ru_ru": "item.ichorPick.name",
+    "de_de": "item.ichorPick.name",
+    "fr_fr": "item.ichorPick.name",
+    "ko_kr": "item.ichorPick.name",
+    "zh_cn": "item.ichorPick.name"
+  },
+  "item.ttinkerer.ichor_shovel": {
+    "en_us": "item.ichorShovel.name",
+    "ru_ru": "item.ichorShovel.name",
+    "de_de": "item.ichorShovel.name",
+    "fr_fr": "item.ichorShovel.name",
+    "ko_kr": "item.ichorShovel.name",
+    "zh_cn": "item.ichorShovel.name"
+  },
+  "item.ttinkerer.ichor_axe": {
+    "en_us": "item.ichorAxe.name",
+    "ru_ru": "item.ichorAxe.name",
+    "de_de": "item.ichorAxe.name",
+    "fr_fr": "item.ichorAxe.name",
+    "ko_kr": "item.ichorAxe.name",
+    "zh_cn": "item.ichorAxe.name"
+  },
+  "item.ttinkerer.ichor_sword": {
+    "en_us": "item.ichorSword.name",
+    "ru_ru": "item.ichorSword.name",
+    "de_de": "item.ichorSword.name",
+    "fr_fr": "item.ichorSword.name",
+    "ko_kr": "item.ichorSword.name",
+    "zh_cn": "item.ichorSword.name"
+  },
+  "item.ttinkerer.ichorcloth_helm": {
+    "en_us": "item.ichorclothHelm.name",
+    "ru_ru": "item.ichorclothHelm.name",
+    "de_de": "item.ichorclothHelm.name",
+    "fr_fr": "item.ichorclothHelm.name",
+    "ko_kr": "item.ichorclothHelm.name",
+    "zh_cn": "item.ichorclothHelm.name"
+  },
+  "item.ttinkerer.ichorcloth_chest": {
+    "en_us": "item.ichorclothChest.name",
+    "ru_ru": "item.ichorclothChest.name",
+    "de_de": "item.ichorclothChest.name",
+    "fr_fr": "item.ichorclothChest.name",
+    "ko_kr": "item.ichorclothChest.name",
+    "zh_cn": "item.ichorclothChest.name"
+  },
+  "item.ttinkerer.ichorcloth_legs": {
+    "en_us": "item.ichorclothLegs.name",
+    "ru_ru": "item.ichorclothLegs.name",
+    "de_de": "item.ichorclothLegs.name",
+    "fr_fr": "item.ichorclothLegs.name",
+    "ko_kr": "item.ichorclothLegs.name",
+    "zh_cn": "item.ichorclothLegs.name"
+  },
+  "item.ttinkerer.ichorcloth_boots": {
+    "en_us": "item.ichorclothBoots.name",
+    "ru_ru": "item.ichorclothBoots.name",
+    "de_de": "item.ichorclothBoots.name",
+    "fr_fr": "item.ichorclothBoots.name",
+    "ko_kr": "item.ichorclothBoots.name",
+    "zh_cn": "item.ichorclothBoots.name"
+  },
+  "item.ttinkerer.ichorcloth_helm_gem": {
+    "en_us": "item.ichorclothHelmGem.name",
+    "ru_ru": "item.ichorclothHelmGem.name",
+    "de_de": "item.ichorclothHelmGem.name",
+    "fr_fr": "item.ichorclothHelmGem.name",
+    "ko_kr": "item.ichorclothHelmGem.name",
+    "zh_cn": "item.ichorclothHelmGem.name"
+  },
+  "item.ttinkerer.ichorcloth_chest_gem": {
+    "en_us": "item.ichorclothChestGem.name",
+    "ru_ru": "item.ichorclothChestGem.name",
+    "de_de": "item.ichorclothChestGem.name",
+    "fr_fr": "item.ichorclothChestGem.name",
+    "ko_kr": "item.ichorclothChestGem.name",
+    "zh_cn": "item.ichorclothChestGem.name"
+  },
+  "item.ttinkerer.ichorcloth_legs_gem": {
+    "en_us": "item.ichorclothLegsGem.name",
+    "ru_ru": "item.ichorclothLegsGem.name",
+    "de_de": "item.ichorclothLegsGem.name",
+    "fr_fr": "item.ichorclothLegsGem.name",
+    "ko_kr": "item.ichorclothLegsGem.name",
+    "zh_cn": "item.ichorclothLegsGem.name"
+  },
+  "item.ttinkerer.ichorcloth_boots_gem": {
+    "en_us": "item.ichorclothBootsGem.name",
+    "ru_ru": "item.ichorclothBootsGem.name",
+    "de_de": "item.ichorclothBootsGem.name",
+    "fr_fr": "item.ichorclothBootsGem.name",
+    "ko_kr": "item.ichorclothBootsGem.name",
+    "zh_cn": "item.ichorclothBootsGem.name"
+  },
+  "item.ttinkerer.ichor_pick_gem": {
+    "en_us": "item.ichorPickGem.name",
+    "ru_ru": "item.ichorPickGem.name",
+    "de_de": "item.ichorPickGem.name",
+    "fr_fr": "item.ichorPickGem.name",
+    "ko_kr": "item.ichorPickGem.name",
+    "zh_cn": "item.ichorPickGem.name"
+  },
+  "item.ttinkerer.ichor_shovel_gem": {
+    "en_us": "item.ichorShovelGem.name",
+    "ru_ru": "item.ichorShovelGem.name",
+    "de_de": "item.ichorShovelGem.name",
+    "fr_fr": "item.ichorShovelGem.name",
+    "ko_kr": "item.ichorShovelGem.name",
+    "zh_cn": "item.ichorShovelGem.name"
+  },
+  "item.ttinkerer.protoclay": {
+    "en_us": "item.protoclay.name",
+    "ru_ru": "item.protoclay.name",
+    "de_de": "item.protoclay.name",
+    "fr_fr": "item.protoclay.name",
+    "ko_kr": "item.protoclay.name",
+    "zh_cn": "item.protoclay.name"
+  },
+  "item.ttinkerer.ichor_axe_gem": {
+    "en_us": "item.ichorAxeGem.name",
+    "ru_ru": "item.ichorAxeGem.name",
+    "de_de": "item.ichorAxeGem.name",
+    "fr_fr": "item.ichorAxeGem.name",
+    "ko_kr": "item.ichorAxeGem.name",
+    "zh_cn": "item.ichorAxeGem.name"
+  },
+  "item.ttinkerer.ichor_sword_gem": {
+    "en_us": "item.ichorSwordGem.name",
+    "ru_ru": "item.ichorSwordGem.name",
+    "de_de": "item.ichorSwordGem.name",
+    "fr_fr": "item.ichorSwordGem.name",
+    "ko_kr": "item.ichorSwordGem.name",
+    "zh_cn": "item.ichorSwordGem.name"
+  },
+  "item.ttinkerer.ichor_pouch": {
+    "en_us": "item.ichorPouch.name",
+    "ru_ru": "item.ichorPouch.name",
+    "de_de": "item.ichorPouch.name",
+    "fr_fr": "item.ichorPouch.name",
+    "ko_kr": "item.ichorPouch.name",
+    "zh_cn": "item.ichorPouch.name"
+  },
+  "item.ttinkerer.cat_amulet": {
+    "en_us": "item.catAmulet.name",
+    "ru_ru": "item.catAmulet.name",
+    "de_de": "item.catAmulet.name",
+    "fr_fr": "item.catAmulet.name",
+    "ko_kr": "item.catAmulet.name",
+    "zh_cn": "item.catAmulet.name"
+  },
+  "item.ttinkerer.block_talisman": {
+    "en_us": "item.blockTalisman.name",
+    "ru_ru": "item.blockTalisman.name",
+    "de_de": "item.blockTalisman.name",
+    "fr_fr": "item.blockTalisman.name",
+    "ko_kr": "item.blockTalisman.name",
+    "zh_cn": "item.blockTalisman.name"
+  },
+  "item.ttinkerer.placement_mirror": {
+    "en_us": "item.placementMirror.name",
+    "ru_ru": "item.placementMirror.name",
+    "de_de": "item.placementMirror.name",
+    "fr_fr": "item.placementMirror.name",
+    "ko_kr": "item.placementMirror.name",
+    "zh_cn": "item.placementMirror.name"
+  },
+  "item.ttinkerer.focus_xp_drain": {
+    "en_us": "item.focusXPDrain.name",
+    "ru_ru": "item.focusXPDrain.name",
+    "de_de": "item.focusXPDrain.name",
+    "fr_fr": "item.focusXPDrain.name",
+    "ko_kr": "item.focusXPDrain.name",
+    "zh_cn": "item.focusXPDrain.name"
+  },
+  "item.ttinkerer.focus_shadowbeam": {
+    "en_us": "item.focusShadowbeam.name",
+    "ru_ru": "item.focusShadowbeam.name",
+    "de_de": "item.focusShadowbeam.name",
+    "fr_fr": "item.focusShadowbeam.name",
+    "ko_kr": "item.focusShadowbeam.name",
+    "zh_cn": "item.focusShadowbeam.name"
+  },
+  "item.ttinkerer.sky_pearl": {
+    "en_us": "item.skyPearl.name",
+    "ru_ru": "item.skyPearl.name",
+    "de_de": "item.skyPearl.name",
+    "fr_fr": "item.skyPearl.name",
+    "ko_kr": "item.skyPearl.name",
+    "zh_cn": "item.skyPearl.name"
+  },
+  "block.ttinkerer.warp_gate": {
+    "en_us": "tile.warpGate.name",
+    "ru_ru": "tile.warpGate.name",
+    "de_de": "tile.warpGate.name",
+    "fr_fr": "tile.warpGate.name",
+    "ko_kr": "tile.warpGate.name",
+    "zh_cn": "tile.warpGate.name"
+  },
+  "item.ttinkerer.focus_recall": {
+    "en_us": "item.focusRecall.name",
+    "ru_ru": "item.focusRecall.name",
+    "de_de": "item.focusRecall.name",
+    "fr_fr": "item.focusRecall.name",
+    "ko_kr": "item.focusRecall.name",
+    "zh_cn": "item.focusRecall.name"
+  },
+  "block.ttinkerer.golem_connector": {
+    "en_us": "tile.golemConnector.name",
+    "ru_ru": "tile.golemConnector.name",
+    "de_de": "tile.golemConnector.name",
+    "fr_fr": "tile.golemConnector.name",
+    "ko_kr": "tile.golemConnector.name",
+    "zh_cn": "tile.golemConnector.name"
+  },
+  "item.ttinkerer.dark_quartz": {
+    "en_us": "item.darkQuartzItem.name",
+    "ru_ru": "item.darkQuartz.name",
+    "de_de": "item.darkQuartz.name",
+    "fr_fr": "item.darkQuartzItem.name",
+    "ko_kr": "item.darkQuartzItem.name",
+    "zh_cn": "item.darkQuartzItem.name"
+  },
+  "block.ttinkerer.dark_quartz_block": {
+    "en_us": "tile.darkQuartz.name",
+    "ru_ru": "tile.darkQuartz.name",
+    "de_de": "tile.darkQuartz.name",
+    "fr_fr": "tile.darkQuartz.name",
+    "ko_kr": "tile.darkQuartz.name",
+    "zh_cn": "tile.darkQuartz.name"
+  },
+  "block.ttinkerer.chiseled_dark_quartz": {
+    "en_us": "tile.darkQuartzChiseled.name",
+    "ru_ru": "tile.darkQuartzChiseled.name",
+    "de_de": "tile.darkQuartzChiseled.name",
+    "fr_fr": "tile.darkQuartzChiseled.name",
+    "ko_kr": "tile.darkQuartzChiseled.name",
+    "zh_cn": "tile.darkQuartzChiseled.name"
+  },
+  "block.ttinkerer.dark_quartz_pillar": {
+    "en_us": "tile.darkQuartzPillar.name",
+    "ru_ru": "tile.darkQuartzPillar.name",
+    "de_de": "tile.darkQuartzPillar.name",
+    "fr_fr": "tile.darkQuartzPillar.name",
+    "ko_kr": "tile.darkQuartzPillar.name",
+    "zh_cn": "tile.darkQuartzPillar.name"
+  },
+  "block.ttinkerer.dark_quartz_stairs": {
+    "en_us": "tile.darkQuartzStairs.name",
+    "ru_ru": "tile.darkQuartzStairs.name",
+    "de_de": "tile.darkQuartzStairs.name",
+    "fr_fr": "tile.darkQuartzStairs.name",
+    "ko_kr": "tile.darkQuartzStairs.name",
+    "zh_cn": "tile.darkQuartzStairs.name"
+  },
+  "block.ttinkerer.dark_quartz_slab": {
+    "en_us": "tile.darkQuartzSlab.name",
+    "ru_ru": "tile.darkQuartzSlab.name",
+    "de_de": "tile.darkQuartzSlab.name",
+    "fr_fr": "tile.darkQuartzSlab.name",
+    "ko_kr": "tile.darkQuartzSlab.name",
+    "zh_cn": "tile.darkQuartzSlab.name"
+  },
+  "block.ttinkerer.aspect_analyzer": {
+    "en_us": "tile.aspectAnalyzer.name",
+    "ru_ru": "tile.aspectAnalyzer.name",
+    "de_de": "tile.aspectAnalyzer.name",
+    "fr_fr": "tile.aspectAnalyzer.name",
+    "ko_kr": "tile.aspectAnalyzer.name",
+    "zh_cn": "tile.aspectAnalyzer.name"
+  },
+  "item.ttinkerer.focus_smelt": {
+    "en_us": "item.focusSmelt.name",
+    "ru_ru": "item.focusSmelt.name",
+    "de_de": "item.focusSmelt.name",
+    "fr_fr": "item.focusSmelt.name",
+    "ko_kr": "item.focusSmelt.name",
+    "zh_cn": "item.focusSmelt.name"
+  },
+  "item.ttinkerer.focus_flight": {
+    "en_us": "item.focusFlight.name",
+    "ru_ru": "item.focusFlight.name",
+    "de_de": "item.focusFlight.name",
+    "fr_fr": "item.focusFlight.name",
+    "ko_kr": "item.focusFlight.name",
+    "zh_cn": "item.focusFlight.name"
+  },
+  "item.ttinkerer.focus_deflect": {
+    "en_us": "item.focusDeflect.name",
+    "ru_ru": "item.focusDeflect.name",
+    "de_de": "item.focusDeflect.name",
+    "fr_fr": "item.focusDeflect.name",
+    "ko_kr": "item.focusDeflect.name",
+    "zh_cn": "item.focusDeflect.name"
+  },
+  "item.ttinkerer.focus_heal": {
+    "en_us": "item.focusHeal.name",
+    "ru_ru": "item.focusHeal.name",
+    "de_de": "item.focusHeal.name",
+    "fr_fr": "item.focusHeal.name",
+    "ko_kr": "item.focusHeal.name",
+    "zh_cn": "item.focusHeal.name"
+  },
+  "item.ttinkerer.focus_ender_chest": {
+    "en_us": "item.focusEnderChest.name",
+    "ru_ru": "item.focusEnderChest.name",
+    "de_de": "item.focusEnderChest.name",
+    "fr_fr": "item.focusEnderChest.name",
+    "ko_kr": "item.focusEnderChest.name",
+    "zh_cn": "item.focusEnderChest.name"
+  },
+  "item.ttinkerer.infused_grain_air": {
+    "en_us": "item.infusedGrain.name",
+    "ru_ru": "item.infusedGrain.name",
+    "de_de": "item.infusedGrain.name",
+    "fr_fr": "item.infusedGrain.name",
+    "ko_kr": "item.infusedGrain.name",
+    "zh_cn": "item.infusedGrain.name"
+  },
+  "item.ttinkerer.infused_potion_air": {
+    "en_us": "item.infusedPotion.Aer.name",
+    "ru_ru": "item.infusedPotion.Aer.name",
+    "de_de": "item.infusedPotion.Aer.name",
+    "fr_fr": "item.infusedPotion.Aer.name",
+    "ko_kr": "item.infusedPotion.Aer.name",
+    "zh_cn": "item.infusedPotion.Aer.name"
+  },
+  "item.ttinkerer.infused_grain_fire": {
+    "en_us": "item.infusedGrain.name",
+    "ru_ru": "item.infusedGrain.name",
+    "de_de": "item.infusedGrain.name",
+    "fr_fr": "item.infusedGrain.name",
+    "ko_kr": "item.infusedGrain.name",
+    "zh_cn": "item.infusedGrain.name"
+  },
+  "item.ttinkerer.infused_potion_fire": {
+    "en_us": "item.infusedPotion.Ignis.name",
+    "ru_ru": "item.infusedPotion.Ignis.name",
+    "de_de": "item.infusedPotion.Ignis.name",
+    "fr_fr": "item.infusedPotion.Ignis.name",
+    "ko_kr": "item.infusedPotion.Ignis.name",
+    "zh_cn": "item.infusedPotion.Ignis.name"
+  },
+  "item.ttinkerer.infused_grain_earth": {
+    "en_us": "item.infusedGrain.name",
+    "ru_ru": "item.infusedGrain.name",
+    "de_de": "item.infusedGrain.name",
+    "fr_fr": "item.infusedGrain.name",
+    "ko_kr": "item.infusedGrain.name",
+    "zh_cn": "item.infusedGrain.name"
+  },
+  "item.ttinkerer.infused_potion_earth": {
+    "en_us": "item.infusedPotion.Terra.name",
+    "ru_ru": "item.infusedPotion.Terra.name",
+    "de_de": "item.infusedPotion.Terra.name",
+    "fr_fr": "item.infusedPotion.Terra.name",
+    "ko_kr": "item.infusedPotion.Terra.name",
+    "zh_cn": "item.infusedPotion.Terra.name"
+  },
+  "item.ttinkerer.infused_grain_water": {
+    "en_us": "item.infusedGrain.name",
+    "ru_ru": "item.infusedGrain.name",
+    "de_de": "item.infusedGrain.name",
+    "fr_fr": "item.infusedGrain.name",
+    "ko_kr": "item.infusedGrain.name",
+    "zh_cn": "item.infusedGrain.name"
+  },
+  "item.ttinkerer.infused_potion_water": {
+    "en_us": "item.infusedPotion.Aqua.name",
+    "ru_ru": "item.infusedPotion.Aqua.name",
+    "de_de": "item.infusedPotion.Aqua.name",
+    "fr_fr": "item.infusedPotion.Aqua.name",
+    "ko_kr": "item.infusedPotion.Aqua.name",
+    "zh_cn": "item.infusedPotion.Aqua.name"
+  }
+}

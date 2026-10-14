@@ -1,0 +1,48 @@
+{
+  "textures": {
+    "particle": "ttinkerer:blocks/dislocator0",
+    "base": "ttinkerer:blocks/dislocator0",
+    "front": "ttinkerer:blocks/dislocator1"
+  },
+  "elements": [
+    {
+      "from": [
+        0,
+        0,
+        0
+      ],
+      "to": [
+        16,
+        16,
+        16
+      ],
+      "faces": {
+        "north": {
+          "texture": "#base",
+          "cullface": "north"
+        },
+        "east": {
+          "texture": "#front",
+          "cullface": "east"
+        },
+        "south": {
+          "texture": "#base",
+          "cullface": "south"
+        },
+        "west": {
+          "texture": "#base",
+          "cullface": "west"
+        },
+        "up": {
+          "texture": "#base",
+          "cullface": "up"
+        },
+        "down": {
+          "texture": "#base",
+          "cullface": "down"
+        }
+      }
+    }
+  ],
+  "parent": "minecraft:block/block"
+}

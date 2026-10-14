@@ -1,0 +1,62 @@
+plugins { id 'java-library'; id 'net.neoforged.moddev' version '2.0.148' }
+version = '0.1.5'
+group = 'dev.eugheist'
+base { archivesName = 'thaumic-tinkerer-modern' }
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+neoForge { version = '21.1.256'; parchment { mappingsVersion = '2024.11.17'; minecraftVersion = '1.21.1' } }
+dependencies { compileOnly files('/home/eugheist/thaumcraft4-server/mods/tc4modern-0.17.158.jar') }
+neoForge {
+    runs {
+        enchanterClientAudit {
+            client()
+            programArguments.addAll '--width', '1080', '--height', '900', '--quickPlaySingleplayer', 'EnchanterInspection'
+            gameDirectory = file('run-enchanter-audit')
+            systemProperty 'ttinkerer.enchanterAudit', 'true'
+        }
+        enchanterShow {
+            client()
+            programArguments.addAll '--width', '1280', '--height', '900', '--quickPlaySingleplayer', 'EnchanterShow'
+            gameDirectory = file('run-enchanter-show')
+            systemProperty 'ttinkerer.enchanterShow', 'true'
+        }
+        portClientAudit {
+            client()
+            programArguments.addAll '--width', '1080', '--height', '900'
+            gameDirectory = file('run-client-audit')
+            systemProperty 'ttinkerer.clientAudit', 'true'
+        }
+        heldBlocksWorldAudit {
+            client()
+            programArguments.addAll '--width', '1080', '--height', '900', '--quickPlaySingleplayer', 'EnchanterInspection'
+            gameDirectory = file('run-enchanter-audit')
+            systemProperty 'ttinkerer.heldBlocksWorldAudit', 'true'
+        }
+        funnelWorldAudit {
+            client()
+            programArguments.addAll '--width', '1080', '--height', '900', '--quickPlaySingleplayer', 'EnchanterInspection'
+            gameDirectory = file('run-enchanter-audit')
+            systemProperty 'ttinkerer.funnelWorldAudit', 'true'
+        }
+        jadeWorldAudit {
+            client()
+            programArguments.addAll '--width', '1080', '--height', '900', '--quickPlaySingleplayer', 'EnchanterInspection'
+            gameDirectory = file('run-enchanter-audit')
+            systemProperty 'ttinkerer.jadeWorldAudit', 'true'
+        }
+        computerWorldAudit {
+            client()
+            programArguments.addAll '--width', '1080', '--height', '900', '--quickPlaySingleplayer', 'EnchanterInspection'
+            gameDirectory = file('run-enchanter-audit')
+            systemProperty 'ttinkerer.computerWorldAudit', 'true'
+        }
+    }
+    mods { ttinkerer { sourceSet sourceSets.main } }
+}
+dependencies { runtimeOnly files('/home/eugheist/thaumcraft4-server/mods/tc4modern-0.17.158.jar') }
+
+repositories { maven { url = 'https://api.modrinth.com/maven'; content { includeGroup 'maven.modrinth' } } }
+dependencies { compileOnly 'maven.modrinth:cc-tweaked:1ewzHZYg' }
+
+dependencies { compileOnly 'maven.modrinth:ae2:KDnFUmMm' }
+
+dependencies { compileOnly 'maven.modrinth:jade:eYz2YBGT' }

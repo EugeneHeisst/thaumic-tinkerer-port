@@ -1,0 +1,14 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "ttinkerer:items/cleansingtalisman0"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "ttinkerer:enabled": 1
+      },
+      "model": "ttinkerer:item/cleansing_talisman_enabled"
+    }
+  ]
+}

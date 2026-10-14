@@ -1,0 +1,11 @@
+{
+  "replace": false,
+  "values": [
+    "ttinkerer:fire_air",
+    "ttinkerer:fire_water",
+    "ttinkerer:fire_fire",
+    "ttinkerer:fire_earth",
+    "ttinkerer:fire_order",
+    "ttinkerer:fire_entropy"
+  ]
+}

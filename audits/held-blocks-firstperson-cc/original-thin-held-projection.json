@@ -1,0 +1,104 @@
+[
+  {
+    "item": "animation_tablet",
+    "hand": "right",
+    "actual_bounds": [
+      886,
+      880,
+      946,
+      900
+    ],
+    "original_bounds": [
+      885,
+      879,
+      946,
+      900
+    ],
+    "actual_pixels": 640
+  },
+  {
+    "item": "animation_tablet",
+    "hand": "left",
+    "actual_bounds": [
+      134,
+      880,
+      194,
+      900
+    ],
+    "original_bounds": [
+      134,
+      879,
+      195,
+      900
+    ],
+    "actual_pixels": 640
+  },
+  {
+    "item": "funnel",
+    "hand": "right",
+    "actual_bounds": [
+      886,
+      880,
+      946,
+      900
+    ],
+    "original_bounds": [
+      885,
+      879,
+      946,
+      900
+    ],
+    "actual_pixels": 640
+  },
+  {
+    "item": "funnel",
+    "hand": "left",
+    "actual_bounds": [
+      134,
+      880,
+      194,
+      900
+    ],
+    "original_bounds": [
+      134,
+      879,
+      195,
+      900
+    ],
+    "actual_pixels": 640
+  },
+  {
+    "item": "summon_tablet",
+    "hand": "right",
+    "actual_bounds": [
+      886,
+      880,
+      946,
+      900
+    ],
+    "original_bounds": [
+      885,
+      879,
+      946,
+      900
+    ],
+    "actual_pixels": 640
+  },
+  {
+    "item": "summon_tablet",
+    "hand": "left",
+    "actual_bounds": [
+      134,
+      880,
+      194,
+      900
+    ],
+    "original_bounds": [
+      134,
+      879,
+      195,
+      900
+    ],
+    "actual_pixels": 640
+  }
+]

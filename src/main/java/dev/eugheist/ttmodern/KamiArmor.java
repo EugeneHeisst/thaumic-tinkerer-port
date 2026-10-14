@@ -1,0 +1,21 @@
+package dev.eugheist.ttmodern;
+import net.minecraft.world.item.*;
+import net.minecraft.world.entity.*;
+import net.minecraft.core.component.DataComponents;
+import thaumcraft.api.aspects.*;
+public class KamiArmor extends ArmorItem implements thaumcraft.api.IVisDiscountGear {
+ static final net.neoforged.neoforge.registries.DeferredRegister<ArmorMaterial> MATERIALS=net.neoforged.neoforge.registries.DeferredRegister.create(net.minecraft.core.registries.Registries.ARMOR_MATERIAL,"ttinkerer");
+ static final net.neoforged.neoforge.registries.DeferredHolder<ArmorMaterial,ArmorMaterial> MATERIAL=MATERIALS.register("ichor",()->new ArmorMaterial(java.util.Map.of(Type.HELMET,3,Type.CHESTPLATE,8,Type.LEGGINGS,6,Type.BOOTS,3,Type.BODY,8),20,net.minecraft.sounds.SoundEvents.ARMOR_EQUIP_LEATHER,()->net.minecraft.world.item.crafting.Ingredient.EMPTY,java.util.List.of(new ArmorMaterial.Layer(net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ttinkerer","ichor"))),0,0));
+ static final java.util.List<Type> TYPES=java.util.List.of(Type.HELMET,Type.CHESTPLATE,Type.LEGGINGS,Type.BOOTS);
+ static final java.util.List<String> IDS=java.util.List.of("ichorcloth_helm","ichorcloth_chest","ichorcloth_legs","ichorcloth_boots");
+ static final java.util.List<net.neoforged.neoforge.registries.DeferredItem<KamiArmor>> ITEMS=new java.util.ArrayList<>();
+ static{for(int i=0;i<4;i++){final Type type=TYPES.get(i);ITEMS.add(KamiRegistries.ITEMS.register(IDS.get(i),()->new KamiArmor(type)));}}
+ KamiArmor(Type type){super(MATERIAL,type,new Properties().stacksTo(1).rarity(Rarity.EPIC).component(DataComponents.UNBREAKABLE,new net.minecraft.world.item.component.Unbreakable(false)));}
+ static void init(net.neoforged.bus.api.IEventBus bus){if(!KamiStartupConfig.enabled())return;MATERIALS.register(bus);}
+ @Override public boolean isFoil(ItemStack stack){return true;}
+ @Override public int getVisDiscount(ItemStack stack,net.minecraft.world.entity.player.Player player,Aspect aspect){return getType()==Type.BOOTS?3:4;}
+ @Override public net.minecraft.resources.ResourceLocation getArmorTexture(ItemStack stack,Entity entity,EquipmentSlot slot,ArmorMaterial.Layer layer,boolean inner){return net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("ttinkerer","textures/model/ichor"+(slot==EquipmentSlot.LEGS?2:1)+".png");}
+ @Override public void appendHoverText(ItemStack stack,Item.TooltipContext context,java.util.List<net.minecraft.network.chat.Component> lines,TooltipFlag flag){super.appendHoverText(stack,context,lines,flag);lines.add(net.minecraft.network.chat.Component.translatable("tc.visdiscount").append(": "+getVisDiscount(stack,null,null)+"%"));}
+
+ static void research(){var r=new KamiResearch("ICHORCLOTH_ARMOR",new AspectList().add(Aspect.ARMOR,2).add(Aspect.CLOTH,1).add(Aspect.LIGHT,1).add(Aspect.CRAFT,1),17,5,5,new ItemStack(ITEMS.getFirst().get()));r.setParents("ICHOR_CLOTH");var pages=new java.util.ArrayList<thaumcraft.api.research.ResearchPage>();pages.add(new thaumcraft.api.research.ResearchPage("ttresearch.page.ICHORCLOTH_ARMOR.0"));String[] keys={"ICHORCLOTH_HELM","ICHORCLOTH_CHEST","ICHORCLOTH_LEGS","ICHORCLOTH_BOOTS"},patterns={"CCCC C","C CCCCCCC","CCCC CC C","C CC C"};Aspect[] costs={Aspect.WATER,Aspect.AIR,Aspect.FIRE,Aspect.EARTH};for(int i=0;i<4;i++){pages.add(MagnetResearch.page(keys[i],thaumcraft.api.research.ResearchPage.PageType.ARCANE_CRAFTING));var ingredients=new java.util.ArrayList<net.minecraft.world.item.crafting.Ingredient>();var predicates=new java.util.ArrayList<java.util.function.Predicate<ItemStack>>();for(char c:patterns[i].toCharArray()){var ingredient=c==' '?net.minecraft.world.item.crafting.Ingredient.EMPTY:net.minecraft.world.item.crafting.Ingredient.of(KamiResources.item(KamiResources.Kind.CLOTH));ingredients.add(ingredient);predicates.add(c==' '?null:ingredient::test);}int height=patterns[i].length()/3;ThaumicTinkererModern.ARCANE_RECIPES.add(new dev.eugheist.tc4modern.ArcaneRecipes.Entry(keys[i],"ICHORCLOTH_ARMOR",3,height,ingredients,new ItemStack(ITEMS.get(i).get()),new AspectList().add(costs[i],75),new thaumcraft.api.crafting.ArcanePattern<ItemStack>("ICHORCLOTH_ARMOR",3,height,predicates).setMirrored(true)));}r.setPages(pages.toArray(thaumcraft.api.research.ResearchPage[]::new)).registerResearchItem();}
+}

@@ -1,0 +1,23 @@
+{
+  "replace": false,
+  "values": [
+    "ttinkerer:dark_quartz_block",
+    "ttinkerer:chiseled_dark_quartz",
+    "ttinkerer:dark_quartz_pillar",
+    "ttinkerer:dark_quartz_stairs",
+    "ttinkerer:dark_quartz_slab",
+    "ttinkerer:transvector_interface",
+    "ttinkerer:funnel",
+    "ttinkerer:repairer",
+    "ttinkerer:dislocator",
+    "ttinkerer:summon_tablet",
+    "ttinkerer:locomotive",
+    "ttinkerer:locomotive_relay",
+    "ttinkerer:animation_tablet",
+    "ttinkerer:enchanter",
+    {
+      "id": "ttinkerer:warp_gate",
+      "required": false
+    }
+  ]
+}

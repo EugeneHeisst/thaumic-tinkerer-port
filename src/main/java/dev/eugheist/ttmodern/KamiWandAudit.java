@@ -1,0 +1,14 @@
+package dev.eugheist.ttmodern;
+import net.minecraft.world.item.*;
+import thaumcraft.api.aspects.*;
+import dev.eugheist.tc4modern.*;
+final class KamiWandAudit {
+ private static void check(boolean ok,String label){if(!ok)throw new IllegalStateException("TT KAMI wands: "+label);}
+ static void run(net.minecraft.server.MinecraftServer server){
+  var cap=WandParts.CAPS.get("ICHOR");var rod=WandParts.RODDEFS.get("ICHORCLOTH");check(cap!=null&&rod!=null&&cap.craftCost()==10&&rod.craftCost()==10&&rod.capacity()==1000&&rod.glowing()&&rod.regen()==null,"original definitions/cost/capacity/glow");check(cap.research().equals("CAP_ICHOR")&&rod.research().equals("ROD_ICHORCLOTH"),"original case-sensitive research tags");
+  var variants=java.util.List.of(WandParts.make(cap,rod),WandParts.make(WandParts.CAPS.get("gold"),rod),WandParts.make(cap,WandParts.RODDEFS.get("silverwood")));
+  for(var wand:variants){var c=WandParts.cap(wand);var r=WandParts.rod(wand);var grid=new java.util.ArrayList<ItemStack>();for(int i=0;i<9;i++)grid.add(ItemStack.EMPTY);grid.set(2,new ItemStack(c.item().get()));grid.set(6,new ItemStack(c.item().get()));grid.set(4,new ItemStack(r.item().get()));var done=java.util.Set.of(c.research(),r.research());var recipe=ArcaneRecipes.find(grid,done);check(recipe!=null&&ItemStack.isSameItemSameComponents(recipe.output(),wand),"actual mixed wand assembly "+c.tag()+"/"+r.tag());for(var a:Aspect.getPrimalAspects())check(recipe.cost().getAmount(a)==c.craftCost()*r.craftCost(),"original craft cost product");check(ArcaneRecipes.find(grid,java.util.Set.of(c.research()))==null&&ArcaneRecipes.find(grid,java.util.Set.of(r.research()))==null,"both parts research required");var restored=ItemStack.parseOptional(server.registryAccess(),(net.minecraft.nbt.CompoundTag)wand.save(server.registryAccess()));check(WandParts.cap(restored)==c&&WandParts.rod(restored)==r&&WandData.capacity(restored)==r.capacity()*100,"native identity/capacity persistence");}
+  var full=variants.getFirst();for(var a:Aspect.getPrimalAspects()){check(WandData.add(full,a,1001,true)==1&&WandData.get(full,a)==100000,"exact thousand-vis capacity/overflow");check(Math.abs(WandData.craftingModifier(full,null,a)-.7)<1e-6,"original .7 modifier all primals");}var cost=new AspectList().add(Aspect.AIR,10);check(WandData.consumeCrafting(full,cost,false,null)&&WandData.get(full,Aspect.AIR)==100000,"preview no mutation");check(WandData.consumeCrafting(full,cost,true,null)&&WandData.get(full,Aspect.AIR)==99300,"actual native discounted crafting debit700centivis");check(WandData.capacity(WandParts.sceptre(cap,rod))==150000,"native sceptre capacity");
+  System.out.println("TT KAMI WAND AUDIT: ALL PASS (original parts/tags,three native mixed assemblies/research/cost,persistence,1000vis overflow,.7 native debit,sceptre)");
+ }
+}

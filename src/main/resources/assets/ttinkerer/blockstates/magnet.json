@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "pulling=true": {
+      "model": "ttinkerer:block/magnet_pull"
+    },
+    "pulling=false": {
+      "model": "ttinkerer:block/magnet_push"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "parent": "minecraft:block/block",
+  "render_type": "minecraft:cutout",
+  "textures": {
+    "top": "ttinkerer:blocks/warpgate0",
+    "bottom": "ttinkerer:blocks/warpgate1",
+    "side": "ttinkerer:blocks/warpgate1",
+    "overlay": "ttinkerer:blocks/warpgate2",
+    "particle": "ttinkerer:blocks/warpgate1"
+  },
+  "elements": [
+    {
+      "from": [
+        0,
+        16,
+        0
+      ],
+      "to": [
+        16,
+        16,
+        16
+      ],
+      "faces": {
+        "up": {
+          "texture": "#overlay"
+        }
+      },
+      "shade": false,
+      "neoforge_data": {
+        "block_light": 15,
+        "sky_light": 15,
+        "ambient_occlusion": false
+      }
+    }
+  ]
+}

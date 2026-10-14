@@ -1,0 +1,122 @@
+index	item	name	pattern	foil	tint
+0	tc4modern:wand	Thaumium Bossed Silverwood Wand		false	ffffffff
+1	ttinkerer:fire_air	Aer Imbued Fire		false	ffffffff
+2	ttinkerer:fire_water	Aqua Imbued Fire		false	ffffffff
+3	ttinkerer:dark_quartz_block	Block of Smokey Quartz		false	ffffffff
+4	ttinkerer:chiseled_dark_quartz	Chiseled Smokey Quartz Block		false	ffffffff
+5	ttinkerer:mob_magnet	Corporeal Attractor		false	ffffffff
+6	ttinkerer:blood_sword	Cursed Spirit's Blade		false	ffffffff
+7	ttinkerer:animation_tablet	Dynamism Tablet		false	ffffffff
+8	ttinkerer:funnel	Essentia Funnel		false	ffffffff
+9	ttinkerer:platform	Ethereal Platform		false	ffffffff
+10	ttinkerer:gas_remover	Fume Dissipator		false	ffffffff
+11	ttinkerer:gaseous_light_bottle	Gaseous Illuminae		false	ffffffff
+12	ttinkerer:gaseous_shadow_bottle	Gaseous Tenebrae		false	ffffffff
+13	ttinkerer:revealing_helm	Helmet of Revealing		false	ffffffff
+14	ttinkerer:bright_nitor	Hyperenergetic Nitor		false	ffffffff
+15	ttinkerer:fire_fire	Ignis Imbued Fire		false	ffffffff
+16	ttinkerer:infused_grain_air	Imbued Grain		false	ffffffff
+17	ttinkerer:infused_grain_fire	Imbued Grain		false	ffffffff
+18	ttinkerer:infused_grain_earth	Imbued Grain		false	ffffffff
+19	ttinkerer:infused_grain_water	Imbued Grain		false	ffffffff
+20	ttinkerer:infused_seeds	Infused Seeds		true	ffffffff
+21	ttinkerer:infused_seeds	Infused Seeds		true	ffffffff
+22	ttinkerer:infused_seeds	Infused Seeds		true	ffffffff
+23	ttinkerer:infused_seeds	Infused Seeds		true	ffffffff
+24	ttinkerer:infused_seeds	Infused Seeds		true	ffffffff
+25	ttinkerer:infused_seeds	Infused Seeds		true	ffffffff
+26	ttinkerer:mob_aspect_aqua_infused	Infused Soul Aspect		true	ffffffff
+27	ttinkerer:mob_aspect_humanus_infused	Infused Soul Aspect		true	ffffffff
+28	ttinkerer:mob_aspect_aer_infused	Infused Soul Aspect		true	ffffffff
+29	ttinkerer:mob_aspect_volatus_infused	Infused Soul Aspect		true	ffffffff
+30	ttinkerer:mob_aspect_ignis_infused	Infused Soul Aspect		true	ffffffff
+31	ttinkerer:mob_aspect_praecantatio_infused	Infused Soul Aspect		true	ffffffff
+32	ttinkerer:mob_aspect_exanimis_infused	Infused Soul Aspect		true	ffffffff
+33	ttinkerer:mob_aspect_corpus_infused	Infused Soul Aspect		true	ffffffff
+34	ttinkerer:mob_aspect_bestia_infused	Infused Soul Aspect		true	ffffffff
+35	ttinkerer:mob_aspect_venenum_infused	Infused Soul Aspect		true	ffffffff
+36	ttinkerer:mob_aspect_terra_infused	Infused Soul Aspect		true	ffffffff
+37	ttinkerer:mob_aspect_alienis_infused	Infused Soul Aspect		true	ffffffff
+38	ttinkerer:mob_aspect_iter_infused	Infused Soul Aspect		true	ffffffff
+39	ttinkerer:mob_aspect_metallum_infused	Infused Soul Aspect		true	ffffffff
+40	ttinkerer:mob_aspect_limus_infused	Infused Soul Aspect		true	ffffffff
+41	ttinkerer:mob_aspect_pannus_infused	Infused Soul Aspect		true	ffffffff
+42	ttinkerer:mob_aspect_messis_infused	Infused Soul Aspect		true	ffffffff
+43	ttinkerer:magnet	Kinetic Attractor		false	ffffffff
+44	ttinkerer:locomotive	Levitational Locomotive		false	ffffffff
+45	ttinkerer:locomotive_relay	Levitational Locomotive Relay		false	ffffffff
+46	ttinkerer:fire_order	Ordo Imbued Fire		false	ffffffff
+47	ttinkerer:enchanter	Osmotic Enchanter		false	ffffffff
+48	ttinkerer:fire_entropy	Perditio Imbued Fire		false	ffffffff
+49	ttinkerer:dark_quartz_pillar	Pillar Smokey Quartz Block		false	ffffffff
+50	ttinkerer:infused_potion_air	Potion of Aer		true	ffffffff
+51	ttinkerer:infused_potion_water	Potion of Aqua		true	ffffffff
+52	ttinkerer:infused_potion_fire	Potion of Ignis		true	ffffffff
+53	ttinkerer:infused_potion_earth	Potion of Terra		true	ffffffff
+54	ttinkerer:dark_quartz	Smokey Quartz		false	ffffffff
+55	ttinkerer:dark_quartz_slab	Smokey Quartz Slab		false	ffffffff
+56	ttinkerer:dark_quartz_stairs	Smokey Quartz Stairs		false	ffffffff
+57	ttinkerer:mob_aspect_aqua	Soul Aspect		false	ffffffff
+58	ttinkerer:mob_aspect_humanus	Soul Aspect		false	ffffffff
+59	ttinkerer:mob_aspect_aer	Soul Aspect		false	ffffffff
+60	ttinkerer:mob_aspect_volatus	Soul Aspect		false	ffffffff
+61	ttinkerer:mob_aspect_ignis	Soul Aspect		false	ffffffff
+62	ttinkerer:mob_aspect_praecantatio	Soul Aspect		false	ffffffff
+63	ttinkerer:mob_aspect_exanimis	Soul Aspect		false	ffffffff
+64	ttinkerer:mob_aspect_corpus	Soul Aspect		false	ffffffff
+65	ttinkerer:mob_aspect_bestia	Soul Aspect		false	ffffffff
+66	ttinkerer:mob_aspect_venenum	Soul Aspect		false	ffffffff
+67	ttinkerer:mob_aspect_terra	Soul Aspect		false	ffffffff
+68	ttinkerer:mob_aspect_alienis	Soul Aspect		false	ffffffff
+69	ttinkerer:mob_aspect_iter	Soul Aspect		false	ffffffff
+70	ttinkerer:mob_aspect_metallum	Soul Aspect		false	ffffffff
+71	ttinkerer:mob_aspect_limus	Soul Aspect		false	ffffffff
+72	ttinkerer:mob_aspect_pannus	Soul Aspect		false	ffffffff
+73	ttinkerer:mob_aspect_messis	Soul Aspect		false	ffffffff
+74	ttinkerer:soul_mould	Soul Mould		false	ffffffff
+75	ttinkerer:soul_mould	Soul Mould	minecraft:snow_golem	false	ffffffff
+76	ttinkerer:soul_mould	Soul Mould	minecraft:bat	false	ffffffff
+77	ttinkerer:soul_mould	Soul Mould	minecraft:blaze	false	ffffffff
+78	ttinkerer:soul_mould	Soul Mould	tc4modern:brainy_zombie	false	ffffffff
+79	ttinkerer:soul_mould	Soul Mould	tc4modern:firebat	false	ffffffff
+80	ttinkerer:soul_mould	Soul Mould	minecraft:cave_spider	false	ffffffff
+81	ttinkerer:soul_mould	Soul Mould	minecraft:chicken	false	ffffffff
+82	ttinkerer:soul_mould	Soul Mould	minecraft:cow	false	ffffffff
+83	ttinkerer:soul_mould	Soul Mould	minecraft:creeper	false	ffffffff
+84	ttinkerer:soul_mould	Soul Mould	minecraft:enderman	false	ffffffff
+85	ttinkerer:soul_mould	Soul Mould	minecraft:ghast	false	ffffffff
+86	ttinkerer:soul_mould	Soul Mould	minecraft:horse	false	ffffffff
+87	ttinkerer:soul_mould	Soul Mould	minecraft:iron_golem	false	ffffffff
+88	ttinkerer:soul_mould	Soul Mould	minecraft:magma_cube	false	ffffffff
+89	ttinkerer:soul_mould	Soul Mould	minecraft:mooshroom	false	ffffffff
+90	ttinkerer:soul_mould	Soul Mould	minecraft:ocelot	false	ffffffff
+91	ttinkerer:soul_mould	Soul Mould	minecraft:pig	false	ffffffff
+92	ttinkerer:soul_mould	Soul Mould	minecraft:zombified_piglin	false	ffffffff
+93	ttinkerer:soul_mould	Soul Mould	minecraft:sheep	false	ffffffff
+94	ttinkerer:soul_mould	Soul Mould	minecraft:silverfish	false	ffffffff
+95	ttinkerer:soul_mould	Soul Mould	minecraft:skeleton	false	ffffffff
+96	ttinkerer:soul_mould	Soul Mould	minecraft:slime	false	ffffffff
+97	ttinkerer:soul_mould	Soul Mould	minecraft:spider	false	ffffffff
+98	ttinkerer:soul_mould	Soul Mould	minecraft:squid	false	ffffffff
+99	ttinkerer:soul_mould	Soul Mould	minecraft:villager	false	ffffffff
+100	ttinkerer:soul_mould	Soul Mould	tc4modern:wisp	false	ffffffff
+101	ttinkerer:soul_mould	Soul Mould	minecraft:witch	false	ffffffff
+102	ttinkerer:soul_mould	Soul Mould	minecraft:wolf	false	ffffffff
+103	ttinkerer:soul_mould	Soul Mould	minecraft:zombie	false	ffffffff
+104	ttinkerer:spell_cloth	Spellbinding Cloth		false	ffbf80ff
+105	ttinkerer:summon_tablet	Tablet of Necromancy		false	ffffffff
+106	ttinkerer:cleansing_talisman	Talisman of Remedium		false	ffffffff
+107	ttinkerer:xp_talisman	Talisman of Withhold		false	ffffffff
+108	ttinkerer:fire_earth	Terra Imbued Fire		false	ffffffff
+109	ttinkerer:repairer	Thaumic Restorer		false	ffffffff
+110	ttinkerer:share_tome	Tome of Knowledge Sharing		true	ffffffff
+111	ttinkerer:connector	Transvector Binder		false	ffffffff
+112	ttinkerer:dislocator	Transvector Dislocator		false	ffffffff
+113	ttinkerer:transvector_interface	Transvector Interface		false	ffffffff
+114	ttinkerer:focus_dislocation	Wand Focus: Dislocation		false	ffffffff
+115	ttinkerer:focus_deflect	Wand Focus: Distortion		false	ffffffff
+116	ttinkerer:focus_smelt	Wand Focus: Efreet's Flame		false	ffffffff
+117	ttinkerer:focus_ender_chest	Wand Focus: Ender Rift		false	ffffffff
+118	ttinkerer:focus_heal	Wand Focus: Mending		false	ffffffff
+119	ttinkerer:focus_telekinesis	Wand Focus: Telekinesis		false	ffffffff
+120	ttinkerer:focus_flight	Wand Focus: Uprising		false	ffffffff

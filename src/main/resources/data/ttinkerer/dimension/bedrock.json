@@ -1,0 +1,23 @@
+{
+  "type": "ttinkerer:bedrock",
+  "generator": {
+    "type": "ttinkerer:bedrock",
+    "settings": {
+      "biome": "minecraft:beach",
+      "features": false,
+      "lakes": false,
+      "layers": [
+        {
+          "block": "minecraft:bedrock",
+          "height": 256
+        }
+      ],
+      "structure_overrides": []
+    }
+  },
+  "neoforge:conditions": [
+    {
+      "type": "ttinkerer:bedrock_enabled"
+    }
+  ]
+}

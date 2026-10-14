@@ -1,0 +1,19 @@
+package dev.eugheist.ttmodern;
+import net.minecraft.world.item.*;
+import net.minecraft.world.entity.*;
+import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.effect.*;
+import thaumcraft.api.aspects.*;
+@net.neoforged.fml.common.EventBusSubscriber(modid="ttinkerer")
+public final class AwakenedLegs extends AwakenedArmorItem {
+ static final net.neoforged.neoforge.registries.DeferredItem<AwakenedLegs> ITEM=KamiRegistries.ITEMS.register("ichorcloth_legs_gem",AwakenedLegs::new);
+ public AwakenedLegs(){super(Type.LEGGINGS);}
+ static void init(){}
+ static java.util.List<net.minecraft.core.BlockPos> lights(Player player){int x=net.minecraft.util.Mth.floor(player.getX()),y=(int)player.getY()+1,z=net.minecraft.util.Mth.floor(player.getZ());float yaw=net.minecraft.util.Mth.wrapDegrees(player.getYRot()+90)*(float)Math.PI/180;double dx=Math.cos(yaw),dz=Math.sin(yaw),length=Math.sqrt(dx*dx+dz*dz);dx/=length;dz/=length;double vx=dx,vz=dz;var list=new java.util.ArrayList<net.minecraft.core.BlockPos>();list.add(new net.minecraft.core.BlockPos(x,y,z));for(int i=0;i<5;i++){vx+=dx;vz+=dz;list.add(new net.minecraft.core.BlockPos(x+(int)vx,y,z+(int)vz));}return list;}
+ static void update(Player player){var stack=player.getItemBySlot(EquipmentSlot.LEGS);if(!(stack.getItem() instanceof AwakenedLegs)||disabled(stack)||!AwakenedArmorStatus.enabled(player))return;var old=player.getEffect(MobEffects.FIRE_RESISTANCE);int amplifier=old!=null&&old.getDuration()<=202?old.getAmplifier():10;player.addEffect(new MobEffectInstance(MobEffects.FIRE_RESISTANCE,202,amplifier,true,true));for(var pos:lights(player))BrightNitorItem.place(player.level(),pos,true);}
+ @net.neoforged.bus.api.SubscribeEvent public static void tick(net.neoforged.neoforge.event.tick.EntityTickEvent.Post event){if(event.getEntity() instanceof Player player&&!player.level().isClientSide)update(player);}
+ public static boolean healFire(LivingEntity entity,net.minecraft.world.damagesource.DamageSource source,float amount){if(!entity.level().isClientSide&&entity instanceof Player player&&player.getItemBySlot(EquipmentSlot.LEGS).getItem() instanceof AwakenedLegs&&source.is(net.minecraft.tags.DamageTypeTags.IS_FIRE)&&AwakenedArmorStatus.enabled(player)){player.heal(amount);return true;}return false;}
+
+ static void research(){var r=new KamiResearch("ICHORCLOTH_LEGS_GEM",new AspectList().add(Aspect.FIRE,2).add(Aspect.HEAL,1).add(Aspect.GREED,1).add(Aspect.ENERGY,1),17,9,5,new ItemStack(ITEM.get()));r.setParents("ICHORCLOTH_ARMOR");r.setPages(new thaumcraft.api.research.ResearchPage("ttresearch.page.ICHORCLOTH_LEGS_GEM.0"),MagnetResearch.page("ICHORCLOTH_LEGS_GEM",thaumcraft.api.research.ResearchPage.PageType.INFUSION_CRAFTING),new thaumcraft.api.research.ResearchPage("ttresearch.page.ICHORCLOTH_LEGS_GEM.1")).registerResearchItem();ThaumicTinkererModern.INFUSION_RECIPES.add(new dev.eugheist.tc4modern.InfusionItemRecipes.Recipe("ICHORCLOTH_LEGS_GEM","ICHORCLOTH_LEGS_GEM",ITEM::get,13,new AspectList().add(Aspect.FIRE,50).add(Aspect.ARMOR,32).add(Aspect.HEAL,32).add(Aspect.ENERGY,32).add(Aspect.LIGHT,64).add(Aspect.GREED,16).add(Aspect.ELDRITCH,16),()->KamiArmor.ITEMS.get(2).get(),java.util.List.of(()->Items.DIAMOND,()->KamiResources.item(KamiResources.Kind.ICHOR),()->KamiResources.item(KamiResources.Kind.ICHOR),()->FocusResearch.item("focus_primal"),()->FocusResearch.item("thaumonomicon"),()->Items.GOLDEN_CHESTPLATE,()->Items.POTION,()->ThaumicTinkererModern.FOCUS_SMELT.get(),()->ThaumicTinkererModern.BRIGHT_NITOR.get(),()->Items.LAVA_BUCKET,()->Items.FIRE_CHARGE,()->Items.BLAZE_ROD)));}
+ public static java.util.List<ItemStack> components(java.util.List<ItemStack> original){var result=new java.util.ArrayList<>(original);result.set(6,net.minecraft.world.item.alchemy.PotionContents.createItemStack(Items.POTION,net.minecraft.world.item.alchemy.Potions.FIRE_RESISTANCE));return result;}
+}

@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "#minecraft:enchantable/sword"
+  ],
+  "remove": [
+    "ttinkerer:blood_sword"
+  ]
+}

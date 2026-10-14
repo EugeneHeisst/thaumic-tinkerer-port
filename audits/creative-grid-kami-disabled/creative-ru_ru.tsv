@@ -1,0 +1,122 @@
+index	item	name	pattern	foil	tint
+0	tc4modern:wand	Покрытый таум-металлом серебродревесный жезл		false	ffffffff
+1	ttinkerer:mob_aspect_aqua	Аспект души		false	ffffffff
+2	ttinkerer:mob_aspect_humanus	Аспект души		false	ffffffff
+3	ttinkerer:mob_aspect_aer	Аспект души		false	ffffffff
+4	ttinkerer:mob_aspect_volatus	Аспект души		false	ffffffff
+5	ttinkerer:mob_aspect_ignis	Аспект души		false	ffffffff
+6	ttinkerer:mob_aspect_praecantatio	Аспект души		false	ffffffff
+7	ttinkerer:mob_aspect_exanimis	Аспект души		false	ffffffff
+8	ttinkerer:mob_aspect_corpus	Аспект души		false	ffffffff
+9	ttinkerer:mob_aspect_bestia	Аспект души		false	ffffffff
+10	ttinkerer:mob_aspect_venenum	Аспект души		false	ffffffff
+11	ttinkerer:mob_aspect_terra	Аспект души		false	ffffffff
+12	ttinkerer:mob_aspect_alienis	Аспект души		false	ffffffff
+13	ttinkerer:mob_aspect_iter	Аспект души		false	ffffffff
+14	ttinkerer:mob_aspect_metallum	Аспект души		false	ffffffff
+15	ttinkerer:mob_aspect_limus	Аспект души		false	ffffffff
+16	ttinkerer:mob_aspect_pannus	Аспект души		false	ffffffff
+17	ttinkerer:mob_aspect_messis	Аспект души		false	ffffffff
+18	ttinkerer:dark_quartz_block	Блок закоптившегося кварца		false	ffffffff
+19	ttinkerer:funnel	Воронка для эссенции		false	ffffffff
+20	ttinkerer:gaseous_shadow_bottle	Газ темноты		false	ffffffff
+21	ttinkerer:bright_nitor	Гиперэнергетический нитор		false	ffffffff
+22	ttinkerer:animation_tablet	Динамическая дощечка		false	ffffffff
+23	ttinkerer:dark_quartz	Закоптившийся кварц		false	ffffffff
+24	ttinkerer:infused_potion_air	Зелье Aer		true	ffffffff
+25	ttinkerer:infused_potion_water	Зелье Aqua		true	ffffffff
+26	ttinkerer:infused_potion_fire	Зелье Ignis		true	ffffffff
+27	ttinkerer:infused_potion_earth	Зелье Terra		true	ffffffff
+28	ttinkerer:magnet	Кинетический притяжатель		false	ffffffff
+29	ttinkerer:dark_quartz_pillar	Колонна из закоптившегося кварца		false	ffffffff
+30	ttinkerer:locomotive	Левитатор		false	ffffffff
+31	ttinkerer:mob_magnet	Материальный притяжатель		false	ffffffff
+32	ttinkerer:soul_mould	Матрица души		false	ffffffff
+33	ttinkerer:soul_mould	Матрица души	minecraft:snow_golem	false	ffffffff
+34	ttinkerer:soul_mould	Матрица души	minecraft:bat	false	ffffffff
+35	ttinkerer:soul_mould	Матрица души	minecraft:blaze	false	ffffffff
+36	ttinkerer:soul_mould	Матрица души	tc4modern:brainy_zombie	false	ffffffff
+37	ttinkerer:soul_mould	Матрица души	tc4modern:firebat	false	ffffffff
+38	ttinkerer:soul_mould	Матрица души	minecraft:cave_spider	false	ffffffff
+39	ttinkerer:soul_mould	Матрица души	minecraft:chicken	false	ffffffff
+40	ttinkerer:soul_mould	Матрица души	minecraft:cow	false	ffffffff
+41	ttinkerer:soul_mould	Матрица души	minecraft:creeper	false	ffffffff
+42	ttinkerer:soul_mould	Матрица души	minecraft:enderman	false	ffffffff
+43	ttinkerer:soul_mould	Матрица души	minecraft:ghast	false	ffffffff
+44	ttinkerer:soul_mould	Матрица души	minecraft:horse	false	ffffffff
+45	ttinkerer:soul_mould	Матрица души	minecraft:iron_golem	false	ffffffff
+46	ttinkerer:soul_mould	Матрица души	minecraft:magma_cube	false	ffffffff
+47	ttinkerer:soul_mould	Матрица души	minecraft:mooshroom	false	ffffffff
+48	ttinkerer:soul_mould	Матрица души	minecraft:ocelot	false	ffffffff
+49	ttinkerer:soul_mould	Матрица души	minecraft:pig	false	ffffffff
+50	ttinkerer:soul_mould	Матрица души	minecraft:zombified_piglin	false	ffffffff
+51	ttinkerer:soul_mould	Матрица души	minecraft:sheep	false	ffffffff
+52	ttinkerer:soul_mould	Матрица души	minecraft:silverfish	false	ffffffff
+53	ttinkerer:soul_mould	Матрица души	minecraft:skeleton	false	ffffffff
+54	ttinkerer:soul_mould	Матрица души	minecraft:slime	false	ffffffff
+55	ttinkerer:soul_mould	Матрица души	minecraft:spider	false	ffffffff
+56	ttinkerer:soul_mould	Матрица души	minecraft:squid	false	ffffffff
+57	ttinkerer:soul_mould	Матрица души	minecraft:villager	false	ffffffff
+58	ttinkerer:soul_mould	Матрица души	tc4modern:wisp	false	ffffffff
+59	ttinkerer:soul_mould	Матрица души	minecraft:witch	false	ffffffff
+60	ttinkerer:soul_mould	Матрица души	minecraft:wolf	false	ffffffff
+61	ttinkerer:soul_mould	Матрица души	minecraft:zombie	false	ffffffff
+62	ttinkerer:focus_ender_chest	Набалдашник: Вмешательство Края		false	ffffffff
+63	ttinkerer:focus_deflect	Набалдашник: Искажение		false	ffffffff
+64	ttinkerer:focus_heal	Набалдашник: Лечение		false	ffffffff
+65	ttinkerer:focus_dislocation	Набалдашник: Перемещение		false	ffffffff
+66	ttinkerer:focus_smelt	Набалдашник: Пламя ифрита		false	ffffffff
+67	ttinkerer:focus_flight	Набалдашник: Подъём		false	ffffffff
+68	ttinkerer:focus_telekinesis	Набалдашник: Телекинез		false	ffffffff
+69	ttinkerer:infused_seeds	Наполненные семена		true	ffffffff
+70	ttinkerer:infused_seeds	Наполненные семена		true	ffffffff
+71	ttinkerer:infused_seeds	Наполненные семена		true	ffffffff
+72	ttinkerer:infused_seeds	Наполненные семена		true	ffffffff
+73	ttinkerer:infused_seeds	Наполненные семена		true	ffffffff
+74	ttinkerer:infused_seeds	Наполненные семена		true	ffffffff
+75	ttinkerer:mob_aspect_aqua_infused	Наполненный аспект души		true	ffffffff
+76	ttinkerer:mob_aspect_humanus_infused	Наполненный аспект души		true	ffffffff
+77	ttinkerer:mob_aspect_aer_infused	Наполненный аспект души		true	ffffffff
+78	ttinkerer:mob_aspect_volatus_infused	Наполненный аспект души		true	ffffffff
+79	ttinkerer:mob_aspect_ignis_infused	Наполненный аспект души		true	ffffffff
+80	ttinkerer:mob_aspect_praecantatio_infused	Наполненный аспект души		true	ffffffff
+81	ttinkerer:mob_aspect_exanimis_infused	Наполненный аспект души		true	ffffffff
+82	ttinkerer:mob_aspect_corpus_infused	Наполненный аспект души		true	ffffffff
+83	ttinkerer:mob_aspect_bestia_infused	Наполненный аспект души		true	ffffffff
+84	ttinkerer:mob_aspect_venenum_infused	Наполненный аспект души		true	ffffffff
+85	ttinkerer:mob_aspect_terra_infused	Наполненный аспект души		true	ffffffff
+86	ttinkerer:mob_aspect_alienis_infused	Наполненный аспект души		true	ffffffff
+87	ttinkerer:mob_aspect_iter_infused	Наполненный аспект души		true	ffffffff
+88	ttinkerer:mob_aspect_metallum_infused	Наполненный аспект души		true	ffffffff
+89	ttinkerer:mob_aspect_limus_infused	Наполненный аспект души		true	ffffffff
+90	ttinkerer:mob_aspect_pannus_infused	Наполненный аспект души		true	ffffffff
+91	ttinkerer:mob_aspect_messis_infused	Наполненный аспект души		true	ffffffff
+92	ttinkerer:enchanter	Осмотический стол зачарований		false	ffffffff
+93	ttinkerer:dark_quartz_slab	Плита закоптившегося кварца		false	ffffffff
+94	ttinkerer:blood_sword	Проклятое лезвие духа		false	ffffffff
+95	ttinkerer:infused_grain_air	Пропитанные зёрна		false	ffffffff
+96	ttinkerer:infused_grain_fire	Пропитанные зёрна		false	ffffffff
+97	ttinkerer:infused_grain_earth	Пропитанные зёрна		false	ffffffff
+98	ttinkerer:infused_grain_water	Пропитанные зёрна		false	ffffffff
+99	ttinkerer:fire_air	Пропитанный Aer огонь		false	ffffffff
+100	ttinkerer:fire_water	Пропитанный Aqua огонь		false	ffffffff
+101	ttinkerer:fire_fire	Пропитанный Ignis огонь		false	ffffffff
+102	ttinkerer:fire_order	Пропитанный Ordo огонь		false	ffffffff
+103	ttinkerer:fire_entropy	Пропитанный Perditio огонь		false	ffffffff
+104	ttinkerer:fire_earth	Пропитанный Terra огонь		false	ffffffff
+105	ttinkerer:summon_tablet	Пьедестал некроманта		false	ffffffff
+106	ttinkerer:gas_remover	Рассеиватель газа		false	ffffffff
+107	ttinkerer:chiseled_dark_quartz	Резной блок закоптившегося кварца		false	ffffffff
+108	ttinkerer:gaseous_light_bottle	Светящийся газ		false	ffffffff
+109	ttinkerer:locomotive_relay	Стрелка левитатора		false	ffffffff
+110	ttinkerer:dark_quartz_stairs	Ступеньки закоптившегося кварца		false	ffffffff
+111	ttinkerer:cleansing_talisman	Талисман очищения		false	ffffffff
+112	ttinkerer:xp_talisman	Талисман удержания		false	ffffffff
+113	ttinkerer:repairer	Таум-восстановитель		false	ffffffff
+114	ttinkerer:spell_cloth	Ткань поглощения заклинаний		false	ffbf80ff
+115	ttinkerer:share_tome	Том записи исследований		true	ffffffff
+116	ttinkerer:transvector_interface	Трансвектор		false	ffffffff
+117	ttinkerer:dislocator	Трансвекторный дислокатор		false	ffffffff
+118	ttinkerer:connector	Трансвекторный соединитель		false	ffffffff
+119	ttinkerer:revealing_helm	Шлем открытия		false	ffffffff
+120	ttinkerer:platform	Эфирная платформа		false	ffffffff

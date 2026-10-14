@@ -1,0 +1,9 @@
+{
+  "replace": false,
+  "values": [
+    "#ttinkerer:digger_enchantable"
+  ],
+  "remove": [
+    "tc4modern:elemental_axe"
+  ]
+}

@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "ttinkerer:block/locomotive_relay"
+    }
+  }
+}

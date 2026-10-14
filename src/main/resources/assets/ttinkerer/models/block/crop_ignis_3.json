@@ -1,0 +1,1 @@
+{"parent": "minecraft:block/crop", "textures": {"crop": "ttinkerer:blocks/crop_ignis_3"}, "render_type": "minecraft:cutout"}

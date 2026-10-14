@@ -1,0 +1,7 @@
+.gradle/
+build/
+run-*/
+*.log
+related/
+releases/
+versions/

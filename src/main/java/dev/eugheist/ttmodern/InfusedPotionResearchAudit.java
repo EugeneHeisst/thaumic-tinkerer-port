@@ -1,0 +1,17 @@
+package dev.eugheist.ttmodern;
+import net.minecraft.world.item.*;
+import thaumcraft.api.aspects.*;
+import thaumcraft.api.research.*;
+final class InfusedPotionResearchAudit {
+ private static void check(boolean ok,String label){if(!ok)throw new IllegalStateException("TT potion research: "+label);}
+ static void run(){
+  var research=ResearchCategories.getResearch("INFUSED_POTIONS");check(research!=null&&research.displayColumn==7&&research.displayRow==-5&&research.getComplexity()==2&&research.isConcealed()&&!research.isSecondary(),"original research position/flags");
+  check(research.tags.size()==2&&research.tags.getAmount(Aspect.WATER)==5&&research.tags.getAmount(Aspect.ENTROPY)==5,"original research aspects");check(java.util.Arrays.equals(research.parentsHidden,new String[]{"INFUSION"}),"hidden infusion prerequisite");
+  if(TinkererConfig.fireEnabled())check(java.util.Arrays.equals(research.parents,new String[]{"FIRE_PERDITIO","FIRE_ORDO","FIRE_IGNIS","FIRE_TERRA","FIRE_AER","FIRE_AQUA"}),"all six original fire prerequisites");else check(research.parents==null||research.parents.length==0,"fire disabled no unavailable prerequisite");
+  check(InfusedSeedData.read(research.icon_item).mainAspect()==Aspect.FIRE,"research icon carries fire seed data");var pages=research.getPages();check(pages.length==11,"six texts/cycling seed infusion/four potion pages");for(int i=0;i<6;i++)check(pages[i].type==ResearchPage.PageType.TEXT&&pages[i].text.equals("ttresearch.page.INFUSED_POTIONS."+i),"text page order");check(pages[6].type==ResearchPage.PageType.INFUSION_CRAFTING&&pages[6].recipeKey.equals("INFUSED_POTIONS"),"original four recipe cycling page");
+  Item[] grains={ThaumicTinkererModern.INFUSED_GRAIN_AIR.get(),ThaumicTinkererModern.INFUSED_GRAIN_FIRE.get(),ThaumicTinkererModern.INFUSED_GRAIN_EARTH.get(),ThaumicTinkererModern.INFUSED_GRAIN_WATER.get()};Item[] potions={InfusedPotions.POTION_AIR.get(),InfusedPotions.POTION_FIRE.get(),InfusedPotions.POTION_EARTH.get(),InfusedPotions.POTION_WATER.get()};Aspect[] aspects={Aspect.AIR,Aspect.FIRE,Aspect.EARTH,Aspect.WATER};
+  var recipes=dev.eugheist.tc4modern.CrucibleRecipes.byKey();
+  for(int i=0;i<4;i++){String key="INFUSED_POTIONSPOT"+i;var recipe=recipes.get(key);check(recipe!=null&&recipe.key.equals("INFUSED_POTIONS"),"map key separate from shared research gate");check(pages[7+i].type==ResearchPage.PageType.CRUCIBLE_CRAFTING&&pages[7+i].recipeKey.equals(key),"potion page order");var cost=new AspectList().add(Aspect.AURA,5).add(aspects[i],5);var catalyst=new ItemStack(grains[i]);check(recipe.aspects.size()==2&&recipe.matches(cost,catalyst),"exact catalyst/aspect cost");check(recipe.getRecipeOutput().is(potions[i])&&recipe.getRecipeOutput().getCount()==1,"original potion output");check(thaumcraft.api.crafting.CrucibleRecipe.findMatching(java.util.List.of(recipe),java.util.Set.of(),cost,catalyst)==null,"locked without research");check(thaumcraft.api.crafting.CrucibleRecipe.findMatching(java.util.List.of(recipe),java.util.Set.of("INFUSED_POTIONS"),cost,catalyst)==recipe,"actual shared gate allows craft");check(recipe.removeMatching(cost).visSize()==0,"exact essentia consumption");for(int j=0;j<4;j++)if(i!=j)check(!recipe.catalystMatches(new ItemStack(grains[j])),"wrong elemental grain rejected");}
+  System.out.println("TT POTION RESEARCH AUDIT: ALL PASS (original prerequisites/config,icon,11 pages,four native crucible recipes,shared research gate,cost/catalysts)");
+ }
+}

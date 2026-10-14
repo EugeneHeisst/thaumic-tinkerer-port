@@ -1,0 +1,92 @@
+Original build164 optional integration inventory (2026-10-12)
+Source root: /home/eugheist/thaumic-tinkerer-reference/build164
+This is a requirement inventory, not a completion claim.
+
+ComputerCraft: base TC4 device drivers, analyzer, golem connector, item/mob
+magnets, transvector interface and Fume turtle tool implemented and tested.
+Animation tablet now exposes its original eight methods; native capability,
+rotation, empty/equipped/busy triggers, persistence and stale isolation pass.
+Actual Lua dispatch passed /tmp/tt-tablet-cc-lua.log; all eight commands verified.
+All optional interface/callback
+declarations must be scanned recursively, not just tile/.
+
+OpenComputers:7files in common/peripheral/OpenComputers plus SimpleComponent
+callbacks on addon tiles; common/core/proxy/TTCommonProxy.initOpenCDrivers.
+OCCompat.InitOC being empty does not mean there are no OC drivers. Modern API
+and runtime target still require selection/verification; no completion claim.
+
+AE2 movement: original TileCamo (platform,transvector,golem connector), magnets,
+relay, animation tablet, repairer, enchanter, funnel and aspect analyzer implement
+IMovableTile. Native locomotive now honors
+this internal contract independently of AE2 and stops tablet breaking before
+serializing. Modern AE2 external spatial strategy now registered for all own
+MovableTile types; real registry begin/complete callbacks tested with AE219.2.18.
+Real spatial cell allocation/store/retrieve now tested for all 12 addon block
+variants with CC (10 without), crossing into AE2 spatial dimension and back.
+Pylon layout, IO-port redstone/energy and client rendering are not covered here.
+Locomotive now uses the AE2 strategy for all tile passengers when AE2 is present,
+respecting spatial blacklist and nullable beginMove refusal. Foreign TC4 jar
+custom handler dispatch/accept/refuse/partial failure/exception rollback tested.
+Rollback restores train and passenger; repeated same-tick retries are prevented.
+Blacklist tested via temporary datapack adding void_jar to nested
+c:relocation_not_supported: real loaded AE2 blacklist leaves it intact and
+invokes neither beginMove nor completeMove. Datapack restored after isolated run.
+All 11 applicable own passenger variants pass native movement with CC present
+(9 without CC); furnace-like state/inventories and tool damage are conserved.
+Funnel has the contract but cannot ride a locomotive because it needs a hopper
+support. Native regression verifies it stays intact with its stored jar.
+Modern API candidate verified directly in released AE2 19.2.18 for MC1.21.1,
+Modrinth version KDnFUmMm: BlockEntityMoveStrategies + IBlockEntityMoveStrategy,
+beginMove(entity,registries) returning nullable NBT and completeMove restoring
+a new entity. Runtime /tmp/tt-ae2-19.2.18.jar hash verified against version API.
+Requires GuideME >=21.1.1; tested isolated runtime GuideME21.1.19.
+AE2 optional compile dependency and startup hook added; production untouched.
+BlockRPlacer/TileRPlacer exists in source but no registry reference found yet;
+do not add unused original code as gameplay before checking original registry.
+
+RF/CoFH: transvector energy forwarding adapted to native NeoForge FE and tested.
+IC2: separate EnergySink, load/unload network events, voltage and tier methods in
+common/block/tile/transvector/TileTransvectorInterface.java and
+common/compat/IndustrialcraftUnloadHelper.java; modern equivalent not settled.
+
+Botania: common/compat/BotaniaFunctions.java adds IManaBurst deflection exclusion;
+benign mana burst lenses exclude lens metadata8/11 from harmless classification.
+Blood Magic: EntityParticleBeam deflection exclusion via common/compat/BloodMagic.
+Modern entity/API identities and actual runtime checks remain pending.
+
+EnderStorage: ender-chest focus crouch-binds chest frequency and owner, resets
+on vanilla ender chest, opens matching EnderStorage inventory after vis payment,
+owner tooltip and sorting helper. Original common/compat/EnderStorageFunctions.
+Current vanilla ender focus does not prove this optional colored network path.
+
+TConstruct: repairer special tool durability/broken flags, charged-tool exclusion,
+modifier/repair-count/repair-cost formula. Original common/compat/
+TinkersConstructCompat.java; generic vanilla durability repair is not equivalent.
+
+ForgeMultipart: TTCommonProxy reflectively registers common/multipart/
+MultipartHandler; exact registered multipart behavior and modern counterpart
+remain pending. Waila providers TTinkererProvider/MagnetProvider also require
+inventory before a claim that all optional integrations are carried over.
+
+Waila detailed inventory: TTinkererProvider callback is sent by original mod
+preInit when Waila present; tablet current tool (modes only if equipped),
+transvector connected tile name + coordinates (nothing if no tile), repairer
+repairing/finished based on damage (no line if empty), warp gate incoming lock,
+magnet pull/push plus mob age and optional entity filter. Native DeviceTooltip
+formatter and server-state regression now implemented. Jade15.10.6 optional
+plugin/server data/client component providers now registered and verified.
+Localized component payload round trips pass. Actual integrated-world Jade
+ray trace/server requests/HUD callbacks and live tablet mode refresh now pass;
+both rendered HUD states inspected. Other device HUD cases and a separate
+WTHIT adapter remain unverified/unimplemented respectively. Warp gate original
+labels inverted locked flag; formatter intentionally fixes that misleading text.
+Modern Jade candidate 15.10.6+neoforge, Modrinth version eYz2YBGT, verified version
+metadata for MC1.21.1; hash-verified runtime /tmp/tt-jade-runtime.jar used only in
+isolated checks. Added compile-only dependency and optional metadata.
+
+ForgeMultipart detailed inventory: executed MultipartHandler registers 16 micro
+materials: TC customOre meta0,7; woodenDevice6,7; magicalLog0; magicalLeaves0;
+cosmeticOpaque0; cosmeticSolid0..6; addon DarkQuartz0..1. MetadataLine uses strict
+<max, not <=max. RegisterBlockPart/PartNitor/PartCandle classes have no callers
+found in original addon, so do not claim active nitor/candle converter gameplay.
+Modern material registry mapping/runtime and real saw/cut/place tests pending.

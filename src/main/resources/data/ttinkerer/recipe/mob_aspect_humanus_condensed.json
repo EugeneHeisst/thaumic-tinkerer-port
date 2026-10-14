@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "XXX",
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "ttinkerer:mob_aspect_humanus"
+    }
+  },
+  "result": {
+    "id": "ttinkerer:mob_aspect_humanus_condensed",
+    "count": 1
+  }
+}

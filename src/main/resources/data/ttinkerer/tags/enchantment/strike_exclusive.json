@@ -1,0 +1,10 @@
+{
+  "replace": false,
+  "values": [
+    "#ttinkerer:tool_exclusive"
+  ],
+  "remove": [
+    "minecraft:knockback",
+    "minecraft:looting"
+  ]
+}

@@ -1,0 +1,549 @@
+[
+  {
+    "key": "INFUSED_POTIONS",
+    "source": "common/item/ItemInfusedPotion.java",
+    "parents": []
+  },
+  {
+    "key": "INFUSED_POTIONS",
+    "source": "common/item/ItemInfusedPotion.java",
+    "parents": [
+      "FIRE_PERDITIO",
+      "FIRE_ORDO",
+      "FIRE_IGNIS",
+      "FIRE_TERRA",
+      "FIRE_AER",
+      "FIRE_AQUA"
+    ]
+  },
+  {
+    "key": "SHARE_TOME",
+    "source": "common/item/ItemShareBook.java",
+    "parents": []
+  },
+  {
+    "key": "CLEANSING_TALISMAN",
+    "source": "common/item/ItemCleansingTalisman.java",
+    "parents": [
+      "DARK_QUARTZ"
+    ]
+  },
+  {
+    "key": "BLOOD_SWORD",
+    "source": "common/item/ItemBloodSword.java",
+    "parents": [
+      "CLEANSING_TALISMAN"
+    ]
+  },
+  {
+    "key": "SPELL_CLOTH",
+    "source": "common/item/ItemSpellCloth.java",
+    "parents": []
+  },
+  {
+    "key": "GAS_REMOVER",
+    "source": "common/item/ItemGasRemover.java",
+    "parents": [
+      "GASEOUS_SHADOW"
+    ]
+  },
+  {
+    "key": "XP_TALISMAN",
+    "source": "common/item/ItemXPTalisman.java",
+    "parents": [
+      "JARBRAIN",
+      "SPELL_CLOTH"
+    ]
+  },
+  {
+    "key": "REVEALING_HELM",
+    "source": "common/item/ItemRevealingHelm.java",
+    "parents": [
+      "GOGGLES"
+    ]
+  },
+  {
+    "key": "GASEOUS_SHADOW",
+    "source": "common/item/ItemGas.java",
+    "parents": [
+      "GASEOUS_LIGHT"
+    ]
+  },
+  {
+    "key": "GASEOUS_LIGHT",
+    "source": "common/item/ItemGas.java",
+    "parents": [
+      "NITOR"
+    ]
+  },
+  {
+    "key": "BRIGHT_NITOR",
+    "source": "common/item/ItemBrightNitor.java",
+    "parents": [
+      "GASEOUS_LIGHT"
+    ]
+  },
+  {
+    "key": "SUMMON",
+    "source": "common/block/BlockSummon.java",
+    "parents": [
+      "BLOOD_SWORD"
+    ]
+  },
+  {
+    "key": "FUNNEL",
+    "source": "common/block/BlockFunnel.java",
+    "parents": [
+      "BRIGHT_NITOR"
+    ]
+  },
+  {
+    "key": "ANIMATION_TABLET",
+    "source": "common/block/BlockAnimationTablet.java",
+    "parents": [
+      "MAGNETS"
+    ]
+  },
+  {
+    "key": "ASPECT_ANALYZER",
+    "source": "common/block/BlockAspectAnalyzer.java",
+    "parents": [
+      "PERIPHERALS"
+    ]
+  },
+  {
+    "key": "MAGNETS",
+    "source": "common/block/BlockMagnet.java",
+    "parents": [
+      "INTERFACE"
+    ]
+  },
+  {
+    "key": "ENCHANTER",
+    "source": "common/block/BlockEnchanter.java",
+    "parents": [
+      "SPELL_CLOTH"
+    ]
+  },
+  {
+    "key": "PLATFORM",
+    "source": "common/block/BlockPlatform.java",
+    "parents": [
+      "CLEANSING_TALISMAN"
+    ]
+  },
+  {
+    "key": "GOLEM_CONNECTOR",
+    "source": "common/block/BlockGolemConnector.java",
+    "parents": [
+      "PERIPHERALS"
+    ]
+  },
+  {
+    "key": "REPAIRER",
+    "source": "common/block/BlockRepairer.java",
+    "parents": [
+      "FUNNEL"
+    ]
+  },
+  {
+    "key": "REMOTE_PLACER",
+    "source": "common/block/BlockRPlacer.java",
+    "parents": [
+      "ANIMATION_TABLET"
+    ]
+  },
+  {
+    "key": "TTENCH_ASCENT_BOOST",
+    "source": "common/research/ResearchHelper.java",
+    "parents": [
+      "ENCHANTER"
+    ]
+  },
+  {
+    "key": "TTENCH_SLOW_FALL",
+    "source": "common/research/ResearchHelper.java",
+    "parents": [
+      "ENCHANTER"
+    ]
+  },
+  {
+    "key": "TTENCH_AUTO_SMELT",
+    "source": "common/research/ResearchHelper.java",
+    "parents": [
+      "ENCHANTER"
+    ]
+  },
+  {
+    "key": "TTENCH_DESINTEGRATE",
+    "source": "common/research/ResearchHelper.java",
+    "parents": [
+      "ENCHANTER"
+    ]
+  },
+  {
+    "key": "TTENCH_QUICK_DRAW",
+    "source": "common/research/ResearchHelper.java",
+    "parents": [
+      "ENCHANTER"
+    ]
+  },
+  {
+    "key": "TTENCH_VAMPIRISM",
+    "source": "common/research/ResearchHelper.java",
+    "parents": [
+      "ENCHANTER"
+    ]
+  },
+  {
+    "key": "TTENCH_FOCUSED",
+    "source": "common/research/ResearchHelper.java",
+    "parents": [
+      "TTENCH_VAMPIRISM"
+    ]
+  },
+  {
+    "key": "TTENCH_DISPERSED",
+    "source": "common/research/ResearchHelper.java",
+    "parents": [
+      "TTENCH_VAMPIRISM"
+    ]
+  },
+  {
+    "key": "TTENCH_FINAL",
+    "source": "common/research/ResearchHelper.java",
+    "parents": [
+      "TTENCH_FOCUSED",
+      "TTENCH_DISPERSED"
+    ]
+  },
+  {
+    "key": "TTENCH_POUNCE",
+    "source": "common/research/ResearchHelper.java",
+    "parents": [
+      "TTENCH_ASCENT_BOOST"
+    ]
+  },
+  {
+    "key": "TTENCH_SHATTER",
+    "source": "common/research/ResearchHelper.java",
+    "parents": [
+      "TTENCH_DESINTEGRATE"
+    ]
+  },
+  {
+    "key": "TTENCH_SHOCKWAVE",
+    "source": "common/research/ResearchHelper.java",
+    "parents": [
+      "TTENCH_SLOW_FALL"
+    ]
+  },
+  {
+    "key": "TTENCH_TUNNEL",
+    "source": "common/research/ResearchHelper.java",
+    "parents": [
+      "TTENCH_AUTO_SMELT"
+    ]
+  },
+  {
+    "key": "TTENCH_VALIANCE",
+    "source": "common/research/ResearchHelper.java",
+    "parents": [
+      "TTENCH_VAMPIRISM"
+    ]
+  },
+  {
+    "key": "PERIPHERALS",
+    "source": "common/research/ResearchHelper.java",
+    "parents": []
+  },
+  {
+    "key": "FIRE_PERDITIO",
+    "source": "common/block/fire/BlockFireChaos.java",
+    "parents": [
+      "BRIGHT_NITOR"
+    ]
+  },
+  {
+    "key": "FIRE_AQUA",
+    "source": "common/block/fire/BlockFireWater.java",
+    "parents": [
+      "BRIGHT_NITOR"
+    ]
+  },
+  {
+    "key": "FIRE_IGNIS",
+    "source": "common/block/fire/BlockFireIgnis.java",
+    "parents": [
+      "BRIGHT_NITOR"
+    ]
+  },
+  {
+    "key": "FIRE_TERRA",
+    "source": "common/block/fire/BlockFireEarth.java",
+    "parents": [
+      "BRIGHT_NITOR"
+    ]
+  },
+  {
+    "key": "FIRE_AER",
+    "source": "common/block/fire/BlockFireAir.java",
+    "parents": [
+      "BRIGHT_NITOR"
+    ]
+  },
+  {
+    "key": "FIRE_ORDO",
+    "source": "common/block/fire/BlockFireOrder.java",
+    "parents": [
+      "BRIGHT_NITOR"
+    ]
+  },
+  {
+    "key": "INTERFACE",
+    "source": "common/block/transvector/BlockTransvectorInterface.java",
+    "parents": [
+      "DARK_QUARTZ"
+    ]
+  },
+  {
+    "key": "DISLOCATOR",
+    "source": "common/block/transvector/BlockTransvectorDislocator.java",
+    "parents": [
+      "INTERFACE"
+    ]
+  },
+  {
+    "key": "WARP_GATE",
+    "source": "common/block/kami/BlockWarpGate.java",
+    "parents": [
+      "ICHORCLOTH_CHEST_GEM"
+    ]
+  },
+  {
+    "key": "LEVITATOR",
+    "source": "common/block/mobilizer/BlockMobilizer.java",
+    "parents": [
+      "MAGNETS"
+    ]
+  },
+  {
+    "key": "PLACEMENT_MIRROR",
+    "source": "common/item/kami/ItemPlacementMirror.java",
+    "parents": [
+      "BLOCK_TALISMAN"
+    ]
+  },
+  {
+    "key": "CAT_AMULET",
+    "source": "common/item/kami/ItemCatAmulet.java",
+    "parents": [
+      "ICHORIUM"
+    ]
+  },
+  {
+    "key": "DIMENSION_SHARDS",
+    "source": "common/item/kami/ItemKamiResource.java",
+    "parents": []
+  },
+  {
+    "key": "ICHOR",
+    "source": "common/item/kami/ItemKamiResource.java",
+    "parents": []
+  },
+  {
+    "key": "ICHOR_CLOTH",
+    "source": "common/item/kami/ItemKamiResource.java",
+    "parents": [
+      "ICHOR"
+    ]
+  },
+  {
+    "key": "ICHORIUM",
+    "source": "common/item/kami/ItemKamiResource.java",
+    "parents": [
+      "ICHOR"
+    ]
+  },
+  {
+    "key": "CAP_ICHOR",
+    "source": "common/item/kami/ItemKamiResource.java",
+    "parents": [
+      "ICHORIUM"
+    ]
+  },
+  {
+    "key": "ROD_ICHORCLOTH",
+    "source": "common/item/kami/ItemKamiResource.java",
+    "parents": [
+      "ICHOR_CLOTH"
+    ]
+  },
+  {
+    "key": "PROTOCLAY",
+    "source": "common/item/kami/ItemProtoclay.java",
+    "parents": [
+      "ICHOR_PICK_GEM"
+    ]
+  },
+  {
+    "key": "ICHOR_POUCH",
+    "source": "common/item/kami/ItemIchorPouch.java",
+    "parents": [
+      "ICHOR_CLOTH"
+    ]
+  },
+  {
+    "key": "BLOCK_TALISMAN",
+    "source": "common/item/kami/ItemBlockTalisman.java",
+    "parents": [
+      "ICHOR_PICK_GEM",
+      "ICHOR_SHOVEL_GEM"
+    ]
+  },
+  {
+    "key": "FOCUS_SMELT",
+    "source": "common/item/foci/ItemFocusSmelt.java",
+    "parents": [
+      "FOCUSEXCAVATION"
+    ]
+  },
+  {
+    "key": "FOCUS_TELEKINESIS",
+    "source": "common/item/foci/ItemFocusTelekinesis.java",
+    "parents": [
+      "FOCUS_FLIGHT"
+    ]
+  },
+  {
+    "key": "FOCUS_DEFLECT",
+    "source": "common/item/foci/ItemFocusDeflect.java",
+    "parents": [
+      "FOCUS_SMELT"
+    ]
+  },
+  {
+    "key": "FOCUS_FLIGHT",
+    "source": "common/item/foci/ItemFocusFlight.java",
+    "parents": [
+      "FOCUS_SMELT"
+    ]
+  },
+  {
+    "key": "FOCUS_ENDER_CHEST",
+    "source": "common/item/foci/ItemFocusEnderChest.java",
+    "parents": [
+      "FOCUS_DEFLECT"
+    ]
+  },
+  {
+    "key": "FOCUS_DISLOCATION",
+    "source": "common/item/foci/ItemFocusDislocation.java",
+    "parents": [
+      "FOCUS_FLIGHT"
+    ]
+  },
+  {
+    "key": "FOCUS_HEAL",
+    "source": "common/item/foci/ItemFocusHeal.java",
+    "parents": [
+      "FOCUS_DEFLECT"
+    ]
+  },
+  {
+    "key": "DARK_QUARTZ",
+    "source": "common/item/quartz/ItemDarkQuartz.java",
+    "parents": []
+  },
+  {
+    "key": "ICHOR_AXE_GEM",
+    "source": "common/item/kami/tool/ItemIchorAxeAdv.java",
+    "parents": [
+      "ICHOR_TOOLS"
+    ]
+  },
+  {
+    "key": "ICHOR_SWORD_GEM",
+    "source": "common/item/kami/tool/ItemIchorSwordAdv.java",
+    "parents": [
+      "ICHOR_TOOLS"
+    ]
+  },
+  {
+    "key": "ICHOR_SHOVEL_GEM",
+    "source": "common/item/kami/tool/ItemIchorShovelAdv.java",
+    "parents": [
+      "ICHOR_TOOLS"
+    ]
+  },
+  {
+    "key": "ICHOR_TOOLS",
+    "source": "common/item/kami/tool/ItemIchorPick.java",
+    "parents": [
+      "ICHORIUM"
+    ]
+  },
+  {
+    "key": "ICHOR_PICK_GEM",
+    "source": "common/item/kami/tool/ItemIchorPickAdv.java",
+    "parents": [
+      "ICHOR_TOOLS"
+    ]
+  },
+  {
+    "key": "ICHORCLOTH_HELM_GEM",
+    "source": "common/item/kami/armor/ItemGemHelm.java",
+    "parents": [
+      "ICHORCLOTH_ARMOR"
+    ]
+  },
+  {
+    "key": "ICHORCLOTH_ARMOR",
+    "source": "common/item/kami/armor/ItemIchorclothArmor.java",
+    "parents": [
+      "ICHOR_CLOTH"
+    ]
+  },
+  {
+    "key": "ICHORCLOTH_BOOTS_GEM",
+    "source": "common/item/kami/armor/ItemGemBoots.java",
+    "parents": [
+      "ICHORCLOTH_ARMOR"
+    ]
+  },
+  {
+    "key": "ICHORCLOTH_LEGS_GEM",
+    "source": "common/item/kami/armor/ItemGemLegs.java",
+    "parents": [
+      "ICHORCLOTH_ARMOR"
+    ]
+  },
+  {
+    "key": "ICHORCLOTH_CHEST_GEM",
+    "source": "common/item/kami/armor/ItemGemChest.java",
+    "parents": [
+      "ICHORCLOTH_ARMOR"
+    ]
+  },
+  {
+    "key": "FOCUS_RECALL",
+    "source": "common/item/kami/foci/ItemFocusRecall.java",
+    "parents": [
+      "WARP_GATE"
+    ]
+  },
+  {
+    "key": "FOCUS_SHADOWBEAM",
+    "source": "common/item/kami/foci/ItemFocusShadowbeam.java",
+    "parents": [
+      "ROD_ICHORCLOTH"
+    ]
+  },
+  {
+    "key": "FOCUS_XP_DRAIN",
+    "source": "common/item/kami/foci/ItemFocusXPDrain.java",
+    "parents": [
+      "ROD_ICHORCLOTH"
+    ]
+  }
+]

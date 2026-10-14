@@ -1,0 +1,1 @@
+{"parent": "ttinkerer:item/ichor_shovel_gem_0", "overrides": [{"predicate": {"ttinkerer:tool_mode": 0}, "model": "ttinkerer:item/ichor_shovel_gem_0"}, {"predicate": {"ttinkerer:tool_mode": 1}, "model": "ttinkerer:item/ichor_shovel_gem_1"}, {"predicate": {"ttinkerer:tool_mode": 2}, "model": "ttinkerer:item/ichor_shovel_gem_2"}]}

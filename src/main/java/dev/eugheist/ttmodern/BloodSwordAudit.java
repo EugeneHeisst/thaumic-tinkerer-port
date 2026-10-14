@@ -1,0 +1,26 @@
+package dev.eugheist.ttmodern;
+import net.minecraft.server.level.ServerLevel;
+import net.minecraft.world.entity.*;
+import net.minecraft.world.entity.item.ItemEntity;
+import net.minecraft.world.item.*;
+import net.minecraft.world.InteractionHand;
+import thaumcraft.api.aspects.Aspect;
+final class BloodSwordAudit{
+    static void check(boolean ok,String label){if(!ok)throw new IllegalStateException("TT PORT AUDIT FAILED: blood sword "+label);}
+    static void run(ServerLevel level){
+        var player=new net.neoforged.neoforge.common.util.FakePlayer(level,new com.mojang.authlib.GameProfile(java.util.UUID.fromString("561c5d21-77bb-4e10-9824-78d5818cb126"),"BloodAudit")){@Override public boolean isInvulnerableTo(net.minecraft.world.damagesource.DamageSource source){return false;}};player.setGameMode(net.minecraft.world.level.GameType.SURVIVAL);try{var spawnProtection=net.minecraft.server.level.ServerPlayer.class.getDeclaredField("spawnInvulnerableTime");spawnProtection.setAccessible(true);spawnProtection.setInt(player,0);}catch(ReflectiveOperationException exception){throw new IllegalStateException(exception);}player.getAbilities().invulnerable=false;player.removeAllEffects();player.stopUsingItem();player.setHealth(20);player.invulnerableTime=0;
+        var sword=new ItemStack(ThaumicTinkererModern.BLOOD_SWORD.get());player.setItemInHand(InteractionHand.MAIN_HAND,sword);
+        check(sword.getMaxDamage()==950&&sword.getEnchantmentValue()==22&&sword.is(net.minecraft.tags.ItemTags.SWORDS),"original durability and enchantability");
+        var zombie=EntityType.ZOMBIE.create(level);zombie.setPos(8,290,9);zombie.setNoAi(true);level.addFreshEntity(zombie);zombie.hurt(level.damageSources().playerAttack(player),4);check(player.getHealth()==18,"real attack costs two health; actual="+player.getHealth());
+        player.setHealth(20);player.invulnerableTime=0;player.startUsingItem(InteractionHand.MAIN_HAND);player.hurt(level.damageSources().mobAttack(zombie),12);check(player.getHealth()==17,"blocking replaces incoming with three health cost; actual="+player.getHealth()+", using="+player.isUsingItem());player.stopUsingItem();check(BloodSwordItem.SELF_DAMAGE.isEmpty(),"recursion guard released");
+        var cow=EntityType.COW.create(level);var drops=new java.util.ArrayList<ItemEntity>();drops.add(new ItemEntity(level,0,290,0,new ItemStack(Items.BEEF,4)));var event=new net.neoforged.neoforge.event.entity.living.LivingDropsEvent(cow,level.damageSources().playerAttack(player),drops,false);BloodSwordItem.drops(event);check(drops.size()==1&&drops.getFirst().getItem().is(Items.BEEF),"inactive preserves loot");
+        BloodSwordItem.toggle(sword);BloodSwordItem.drops(event);check(drops.size()==3&&drops.stream().allMatch(e->e.getItem().getItem() instanceof MobAspectItem)&&drops.stream().filter(e->((MobAspectItem)e.getItem().getItem()).aspect==Aspect.BEAST).count()==2,"active cow replaces loot with duplicate beast plus earth");
+        drops.clear();drops.add(new ItemEntity(level,0,290,0,new ItemStack(Items.BEEF)));BloodSwordItem.drops(new net.neoforged.neoforge.event.entity.living.LivingDropsEvent(cow,level.damageSources().magic(),drops,false));check(drops.getFirst().getItem().is(Items.BEEF),"nonplayer source unaffected");
+        var modern=EntityType.ALLAY.create(level);BloodSwordItem.drops(new net.neoforged.neoforge.event.entity.living.LivingDropsEvent(modern,level.damageSources().playerAttack(player),drops,false));check(drops.getFirst().getItem().is(Items.BEEF),"unknown mob unaffected");
+        check(MobAspects.ASPECTS.size()==17&&MobAspects.ITEMS.size()==17,"seventeen actual original aspects");for(var entry:MobAspects.MOBS.entrySet()){check(net.minecraft.core.registries.BuiltInRegistries.ENTITY_TYPE.containsKey(net.minecraft.resources.ResourceLocation.parse(entry.getKey())),"mob type resolves "+entry.getKey());check(entry.getValue().size()==3&&entry.getValue().stream().allMatch(MobAspects.ITEMS::containsKey),"every mob yield resolves");}
+        for(var aspect:MobAspects.ASPECTS){var raw=MobAspects.stack(aspect,0);check(dev.eugheist.tc4modern.RecipeAspects.get(raw,level).equals(java.util.Map.of(aspect.getTag(),8)),"eight-aspect scan tags "+aspect.getTag());check(raw.getMaxStackSize()==16&&!raw.hasFoil()&&MobAspects.stack(aspect,2).hasFoil(),"stack size and infused glint");}
+        var recipe=dev.eugheist.tc4modern.InfusionItemRecipes.all().stream().filter(r->r.key().equals("BLOOD_SWORD")).findFirst().orElseThrow();check(recipe.central().get()==FocusResearch.item("thaumium_sword")&&recipe.components().stream().map(java.util.function.Supplier::get).toList().equals(java.util.List.of(Items.ROTTEN_FLESH,Items.PORKCHOP,Items.BEEF,Items.BONE,Items.DIAMOND,Items.GHAST_TEAR)),"exact infusion ingredients");check(dev.eugheist.tc4modern.ResearchWarp.amount("BLOOD_SWORD")==1,"research warp registered");
+        player.stopUsingItem();player.setItemInHand(InteractionHand.MAIN_HAND,ItemStack.EMPTY);player.setHealth(20);player.invulnerableTime=0;zombie.discard();cow.discard();modern.discard();
+        System.out.println("TT BLOOD SWORD AUDIT: ALL PASS (real attack/block health costs, recursion, active/normal loot, exact mob table, item variants, recipe and warp)");
+    }
+}

@@ -1,0 +1,14 @@
+{
+  "parent": "minecraft:item/handheld",
+  "textures": {
+    "layer0": "ttinkerer:items/bloodsword0"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "ttinkerer:active": 1
+      },
+      "model": "ttinkerer:item/blood_sword_active"
+    }
+  ]
+}

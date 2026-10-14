@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "category": "misc",
+  "ingredients": [
+    {
+      "item": "ttinkerer:ichorium"
+    }
+  ],
+  "result": {
+    "id": "ttinkerer:ichor_nugget",
+    "count": 9
+  },
+  "neoforge:conditions": [
+    {
+      "type": "ttinkerer:kami_enabled"
+    }
+  ]
+}

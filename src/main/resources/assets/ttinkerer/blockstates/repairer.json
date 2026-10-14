@@ -1,0 +1,20 @@
+{
+  "variants": {
+    "facing=north": {
+      "model": "ttinkerer:block/repairer",
+      "y": 0
+    },
+    "facing=east": {
+      "model": "ttinkerer:block/repairer",
+      "y": 90
+    },
+    "facing=south": {
+      "model": "ttinkerer:block/repairer",
+      "y": 180
+    },
+    "facing=west": {
+      "model": "ttinkerer:block/repairer",
+      "y": 270
+    }
+  }
+}

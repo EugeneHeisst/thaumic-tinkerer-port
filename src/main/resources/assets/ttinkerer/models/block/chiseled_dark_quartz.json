@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "side": "ttinkerer:blocks/chiseleddarkquartz0",
+    "end": "ttinkerer:blocks/chiseleddarkquartz1"
+  }
+}

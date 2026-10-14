@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "building",
+  "pattern": [
+    "Q",
+    "Q"
+  ],
+  "key": {
+    "Q": {
+      "item": "ttinkerer:dark_quartz_slab"
+    }
+  },
+  "result": {
+    "id": "ttinkerer:chiseled_dark_quartz",
+    "count": 1
+  }
+}

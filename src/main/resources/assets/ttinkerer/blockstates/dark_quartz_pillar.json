@@ -1,0 +1,16 @@
+{
+  "variants": {
+    "axis=y": {
+      "model": "ttinkerer:block/dark_quartz_pillar"
+    },
+    "axis=x": {
+      "model": "ttinkerer:block/dark_quartz_pillar_horizontal",
+      "x": 90,
+      "y": 90
+    },
+    "axis=z": {
+      "model": "ttinkerer:block/dark_quartz_pillar_horizontal",
+      "x": 90
+    }
+  }
+}

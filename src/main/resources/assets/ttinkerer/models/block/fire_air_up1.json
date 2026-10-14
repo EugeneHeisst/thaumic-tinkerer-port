@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/template_fire_up",
+  "textures": {
+    "fire": "ttinkerer:blocks/fireair_layer_1"
+  },
+  "render_type": "minecraft:cutout"
+}

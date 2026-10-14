@@ -1,0 +1,22 @@
+{
+  "description": {
+    "translate": "enchantment.ttinkerer:vampirism"
+  },
+  "supported_items": "#ttinkerer:vampirism_enchantable",
+  "exclusive_set": "#ttinkerer:vampirism_exclusive",
+  "weight": 1,
+  "max_level": 2,
+  "min_cost": {
+    "base": 11,
+    "per_level_above_first": 10
+  },
+  "max_cost": {
+    "base": 16,
+    "per_level_above_first": 10
+  },
+  "anvil_cost": 0,
+  "slots": [
+    "mainhand"
+  ],
+  "effects": {}
+}

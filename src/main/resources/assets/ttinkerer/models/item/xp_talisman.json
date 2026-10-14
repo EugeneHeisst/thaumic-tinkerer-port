@@ -1,0 +1,14 @@
+{
+  "parent": "minecraft:item/generated",
+  "textures": {
+    "layer0": "ttinkerer:items/xptalisman0"
+  },
+  "overrides": [
+    {
+      "predicate": {
+        "ttinkerer:enabled": 1
+      },
+      "model": "ttinkerer:item/xp_talisman_enabled"
+    }
+  ]
+}

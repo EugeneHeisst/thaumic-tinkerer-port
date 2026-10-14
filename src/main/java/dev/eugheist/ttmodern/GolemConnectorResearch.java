@@ -1,0 +1,24 @@
+package dev.eugheist.ttmodern;
+final class GolemConnectorResearch {
+ static void register(){
+  var w=net.minecraft.world.item.crafting.Ingredient.of(dev.eugheist.tc4modern.TC4Modern.GREATWOOD_LOG.get());var f=net.minecraft.world.item.crafting.Ingredient.of(net.minecraft.world.item.Items.REDSTONE_BLOCK);var s=net.minecraft.world.item.crafting.Ingredient.of(net.minecraft.world.item.Items.ENDER_PEARL);var bell=net.minecraft.world.item.crafting.Ingredient.of(dev.eugheist.tc4modern.Golemancy.BELL.get());
+  var ingredients=java.util.List.of(w,f,w,s,bell,s,w,f,w);var predicates=new java.util.ArrayList<java.util.function.Predicate<net.minecraft.world.item.ItemStack>>();for(var ingredient:ingredients)predicates.add(ingredient::test);
+  ThaumicTinkererModern.ARCANE_RECIPES.add(new dev.eugheist.tc4modern.ArcaneRecipes.Entry("GOLEM_CONNECTOR","GOLEM_CONNECTOR",3,3,ingredients,new net.minecraft.world.item.ItemStack(GolemConnector.ITEM.get()),new thaumcraft.api.aspects.AspectList().add(thaumcraft.api.aspects.Aspect.AIR,20).add(thaumcraft.api.aspects.Aspect.ORDER,5).add(thaumcraft.api.aspects.Aspect.ENTROPY,15),new thaumcraft.api.crafting.ArcanePattern<net.minecraft.world.item.ItemStack>("GOLEM_CONNECTOR",3,3,predicates).setMirrored(true)));
+  new thaumcraft.api.research.ResearchItem("GOLEM_CONNECTOR","THAUMICTINKERER",new thaumcraft.api.aspects.AspectList().add(thaumcraft.api.aspects.Aspect.ORDER,1).add(thaumcraft.api.aspects.Aspect.TRAVEL,2).add(thaumcraft.api.aspects.Aspect.TOOL,1),1,0,0,new net.minecraft.world.item.ItemStack(GolemConnector.ITEM.get())){
+   @Override public String getName(){return net.minecraft.network.chat.Component.translatable("ttresearch.name.GOLEM_CONNECTOR").getString();}
+   @Override public String getText(){return net.minecraft.network.chat.Component.translatable("ttresearch.lore.GOLEM_CONNECTOR").getString();}
+  }.setParents("PERIPHERALS").setParentsHidden("GOLEMBELL").setConcealed().setRound().setPages(text(0),arcane("GOLEM_CONNECTOR"),text(1),arcane("INTERFACE1"),text(2),text(3)).registerResearchItem();
+ }
+ private static thaumcraft.api.research.ResearchPage text(int page){return new thaumcraft.api.research.ResearchPage("ttresearch.page.GOLEM_CONNECTOR."+page);}
+ private static thaumcraft.api.research.ResearchPage arcane(String key){var page=new thaumcraft.api.research.ResearchPage("");page.type=thaumcraft.api.research.ResearchPage.PageType.ARCANE_CRAFTING;page.recipeKey=key;return page;}
+ static void audit(){
+  var research=thaumcraft.api.research.ResearchCategories.getResearch("GOLEM_CONNECTOR");
+  if(research==null||research.displayColumn!=1||research.displayRow!=0||research.getComplexity()!=1||!research.isRound()||!research.isConcealed()||!java.util.Arrays.equals(research.parents,new String[]{"PERIPHERALS"})||!java.util.Arrays.equals(research.parentsHidden,new String[]{"GOLEMBELL"})||research.tags.getAmount(thaumcraft.api.aspects.Aspect.ORDER)!=1||research.tags.getAmount(thaumcraft.api.aspects.Aspect.TRAVEL)!=2||research.tags.getAmount(thaumcraft.api.aspects.Aspect.TOOL)!=1)throw new IllegalStateException("Golem connector original research dependencies/tags");
+  var pages=research.getPages();if(pages.length!=6||!"GOLEM_CONNECTOR".equals(pages[1].recipeKey)||!"INTERFACE1".equals(pages[3].recipeKey))throw new IllegalStateException("Golem connector six original book pages");
+  var recipe=dev.eugheist.tc4modern.ArcaneRecipes.entries().stream().filter(r->r.key().equals("GOLEM_CONNECTOR")).findFirst().orElseThrow();
+  var log=dev.eugheist.tc4modern.TC4Modern.GREATWOOD_LOG.get().asItem();var red=net.minecraft.world.item.Items.REDSTONE_BLOCK;var pearl=net.minecraft.world.item.Items.ENDER_PEARL;var bell=dev.eugheist.tc4modern.Golemancy.BELL.get();var expected=java.util.List.of(log,red,log,pearl,bell,pearl,log,red,log);var grid=new java.util.ArrayList<net.minecraft.world.item.ItemStack>();for(int i=0;i<9;i++){var stack=new net.minecraft.world.item.ItemStack(expected.get(i));grid.add(stack);if(!recipe.ingredients().get(i).test(stack))throw new IllegalStateException("Golem recipe ingredient "+i);}
+  if(!recipe.output().is(GolemConnector.ITEM.get())||recipe.output().getCount()!=1||recipe.cost().getAmount(thaumcraft.api.aspects.Aspect.AIR)!=20||recipe.cost().getAmount(thaumcraft.api.aspects.Aspect.ORDER)!=5||recipe.cost().getAmount(thaumcraft.api.aspects.Aspect.ENTROPY)!=15||!recipe.matches(grid,java.util.Set.of("GOLEM_CONNECTOR"))||recipe.matches(grid,java.util.Set.of()))throw new IllegalStateException("Golem recipe output/cost/research gate");
+  grid.set(4,new net.minecraft.world.item.ItemStack(net.minecraft.world.item.Items.STICK));if(recipe.matches(grid,java.util.Set.of("GOLEM_CONNECTOR")))throw new IllegalStateException("Golem recipe wrong bell accepted");
+  System.out.println("TT GOLEM CONNECTOR RESEARCH AUDIT: ALL PASS (original parents,tags,coordinates,six pages,exact ingredients,vis costs,output,research gate,wrong ingredient)");
+ }
+}

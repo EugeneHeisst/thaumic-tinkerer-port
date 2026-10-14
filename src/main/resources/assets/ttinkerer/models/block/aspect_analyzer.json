@@ -1,0 +1,12 @@
+{
+  "parent": "minecraft:block/cube",
+  "textures": {
+    "up": "ttinkerer:blocks/aspectanalyzer0",
+    "down": "ttinkerer:blocks/aspectanalyzer0",
+    "north": "ttinkerer:blocks/aspectanalyzer1",
+    "south": "ttinkerer:blocks/aspectanalyzer2",
+    "west": "ttinkerer:blocks/aspectanalyzer3",
+    "east": "ttinkerer:blocks/aspectanalyzer4",
+    "particle": "ttinkerer:blocks/aspectanalyzer0"
+  }
+}

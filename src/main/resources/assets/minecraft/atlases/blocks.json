@@ -1,0 +1,44 @@
+{
+  "sources": [
+    {
+      "type": "minecraft:single",
+      "resource": "ttinkerer:model/repairer",
+      "sprite": "ttinkerer:model/repairer"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "ttinkerer:model/magnets",
+      "sprite": "ttinkerer:model/magnets"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "ttinkerer:model/magnetn",
+      "sprite": "ttinkerer:model/magnetn"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "ttinkerer:model/mobmagnets",
+      "sprite": "ttinkerer:model/mobmagnets"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "ttinkerer:model/mobmagnetn",
+      "sprite": "ttinkerer:model/mobmagnetn"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "ttinkerer:items/focushealdepth",
+      "sprite": "ttinkerer:items/focushealdepth"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "ttinkerer:items/focusenderchestdepth",
+      "sprite": "ttinkerer:items/focusenderchestdepth"
+    },
+    {
+      "type": "minecraft:single",
+      "resource": "ttinkerer:items/focusrecalldepth",
+      "sprite": "ttinkerer:items/focusrecalldepth"
+    }
+  ]
+}

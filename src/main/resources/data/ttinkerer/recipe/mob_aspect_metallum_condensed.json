@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "XXX",
+    "XXX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "ttinkerer:mob_aspect_metallum"
+    }
+  },
+  "result": {
+    "id": "ttinkerer:mob_aspect_metallum_condensed",
+    "count": 1
+  }
+}

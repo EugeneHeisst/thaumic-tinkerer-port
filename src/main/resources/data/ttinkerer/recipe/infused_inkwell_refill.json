@@ -1,0 +1,21 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "QQQ",
+    "QCQ",
+    "QQQ"
+  ],
+  "key": {
+    "Q": {
+      "item": "minecraft:ink_sac"
+    },
+    "C": {
+      "item": "ttinkerer:infused_inkwell"
+    }
+  },
+  "result": {
+    "id": "ttinkerer:infused_inkwell",
+    "count": 1
+  }
+}
