@@ -4,7 +4,7 @@ group = 'dev.eugheist'
 base { archivesName = 'thaumic-tinkerer-modern' }
 java.toolchain.languageVersion = JavaLanguageVersion.of(21)
 neoForge { version = '21.1.256'; parchment { mappingsVersion = '2024.11.17'; minecraftVersion = '1.21.1' } }
-dependencies { compileOnly files('/home/eugheist/thaumcraft4-server/mods/tc4modern-0.17.161.jar') }
+dependencies { compileOnly files('/home/eugheist/thaumcraft4-server/mods/tc4modern-0.17.162.jar') }
 neoForge {
     runs {
         enchanterClientAudit {
@@ -52,7 +52,7 @@ neoForge {
     }
     mods { ttinkerer { sourceSet sourceSets.main } }
 }
-dependencies { runtimeOnly files('/home/eugheist/thaumcraft4-server/mods/tc4modern-0.17.161.jar') }
+dependencies { runtimeOnly files('/home/eugheist/thaumcraft4-server/mods/tc4modern-0.17.162.jar') }
 
 repositories { maven { url = 'https://api.modrinth.com/maven'; content { includeGroup 'maven.modrinth' } } }
 dependencies { compileOnly 'maven.modrinth:cc-tweaked:1ewzHZYg' }
