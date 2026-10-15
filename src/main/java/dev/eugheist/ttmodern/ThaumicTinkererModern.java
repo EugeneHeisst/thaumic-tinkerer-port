@@ -155,6 +155,8 @@ public final class ThaumicTinkererModern {
     private void setup(FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
             if(net.neoforged.fml.ModList.get().isLoaded("ae2"))AE2Compat.init();
+            // A vis charge relay above the osmotic enchanter recharges its wand like the arcane workbench slot.
+            dev.eugheist.tc4modern.api.TC4Addons.registerWandHolder(tile->tile instanceof EnchanterEntity enchanter?enchanter.inventory.getStackInSlot(1):null);
             // Base initialization must run first: TC4's lazy init tests an empty category map.
             thaumcraft.common.config.ConfigResearchData.init();
             ResearchCategories.registerCategory("THAUMICTINKERER",
