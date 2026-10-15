@@ -132,7 +132,7 @@ public final class SummonFx {
     }
 
     static final ParticleRenderType TRANSLUCENT = new ParticleRenderType() {
-        @Override public BufferBuilder begin(Tesselator tessellator, net.minecraft.client.renderer.texture.TextureManager textures) {
+        @Override public BufferBuilder begin(Tesselator tessellator, net.minecraft.client.renderer.texture.TextureManager textures) {com.mojang.blaze3d.systems.RenderSystem.enableDepthTest();com.mojang.blaze3d.systems.RenderSystem.depthFunc(515);
             RenderSystem.setShader(net.minecraft.client.renderer.GameRenderer::getParticleShader);
             RenderSystem.setShaderTexture(0, net.minecraft.resources.ResourceLocation.fromNamespaceAndPath("tc4modern","textures/misc/particles.png"));
             RenderSystem.enableBlend();
