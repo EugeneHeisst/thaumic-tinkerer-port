@@ -33,6 +33,8 @@ public final class EnchanterScreen extends AbstractContainerScreen<EnchanterMenu
         hits.add(new Hit(x,y,16,16,1+index*3,tooltip));
     }
     @Override protected void renderBg(GuiGraphics g,float partial,int mx,int my){
+        // The GUI sheet and enchantment icons rely on alpha (glass jars, soft icon edges); without blending near-transparent pixels show as solid dots.
+        com.mojang.blaze3d.systems.RenderSystem.enableBlend();com.mojang.blaze3d.systems.RenderSystem.defaultBlendFunc();
         hits.clear();g.blit(TEXTURE,leftPos,topPos,0,0,imageWidth,imageHeight);
         var choices=available();boolean twoRows=choices.size()>8;var tool=menu.slots.get(0).getItem();
         if(!tool.isEmpty()&&!tool.isEnchanted())g.blit(TEXTURE,leftPos+30,topPos+50,0,166,147,24);
