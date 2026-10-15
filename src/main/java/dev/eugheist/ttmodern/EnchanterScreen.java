@@ -24,7 +24,7 @@ public final class EnchanterScreen extends AbstractContainerScreen<EnchanterMenu
         return result;
     }
     private void icon(GuiGraphics g,int index,int x,int y,boolean selected){
-        var entry=EnchanterCosts.ENTRIES.get(EnchanterMenu.IDS.get(index));g.blit(ResourceLocation.parse(entry.texture()),x,y,0,0,16,16,16,16);
+        var entry=EnchanterCosts.ENTRIES.get(EnchanterMenu.IDS.get(index));blend();g.blit(ResourceLocation.parse(entry.texture()),x,y,0,0,16,16,16,16);
         var tooltip=new ArrayList<Component>();
         var enchant=minecraft.level==null?null:minecraft.level.registryAccess().registryOrThrow(net.minecraft.core.registries.Registries.ENCHANTMENT).getHolder(ResourceLocation.parse(EnchanterMenu.IDS.get(index))).orElse(null);
         tooltip.add(enchant==null?Component.literal(EnchanterMenu.IDS.get(index)):enchant.value().description());
@@ -49,6 +49,7 @@ public final class EnchanterScreen extends AbstractContainerScreen<EnchanterMenu
         }
         if(row>0){
             int sx=leftPos+151,sy=topPos+33;g.blit(TEXTURE,sx,sy,176,menu.working()?39:24,15,15);hits.add(new Hit(sx,sy,15,15,0,List.of(Component.translatable("ttmisc.startEnchant"))));
+            blend(); // GuiEnchanting enables GL_BLEND for the aspect jars; g.fill above has switched it off again
             var primals=Aspect.getPrimalAspects();for(int i=0;i<6;i++){
                 var aspect=primals.get(i);int needed=total.getAmount(aspect),current=menu.progress(i),size=needed==0?11:59,x=leftPos+55+i*15,y=topPos+(twoRows?26:50)-size;
                 if(needed>0){int pixels=Math.min(48,(int)(48.0*current/needed));int color=aspect.getColor();com.mojang.blaze3d.systems.RenderSystem.setShaderColor((color>>16&255)/255f,(color>>8&255)/255f,(color&255)/255f,1);g.blit(TEXTURE,x+1,y+4+48-pixels,210,48-pixels,8,pixels);com.mojang.blaze3d.systems.RenderSystem.setShaderColor(1,1,1,1);}
@@ -57,6 +58,7 @@ public final class EnchanterScreen extends AbstractContainerScreen<EnchanterMenu
             }
         }
     }
+    private static void blend(){com.mojang.blaze3d.systems.RenderSystem.enableBlend();com.mojang.blaze3d.systems.RenderSystem.defaultBlendFunc();}
     @Override protected void renderLabels(GuiGraphics g,int x,int y){}
     @Override public boolean mouseClicked(double x,double y,int button){if(button==0&&!menu.working())for(var hit:hits)if(hit.button>=0&&hit.contains(x,y)){if(minecraft.gameMode!=null)minecraft.gameMode.handleInventoryButtonClick(menu.containerId,hit.button);return true;}return super.mouseClicked(x,y,button);}
     @Override public void render(GuiGraphics g,int x,int y,float partial){super.render(g,x,y,partial);renderTooltip(g,x,y);for(var hit:hits)if(hit.contains(x,y)&&!hit.tooltip.isEmpty()){g.renderComponentTooltip(font,hit.tooltip,x,y);break;}}
