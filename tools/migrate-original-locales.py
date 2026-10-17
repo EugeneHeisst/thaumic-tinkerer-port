@@ -35,9 +35,11 @@ with zipfile.ZipFile(reference) as jar:
                 suffix=key.removeprefix('tc.research_name.')
                 source='ttresearch.name.'+('LEVITATOR' if suffix=='TT_LEVITATOR' else suffix)
                 if source in values:data[key]=values[source]
+        if 'item.infusedInkwell.name' in values:
+            data['item.ttinkerer.infused_inkwell']=values['item.infusedInkwell.name']
         if 'itemGroup.ThaumicTinkerer' in values:
             data['itemGroup.ttinkerer']=values['itemGroup.ThaumicTinkerer']
-            data['tc.research_category.THAUMICTINKERER']=values['itemGroup.ThaumicTinkerer']
+            data['tc.research_category.THAUMICTINKERER']=values['tc.research_category.TT_CATEGORY']
         output(folder/f'{locale}.json',data)
         print(f'TT ORIGINAL LOCALE {"AUDIT" if check else "MIGRATION"}: {locale}: {len(values)} original keys retained, {len(data)-len(values)} aliases; {len(missing)} item names use English fallback')
 output(mapping_path,mapping)

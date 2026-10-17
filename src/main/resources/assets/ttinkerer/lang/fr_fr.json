@@ -678,6 +678,6 @@
   "tc.research_name.INFUSED_POTIONS": "Récoltes infusées",
   "tc.research_name.TT_LEVITATOR": "Locomotive lévitationnelle",
   "itemGroup.ttinkerer": "Thaumic Tinkerer",
-  "tc.research_category.THAUMICTINKERER": "Thaumic Tinkerer",
+  "tc.research_category.THAUMICTINKERER": "Thaumic Tinkering",
   "item.ttinkerer.infused_inkwell": "Outils de Scribe infusés"
 }

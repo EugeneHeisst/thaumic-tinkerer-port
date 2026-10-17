@@ -160,7 +160,7 @@ public final class ThaumicTinkererModern {
             // Base initialization must run first: TC4's lazy init tests an empty category map.
             thaumcraft.common.config.ConfigResearchData.init();
             ResearchCategories.registerCategory("THAUMICTINKERER",
-                ResourceLocation.fromNamespaceAndPath(ID, "textures/items/darkquartzitem.png"),
+                ResourceLocation.fromNamespaceAndPath(ID, "textures/misc/r_enchanting.png"),
                 ResourceLocation.fromNamespaceAndPath("tc4modern", "textures/gui/gui_researchback.png"));
             new ResearchItem("DARK_QUARTZ", "THAUMICTINKERER", new AspectList(), -2, 2, 0, new ItemStack(DARK_QUARTZ.get())) {
                 @Override public String getName() { return Component.translatable("ttresearch.name.DARK_QUARTZ").getString(); }
