@@ -1,4 +1,4 @@
-# Thaumic Tinkerer PORT
+# Thaumic Tinkerer UNOFFICIAL PORT
 
 Неофициальный порт аддона **Thaumic Tinkerer** (build 164; авторы — Vazkii, pixlepix, nekosune) на **Minecraft 1.21.1 / NeoForge**.
 
@@ -8,12 +8,12 @@
 ## Требования
 
 - Minecraft **1.21.1**, NeoForge **21.1.256** или новее
-- [Thaumcraft PORT](https://github.com/EugeneHeisst/thaumcraft-port)
+- [Thaumcraft UNOFFICIAL PORT](https://github.com/EugeneHeisst/thaumcraft-port)
 - Необязательно: Applied Energistics 2, Jade, ComputerCraft
 
 ## Установка
 
-Положите `thaumic-tinkerer-modern-<версия>.jar` в папку `mods` рядом с Thaumcraft PORT.
+Положите `thaumic-tinkerer-modern-<версия>.jar` в папку `mods` рядом с Thaumcraft UNOFFICIAL PORT.
 
 ## Права
 

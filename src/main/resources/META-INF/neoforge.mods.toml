@@ -4,7 +4,7 @@ license="CC-BY-NC-SA-3.0"
 [[mods]]
 modId="ttinkerer"
 version="0.1.9"
-displayName="Thaumic Tinkerer PORT"
+displayName="Thaumic Tinkerer UNOFFICIAL PORT"
 authors="Vazkii, pixlepix, nekosune"
 description="Полный порт Thaumic Tinkerer (build 164) на Minecraft 1.21.1 поверх Thaumcraft PORT. Full port of Thaumic Tinkerer build 164 to Minecraft 1.21.1."
 [[dependencies.ttinkerer]]
