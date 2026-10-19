@@ -1,4 +1,4 @@
-Thaumic Tinkerer PORT is an adaptation of Thaumic Tinkerer build 164 for Minecraft 1.21.1 (NeoForge).
+Thaumic Tinkerer UNOFFICIAL PORT is an adaptation of Thaumic Tinkerer build 164 for Minecraft 1.21.1 (NeoForge).
 
 Original authors: Vazkii, pixlepix, nekosune and the contributors credited by the original mod.
 Original code and assets are licensed CC BY-NC-SA 3.0 Unported:
@@ -8,4 +8,4 @@ Original source: https://github.com/Thaumic-Tinkerer/ThaumicTinkerer
 This adaptation (port by Eugene Heist, 2026) is distributed under the same license, CC BY-NC-SA 3.0:
 non-commercial use only, credit the original authors, share changes under the same license.
 
-Thaumcraft is by Azanor; this addon requires the separate Thaumcraft PORT mod.
+Thaumcraft is by Azanor; this addon requires the separate Thaumcraft UNOFFICIAL PORT mod.
