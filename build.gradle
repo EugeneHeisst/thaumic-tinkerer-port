@@ -1,5 +1,5 @@
 plugins { id 'java-library'; id 'net.neoforged.moddev' version '2.0.148' }
-version = '0.1.9'
+version = '0.1.10'
 group = 'dev.eugheist'
 base { archivesName = 'thaumic-tinkerer-modern' }
 java.toolchain.languageVersion = JavaLanguageVersion.of(21)
