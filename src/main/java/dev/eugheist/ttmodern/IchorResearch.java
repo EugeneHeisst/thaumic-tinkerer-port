@@ -9,5 +9,4 @@ public final class IchorResearch {
   ThaumicTinkererModern.INFUSION_RECIPES.add(new dev.eugheist.tc4modern.InfusionItemRecipes.Recipe("ICHOR","ICHOR",()->KamiResources.item(KamiResources.Kind.ICHOR),7,new AspectList().add(Aspect.MAN,32).add(Aspect.LIGHT,32).add(Aspect.SOUL,64),()->Items.NETHER_STAR,java.util.List.of(()->Items.DIAMOND,()->KamiResources.item(KamiResources.Kind.ENDER_SHARD),()->Items.ENDER_EYE,()->KamiResources.item(KamiResources.Kind.NETHER_SHARD))));
  }
  public static ItemStack output(String key){return key.equals("SKY_PEARL")?new ItemStack(SkyPearl.ITEM.get(),2):key.equals("ICHOR")?new ItemStack(KamiResources.item(KamiResources.Kind.ICHOR),8):ItemStack.EMPTY;}
- public static java.util.List<ItemStack> components(String key,java.util.List<ItemStack> original){if(!key.equals("ICHOR"))return original;var result=new java.util.ArrayList<ItemStack>();for(var stack:original)result.add(stack.copy());result.get(1).setCount(8);result.get(3).setCount(8);return result;}
 }
