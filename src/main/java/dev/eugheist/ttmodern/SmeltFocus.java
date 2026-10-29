@@ -27,6 +27,13 @@ public final class SmeltFocus extends TinkererFocus {
         if(input.isEmpty()||!FociContent.consumeAllVis(wand,player,getVisCost(wand),false)){progress.remove(player.getUUID());return false;}
         var recipe=level.getRecipeManager().getRecipeFor(RecipeType.SMELTING,new SingleRecipeInput(input),level);
         var result=recipe.map(r->r.value().assemble(new SingleRecipeInput(input),level.registryAccess())).orElse(ItemStack.EMPTY);
+        // Vanilla has no furnace recipes for raw-metal storage blocks. Only the focus
+        // compresses the ordinary raw-metal -> ingot conversion into a block conversion.
+        if (result.isEmpty()) {
+            if (state.is(net.minecraft.world.level.block.Blocks.RAW_IRON_BLOCK)) result = new ItemStack(Items.IRON_BLOCK);
+            else if (state.is(net.minecraft.world.level.block.Blocks.RAW_GOLD_BLOCK)) result = new ItemStack(Items.GOLD_BLOCK);
+            else if (state.is(net.minecraft.world.level.block.Blocks.RAW_COPPER_BLOCK)) result = new ItemStack(Items.COPPER_BLOCK);
+        }
         if(!(result.getItem() instanceof BlockItem block)||block.getBlock().defaultBlockState().hasBlockEntity()){progress.remove(player.getUUID());return false;}
         var old=progress.get(player.getUUID());int ticks=20-Math.min(3,getUpgradeLevel(FociContent.getFocusItem(wand),0))*5;
         if(old!=null&&old.dimension()==level.dimension()&&old.pos().equals(pos)&&old.input()==state)ticks=old.ticks()-1;
