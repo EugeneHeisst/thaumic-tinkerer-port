@@ -71,7 +71,7 @@ entry-count decay formula, names ignored, and a real datapack reload: a cached
 miss for obsidian becomes diamond block after adding a temporary nine-obsidian
 recipe, then becomes a miss again after removing the pack. The temporary pack is
 removed and original pack selection restored. Full earlier content regressions
-also pass. Logs: `/tmp/tt-ordo-final-server.log`, build `/tmp/tt-ordo-build.log`.
+also pass.
 
 ## Six world blocks implemented
 
@@ -104,15 +104,15 @@ material, exact vanilla FIRE, or PORTAL. An infused fire is none of these, so it
 original attempted portal creation cannot form a portal. The modern custom fire
 does not invoke vanilla onPlace/portal logic or inherit its fast tick schedule.
 
-Native world audit `/tmp/tt-fire-world-final-server.log` covers five actual tick
+The native world audit covers five actual tick
 conversions; entropy -> native fire; original delays; zero drops/collision;
 placement schedule; gamerule/config freezing; swapped-axis decoy conservation;
 air spread; no-target extinguish; actual rain; Ordo decay failure; exactly one
 primed TNT (discarded in test cleanup); no forced chunk loading; research parents,
 crucible entries and disabled recipe filtering. Full earlier regressions pass.
-`/tmp/tt-fire-model-client.log` checks all item models/textures and all block state
+The client resource audit checks all item models/textures and all block state
 models/quads (including all six fire age/attachment combinations), hidden/muted.
-Build `/tmp/tt-fire-world-build.log` passes. No production deployment.
+The build passes.
 
 Modern flame geometry uses the native 1.4-block-high multipart adaptation; the
 original colored animated sprites are preserved. Side-wall smoke is verified below.
@@ -137,16 +137,14 @@ native tag-membership regression. Natural cadence fixtures are separated so
 Perditio cannot spread into the ordinary-fire fixture: ordinary fire stays until
 at least tick 200 and first extinguishes at elapsed 203 (allowed 200..209).
 Entropy extinguishes naturally by elapsed 11 (initial 1..10). No manual tick call
-is used in the integrated cadence test. Logs:
-`/tmp/tt-fire-contact-fixed-client.log` (BUILD SUCCESSFUL, all earlier GUI/gear/
-platform checks included), `/tmp/tt-fire-contact-fixed-server.log` (full PASS),
-`/tmp/tt-fire-contact-fix-build.log` (PASS).
+is used in the integrated cadence test. The client, server and build checks pass,
+including the earlier GUI, gear and platform regressions.
 
 `python3 tools/audit-server.py --fire-disabled` launches only the isolated server
 with enableFire=false and restores its previous config afterwards. Native startup
 checks prove all six fire research/recipes absent, block/item registrations and
-BRIGHT_NITOR retained, and world fire ticks frozen. Log
-`/tmp/tt-fire-disabled-server.log` PASS; test config restored byte-for-byte. The
+BRIGHT_NITOR retained, and world fire ticks frozen. The test passes and its
+configuration is restored byte-for-byte. The
 normal server audit mode remains available and passed after that config run.
 
 ## Side-wall smoke correction
@@ -164,8 +162,6 @@ InfusedFireSmokeAudit checks all five wall orientations, face bounds and both
 solid/flammable support using actual world blocks. Client regression invokes
 actual animateTick against a temporary client-world wood wall and identifies two
 new native LargeSmokeParticle instances through ParticleEngine.iterateParticles;
-the prior wall state is restored. Server `/tmp/tt-fire-smoke-server.log` full PASS;
-actual integrated client `/tmp/tt-fire-smoke-client.log` BUILD SUCCESSFUL (all
-previous GUI/gear/platform/contact/cadence checks retained; ordinary tick observed
-205). Build `/tmp/tt-fire-smoke-build.log` PASS. All tests hidden/muted, no live
-client or production changes.
+the prior wall state is restored. Server and integrated-client regressions pass,
+including previous GUI, gear, platform, contact and cadence checks (ordinary
+tick observed: 205). The build passes. The checks use an isolated client and world.

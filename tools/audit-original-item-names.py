@@ -1,8 +1,9 @@
-"""Compare every port display-name mapping with the user's unmodified build164 JAR."""
+"""Compare every port display-name mapping with the unmodified build164 reference JAR."""
+from audit_paths import reference_jar
 from pathlib import Path
 import json, zipfile
 root=Path(__file__).resolve().parent.parent
-reference=Path('/home/eugheist/Downloads/ThaumicTinkerer_2.5_1.7.10_164.jar')
+reference=reference_jar()
 mapping=json.loads((root/'tools/original-item-names.json').read_text())
 with zipfile.ZipFile(reference) as jar:
     for locale,original in [('en_us','en_US'),('ru_ru','ru_RU')]:

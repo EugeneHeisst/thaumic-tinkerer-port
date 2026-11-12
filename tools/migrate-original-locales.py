@@ -1,9 +1,10 @@
 """Migrate build164 translations and explicit modern aliases; --check is read-only."""
+from audit_paths import reference_jar
 from pathlib import Path
 import json,sys,zipfile
 root=Path(__file__).resolve().parent.parent
 folder=root/'src/main/resources/assets/ttinkerer/lang'
-reference=Path('/home/eugheist/Downloads/ThaumicTinkerer_2.5_1.7.10_164.jar')
+reference=reference_jar()
 mapping_path=root/'tools/original-item-names.json'
 mapping=json.loads(mapping_path.read_text())
 check='--check' in sys.argv

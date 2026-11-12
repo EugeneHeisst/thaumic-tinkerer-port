@@ -33,20 +33,18 @@ OpenComputers drivers are separate and do not change those registration gates.
 Other optional integration paths (IC2/AE2/OpenComputers) still require inventory
 and modern-equivalent decisions based on original code, not completion claims.
 
-First-slice results: build PASS /tmp/tt-cc-jar-build-cdn.log;
-actual CC:T capability + full native regression PASS /tmp/tt-cc-jar-server.log;
-client without CC:T PASS /tmp/tt-cc-absent-client.log (26s).
+First-slice results: build PASS;
+actual CC:T capability + full native regression PASS;
+client without CC:T PASS (26s).
 JAR contents checked: no dan200 classes or CC:T runtime bundled.
-Server without CC:T PASS /tmp/tt-cc-absent-server.log; no optional linkage failure.
+Server without CC:T PASS; no optional linkage failure.
 
 Second slice: native deconstruction table tt_deconstructor exposes hasAspect,
 hasItem and getAspect (nil when no aspect), without collecting the aspect or
 consuming input. Brain jar tt_braininajar exposes getXP without releasing XP.
 Both use main-thread LuaFunction methods and native PeripheralCapability.
 Native audit covers empty/filled table and unchanged three input items/terra,
-empty brain jar and repeated 731 XP reads. Build PASS:
-/tmp/tt-cc-device-build.log; actual CC:T + full native suite PASS:
-/tmp/tt-cc-device-server.log. Lua-program dispatch remains a separate pending
+empty brain jar and repeated 731 XP reads. Build and actual CC:T/full native suite PASS. Lua-program dispatch remains a separate pending
 check. The wrapper now requires both jar and device audit markers.
 
 Arcane ear slice: tt_arcaneear getNote/setNote(number), matching original
@@ -55,9 +53,7 @@ ArcaneEarAccessor accesses only the note field. setChanged persists edits,
 without emitting a sound or changing redstone. Native CC audit checks actual
 capability, 0/24/7.9/-2.9/130/256 and saved note=12. Base TC's reload clamps
 note to 0..24; that existing base behavior is not silently replaced here.
-Build PASS /tmp/tt-cc-ear-fixed-build.log; CC native/full suite PASS
-/tmp/tt-cc-ear-server.log; absent-CC client PASS
-/tmp/tt-cc-ear-absent-client.log. Actual Lua dispatch remains pending.
+Build PASS; CC native/full suite PASS; absent-CC client PASS. Actual Lua dispatch remains pending.
 
 Transport slice: tube, valve, filter, buffer, restricted and one-way tube
 expose tt_aspectTransport. Original eight query names are retained; there are
@@ -70,7 +66,7 @@ aspect-container precedence must be preserved for alembics/reservoirs etc.
 Audit covers six native kinds and all eight methods on all six faces, with
 filled tube states and NBT equality before/after reads. Buffer fixture is empty;
 filled buffer and actual Lua program checks remain pending.
-Build PASS /tmp/tt-cc-transport-filled-build.log; actual CC/full native suite PASS /tmp/tt-cc-transport-filled-server.log.
+Build PASS; actual CC/full native suite PASS.
 
 Bore slice: tt_arcanebore exposes all nine original query names. Radius is
 1+(area+2)*2; speed reads the native computed value. Fortune/silk queries read
@@ -81,7 +77,7 @@ area/speed and invokes native power detection; no mining or inventory mutation.
 Initial audit covers actual capability, empty bore, radius=5, Fortune III
 pickaxe and near-broken gating. Powered/focus-upgraded/elemental/silk fixtures
 and actual Lua calls remain pending; this is not complete bore coverage.
-Build PASS /tmp/tt-cc-bore-build.log; CC/full native suite PASS /tmp/tt-cc-bore-server.log.
+Build PASS; CC/full native suite PASS.
 
 Extended bore fixture supplies real redstone and a supported mount. It applies
 five original focus upgrade IDs (enlarge=3, potency=0, treasure=2, silk=8,
@@ -91,7 +87,7 @@ It tests working/powered and near-broken, Silk Touch pick, elemental pick, and
 NBT conservation across queries. An initial unsupported fixture broke on the
 redstone neighbor update; the corrected fixture uses greatwood planks, restores
 the support and redstone blocks, and leaves native bore behavior unchanged.
-Extended bore build PASS /tmp/tt-cc-bore-supported-build.log; CC/full native suite PASS /tmp/tt-cc-bore-supported-server.log.
+Extended bore build PASS; CC/full native suite PASS.
 
 Alembic slice: tt_aspectContainer takes precedence over essentia transport,
 matching original IAspectContainer-first selection. Generic AspectPeripheral
@@ -99,7 +95,7 @@ returns original sorted one-based aspect table and exact counts. Alembic reads
 contents only; unlike jars, its filter does not override getAspects. Native
 fixture tests empty/filled, AIR=23 with FIRE filter, unknown count=0, and NBT
 read conservation. No base TC API classes or client mods are modified.
-Build PASS /tmp/tt-cc-alembic-build.log; actual CC/full native suite PASS /tmp/tt-cc-alembic-server.log.
+Build PASS; actual CC/full native suite PASS.
 
 Fallback selection now covers TC4Modern's other native block entity types:
 reservoir and thaumatorium expose their multi-aspect contents; centrifuge
@@ -112,8 +108,7 @@ and eldritch-tab/TileEssentiaReservoir.java in the TC reference tree.
 Native audit confirms four container selections, multi-aspect counts,
 input/output distinction and bore-base transport suction 128/perditio.
 Bore test inventory is now cleared before fixture replacement to avoid drops.
-Build PASS /tmp/tt-cc-fallback-build.log; CC/full native suite PASS
-/tmp/tt-cc-fallback-server.log. Other transport hosts use the same interface
+Build PASS; CC/full native suite PASS. Other transport hosts use the same interface
 adapter but still need individually scoped fixtures and actual Lua dispatch.
 
 Actual Lua runtime test added (separate isolated mode):
@@ -130,8 +125,7 @@ for jar, ear, deconstructor and brain jar, not every method or
 detach/replacement/chunk lifecycle yet. The brain fixture starts at its native
 2000 XP capacity so ambient XP cannot affect conservation checks; teardown
 clears owned inventory and XP before restoring blocks, avoiding test drops.
-Build PASS /tmp/tt-cc-lua-build.log; actual Lua PASS
-/tmp/tt-cc-lua-server.log and isolated audit-cc-lua.log.
+Build PASS; actual Lua PASS.
 
 PERIPHERALS root research now auto-unlocks only when computercraft is present,
 with original round shape, (-1,0), empty aspects, complexity 0, redstone icon,
@@ -156,13 +150,13 @@ one-based numeric table), getAspectCount (whole tag->amount map, no argument).
 Do not accidentally substitute the jar getAspectCount(name) signature.
 Original wooden-device meta 6 verified as greatwood planks (iconGreatwood in
 BlockWoodenDevice); recipe W is not an arcane workbench.
-Root research build PASS /tmp/tt-peripherals-icon-build.log; CC/full suite PASS /tmp/tt-peripherals-research-server.log; absent CC/full suite PASS /tmp/tt-peripherals-absent-server.log.
+Root research build PASS; CC/full suite PASS; absent CC/full suite PASS.
 
-Extended four-device actual Lua audit PASS: /tmp/tt-cc-lua-devices-capacity-server.log; build PASS: /tmp/tt-cc-lua-devices-capacity-build.log.
+Extended four-device actual Lua audit PASS; build PASS.
 
-Analyzer build PASS /tmp/tt-analyzer-audit-build.log; CC full native PASS /tmp/tt-analyzer-server.log.
+Analyzer build PASS; CC full native PASS.
 
-Analyzer Lua PASS /tmp/tt-analyzer-lua-server.log; CC client models/textures PASS /tmp/tt-analyzer-cc-client.log; CC native drop coverage PASS /tmp/tt-analyzer-coverage-server.log; explicit absent registries PASS /tmp/tt-analyzer-registry-absent-server.log.
+Analyzer Lua PASS; CC client models/textures PASS; CC native drop coverage PASS; explicit absent registries PASS.
 
 Golem connector marker boundary is implemented in GolemMarkerCodec and the
 registered optional ComputerCraft connector/peripheral. Original table fields are
@@ -198,8 +192,8 @@ Native UUID tests cover link, reload, camouflage, range exit/re-entry, removed
 entity and disconnect. Client model/resource check passes. Binder interaction
 itself, actual camouflage rendering, original recipe/research and all 15 Lua
 commands still require implementation or scoped tests as appropriate.
-Build PASS /tmp/tt-golem-link-build.log; native PASS /tmp/tt-golem-link-server.log;
-hidden CC client PASS /tmp/tt-golem-link-client.log.
+Build PASS; native PASS;
+hidden CC client PASS.
 
 GolemPeripheral now exposes all 15 original method names through real CC
 capability, server-thread LuaFunctions. getGolemType is explicitly aliased to
@@ -215,8 +209,7 @@ Native actual-golem tests cover state queries/home radius/marker CRUD and invali
 index conservation. Actual computer Lua verifies alias, multiple return values,
 marker tables and CRUD (including errors). Recipe/research, exact accessory/core
 variants, binder interaction, detach/reload and actual camouflage draw remain.
-Build PASS /tmp/tt-golem-methods-audit-build.log; native full suite PASS
-/tmp/tt-golem-methods-server.log; real Lua PASS /tmp/tt-golem-lua-server.log.
+Build PASS; native full suite PASS; real Lua PASS.
 
 GOLEM_CONNECTOR recipe/research implemented: WFW/sIs/WFW (greatwood logs,
 redstone blocks, ender pearls, golem bell); AIR20/ORDER5/ENTROPY15; one connector.
@@ -232,7 +225,7 @@ vis costs, research lock and rejection of a stick substituted for the bell.
 No-CC audit now also rejects connector block/item/entity/research registration.
 Lua audit golem starts with home at the fixture, avoiding unrelated return-home AI.
 
-Connector research build PASS /tmp/tt-golem-research-fixed-build.log; CC full native PASS /tmp/tt-golem-research-fixed-server.log; explicit no-CC connector absence PASS /tmp/tt-golem-research-absent-server.log.
+Connector research build PASS; CC full native PASS; explicit no-CC connector absence PASS.
 
 Native binder integration test now calls ItemStack.useOn for block selection and
 Player.interactOn for shift-use on the actual golem in SURVIVAL and CREATIVE.
@@ -243,7 +236,7 @@ ItemConnector's explicit current-held-item behavior. Test also exercises missing
 loaded source and cross-dimension selection: no connection, no forced chunk load,
 and pending selection retained. Fake player hand/mode/position/shift are restored.
 
-Binder fixed build PASS /tmp/tt-golem-binder-fixed-build.log; native integration and full suite PASS /tmp/tt-golem-binder-fixed-server.log.
+Binder fixed build PASS; native integration and full suite PASS.
 
 FumeTool turtle upgrade implemented with modern UpgradeType registry and
  data/ttinkerer/computercraft/turtle_upgrade/fume_tool.json. Stable ID
@@ -259,9 +252,9 @@ checks dynamic upgrade loading/install, DIG asymmetrical limits, three gases,
 ordinary-block retention, ATTACK failure, empty success, fuel/inventory retained.
 Direct native useTool is tested; real turtle Lua dispatch/equip/reload and actual
 upgrade model rendering remain pending. This does not complete all CC integration.
-Build PASS /tmp/tt-fume-audit-build.log; full CC native PASS /tmp/tt-fume-server.log.
+Build PASS; full CC native PASS.
 
-Fume optional CC client startup PASS /tmp/tt-fume-client.log; no-CC full native PASS /tmp/tt-fume-absent-server.log.
+Fume optional CC client startup PASS; no-CC full native PASS.
 
 FumeLuaAudit now boots a second real turtle in the isolated Lua audit world.
 The Lua program equips GasRemover from slot1 with turtle.equipLeft(), verifies
@@ -272,9 +265,9 @@ stone retained, unchanged fuel/inventory and no installed upgrade afterward.
 Parent Lua success waits for both real programs; owned files, inventory,
 blocks/NBT are restored without extra forced chunks. Wrapper requires both
 CC LUA and FUME LUA markers. Full upgraded model draw remains unverified.
-Build PASS /tmp/tt-fume-lua-build.log; actual turtle Lua PASS /tmp/tt-fume-lua-server.log.
+Build PASS; actual turtle Lua PASS.
 
-Native turtle saveWithFullMetadata/loadWithComponents now verifies installed FumeTool, fuel37 and diamonds3 restored after clearing them. Build PASS /tmp/tt-fume-reload-build.log; full CC native PASS /tmp/tt-fume-reload-server.log.
+Native turtle saveWithFullMetadata/loadWithComponents now verifies installed FumeTool, fuel37 and diamonds3 restored after clearing them. Build PASS; full CC native PASS.
 
 Native connector variant audit covers all 8 materials, blank plus 12 cores, and
 all 8 accessories independently, through actual native entity NBT reload.
@@ -307,7 +300,7 @@ recreates and loads its saved NBT, and verifies filter/state persistence and new
 peripheral identity. Calls through the old peripheral cannot change replacement
 polarity or mob age. Mob age setter now guards live tile identity before dirtying
 or sending updates, matching the existing polarity setter's stale-call guard.
-Full native CC regression passed /tmp/tt-magnet-lifecycle-server.log.
+Full native CC regression passed.
 
 Transvector interface now forwards ComputerCraft peripheral methods too. It
 exposes the linked target's type/method names (or original misspelled unconnected
@@ -348,12 +341,12 @@ negative metadata could corrupt the block and cannot be represented by modern
 horizontal states. Setters return no Lua values, mark dirty and synchronize.
 Trigger succeeds for an idle empty tablet as build164 did, resets on its next
 empty tick, and refuses a busy tablet. Stale setters/trigger cannot mutate a
-replacement tile. Native full CC audit PASS /tmp/tt-tablet-cc-server.log.
-Actual turtle Lua PASS /tmp/tt-tablet-cc-lua.log: all eight commands discovered,
+replacement tile. Native full CC audit PASS.
+Actual turtle Lua PASS: all eight commands discovered,
 boolean validation, void setters, all four fractional rotations, invalid input
 conservation, trigger/busy, authoritative modes and undamaged tool checked.
 Existing transvector dynamic/yield/lifecycle, magnets and Fume Lua tests also pass.
-Full native suite without CC PASS /tmp/tt-tablet-cc-absent.log; optional classes
+Full native suite without CC PASS; optional classes
 remain absent from ordinary startup. These results do not close full visual,
 natural progression, dual game-mode or other optional-mod integration gates.
 
@@ -363,8 +356,7 @@ now moves nine variants without CC, eleven with CC, including damaged tools,
 enchanter dual-slot contents/process NBT and analyzer stack37. Funnel's hopper
 support restriction prevents riding the locomotive; an explicit regression
 confirms its block and stored jar stay intact instead of being moved/dropped.
-Build /tmp/tt-movable-complete-build.log PASS; full native suites
-/tmp/tt-movable-complete-cc.log and /tmp/tt-movable-complete-absent.log PASS.
+Build and full native suites with and without CC PASS.
 AE2 external spatial registry and foreign passenger handlers are now implemented;
 real spatial-cell dimension round trips are now verified below; IO port/pylon
 redstone, energy and client visuals are outside these particular checks.
@@ -374,7 +366,7 @@ for all own original MovableTile types (including optional CC devices). It calls
 prepareToMove before AE2 serialization and doneMoving on the restored instance;
 new capability caches are invalidated and restored data marked dirty.
 Real released AE2 + GuideME21.1.19 native registry tests passed with CC and without
-CC: /tmp/tt-ae2-strategy-server.log, /tmp/tt-ae2-strategy-no-cc.log. Actual AE2 API
+CC. Actual AE2 API
 pipeline preserves saved state, named/damaged inventory stacks and camouflage;
 new block entity identity/coordinates and item capabilities verified, no drops.
 These tests invoke the real registered handler; they do not yet activate a full
@@ -394,11 +386,10 @@ Real custom AE2 handler fixture uses a foreign TC4 jar with 17 Aer + filter:
 accept, refuse, partial-destination false return, partial-destination exception.
 All cases preserve source/destination state and exact callback counts; expected
 handler exception is logged as a warning during this deliberate failure test.
-Full AE2+CC suite /tmp/tt-ae2-locomotive-server.log PASS; final AE2 without CC
-/tmp/tt-ae2-locomotive-no-cc.log PASS. Custom handler is registered ONLY under the
+Full AE2+CC and AE2-without-CC suites PASS. Custom handler is registered ONLY under the
 isolated portAudit flag; ordinary games do not receive an audit jar handler.
 Nested blacklist and real spatial-cell round trips are now verified below.
-Full native suite without AE2/CC /tmp/tt-ae2-locomotive-absent.log PASS after the
+Full native suite without AE2/CC PASS after the
 final rollback neighbor refresh; optional API class loading remains isolated.
 
 AE2 nested blacklist test: audit-ae2.py temporarily adds an isolated datapack with
@@ -406,7 +397,7 @@ c:relocation_not_supported containing tc4modern:void_jar; real AE2
 blacklisted/spatial tag resolves it. Native locomotive fifth scenario confirms
 the forbidden jar remains intact with Aer/filter, train moves, handler begin and
 complete counts both stay zero. Datapack bytes/JARs restored in finally.
-/tmp/tt-ae2-blacklist-server.log PASS.
+Native regression PASS.
 
 Actual spatial-cell transitions: for every own movable block variant, allocate
 AE2 2-cubed storage cell plot, store the two-block hopper/device region into the
@@ -414,14 +405,13 @@ real spatial storage dimension, inspect the moved entity's level/position/type
 and complete saved NBT, then retrieve through the same cell and verify exact
 state plus empty spatial source. Free allocated plot in finally. This exercises
 AE2's native region swap, not direct calls to the addon restore handler.
-/tmp/tt-ae2-spatial-cell-server.log PASS (10 variants, no CC),
-/tmp/tt-ae2-spatial-cell-cc.log PASS (12 variants, with CC).
+Native spatial-cell audits PASS (10 variants without CC, 12 with CC).
 Both suites also pass the native registry and foreign locomotive/blacklist tests.
 This proves the addon migration pipeline; it does not validate AE2's own pylon
 layout, IO-port energy/redstone controls, or client rendering of a spatial swap.
 
 Waila tooltip information now has a dependency-free server formatter DeviceTooltip.
-Native /tmp/tt-device-tooltip-server.log PASS covers empty/equipped tablet,
+The native audit covers empty/equipped tablet,
 four control modes, eight mob age/filter/polarity combinations, damaged/finished
 repair, live/missing transvector targets and correct locked/unlocked gate labels.
 It preserves device state; target queries do not load chunks. This formatter is
@@ -435,13 +425,13 @@ Names/translation arguments survive, unrelated provider NBT remains unchanged.
 Jade stays compile-only/optional; API classes are not bundled. RU/EN option name
 added. Native provider fixture uses an API accessor proxy; it does not prove real
 network delivery or a rendered world overlay yet.
-Builds /tmp/tt-jade-plugin-build.log and /tmp/tt-jade-client-build.log PASS;
-real Jade server /tmp/tt-jade-provider-server.log PASS (discovery/provider/codec),
-hidden silent client /tmp/tt-jade-client.log PASS (client registration/resources),
-ordinary no-Jade server /tmp/tt-jade-absent-server.log PASS.
+Builds PASS;
+real Jade server PASS (discovery/provider/codec),
+hidden silent client PASS (client registration/resources),
+ordinary no-Jade server PASS.
 Reproduce tools/audit-jade.py or tools/audit-jade-client.py with runtime JAR.
 
-Jade actual integrated-world check now passed /tmp/tt-jade-world-client.log.
+Jade actual integrated-world check now passed.
 A real ray trace targets a named-tool tablet, Jade requests server data, registered
 component callback receives localized lines, and the normal HUD renders them.
 Server changes left/redstone to right/autonomous while aiming; Jade updates
@@ -451,6 +441,6 @@ jade-right-autonomous.png. Mode-line HUD crop changes4752 pixels (>30 RGB diff),
 excluding animated world pixels. Wrapper now checks this automatically; exact
 same pixel code also run against the captured successful test frames.
 Fixture restores prior block/NBT, player position/rotation and flight abilities,
-clears test tool before replacement, hidden Xvfb/null audio. No production edit.
+clears test tool before replacement, hidden Xvfb/null audio.
 Reproduce: python3 tools/audit-jade-world.py Jade.jar.
 This proves tablet networking/rendered refresh, not every other device HUD case.

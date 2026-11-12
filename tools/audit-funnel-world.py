@@ -2,7 +2,7 @@
 import os,subprocess
 from pathlib import Path
 root=Path(__file__).resolve().parent.parent
-env=os.environ.copy();env['JAVA_HOME']='/usr/lib/jvm/java-21-openjdk';env['ALSOFT_DRIVERS']='null'
+env=os.environ.copy();env['ALSOFT_DRIVERS']='null'
 result=subprocess.run(['timeout','180s','xvfb-run','-a','-s','-screen 0 1280x960x24','./gradlew','runFunnelWorldAudit','--console=plain'],cwd=root,env=env,capture_output=True,text=True)
 print(result.stdout,end='');print(result.stderr,end='')
 if result.returncode or 'TT FUNNEL WORLD CLIENT AUDIT: ALL PASS' not in result.stdout or 'TT FUNNEL CLIENT INTERACTION MODES AUDIT: ALL PASS' not in result.stdout:raise SystemExit(result.returncode or 1)

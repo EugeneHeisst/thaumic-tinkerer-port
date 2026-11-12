@@ -2,12 +2,13 @@
 No original source is copied into the repository; local reference JAR/CFR required.
 This proves geometry/projection, not lighting or complete texture raster fidelity.
 """
+from audit_paths import REFERENCE_DIR, java_tool, reference_jar
 from pathlib import Path
 import math,subprocess,tempfile,json
 from PIL import Image,ImageDraw,ImageChops,ImageFilter
 root=Path(__file__).resolve().parent.parent
-reference=Path('/home/eugheist/thaumcraft4-reference')
-java='/usr/lib/jvm/java-21-openjdk/bin/java'
+reference=REFERENCE_DIR
+java=java_tool('java')
 with tempfile.TemporaryDirectory(prefix='tt-original-thin-held-') as temp:
     subprocess.run([java,'-jar',str(reference/'cfr.jar'),str(reference/'minecraft-1.7.10-client.jar'),'--jarfilter','blm|bly','--outputdir',temp],check=True,stdout=subprocess.DEVNULL,stderr=subprocess.DEVNULL)
     item=(Path(temp)/'bly.java').read_text();block=(Path(temp)/'blm.java').read_text()
@@ -18,11 +19,11 @@ with tempfile.TemporaryDirectory(prefix='tt-original-thin-held-') as temp:
     normal=block[start:block.index('bmh2.b();',start)]
     assert 'aji2.g();' in normal and 'glRotatef((float)90.0f' in normal
     assert 'glTranslatef((float)-0.5f, (float)-0.5f, (float)-0.5f)' in normal
-    bytecode=subprocess.check_output(['/usr/lib/jvm/java-21-openjdk/bin/javap','-c','-classpath',str(reference/'minecraft-1.7.10-client.jar'),'aji'],text=True)
+    bytecode=subprocess.check_output([java_tool('javap'),'-c','-classpath',str(reference/'minecraft-1.7.10-client.jar'),'aji'],text=True)
     assert 'public void g();\n    Code:\n       0: return' in bytecode,'Original item-bounds hook is no longer no-op'
-    ttjar='/home/eugheist/Downloads/ThaumicTinkerer_2.5_1.7.10_164.jar'
+    ttjar=str(reference_jar())
     for name in ['BlockFunnel','BlockAnimationTablet','BlockSummon']:
-        code=subprocess.check_output(['/usr/lib/jvm/java-21-openjdk/bin/javap','-c','-classpath',ttjar,'thaumic.tinkerer.common.block.'+name],text=True)
+        code=subprocess.check_output([java_tool('javap'),'-c','-classpath',ttjar,'thaumic.tinkerer.common.block.'+name],text=True)
         assert 'float 0.125f' in code and 'func_149683_g' not in code,(name,'original item bounds override')
 # Original model-to-view: T(.56,-.52,-.72) RY45 S(.4) RY90 T(-.5).
 # FOV70 and1080x900 match captured native camera. At rest all view-arm deltas are0.

@@ -1,11 +1,11 @@
 #!/usr/bin/env python3
 """Run extracted original throwable constructor and TT beam heading; print trajectory goldens."""
+from audit_paths import REFERENCE_DIR, TT_REFERENCE_SOURCE, java_tool
 from pathlib import Path
 import subprocess
 import tempfile
-JAVA = '/usr/lib/jvm/java-21-openjdk/bin/'
-REF = Path('/home/eugheist/thaumcraft4-reference')
-TT = Path('/home/eugheist/thaumic-tinkerer-reference/build164/thaumic/tinkerer/common/item/kami/foci/ItemFocusShadowbeam.java')
+REF = REFERENCE_DIR
+TT = TT_REFERENCE_SOURCE / 'thaumic/tinkerer/common/item/kami/foci/ItemFocusShadowbeam.java'
 def method(source, marker):
     start = source.index(marker)
     opening = source.index('{', start)
@@ -17,7 +17,7 @@ def method(source, marker):
     return source[start:end]
 with tempfile.TemporaryDirectory(prefix='tt-original-shadowbeam-') as temp:
     root = Path(temp)
-    subprocess.run([JAVA+'java', '-jar', str(REF/'cfr.jar'), str(REF/'minecraft-1.7.10-client.jar'), '--jarfilter', 'zk', '--outputdir', temp], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+    subprocess.run([java_tool('java'), '-jar', str(REF/'cfr.jar'), str(REF/'minecraft-1.7.10-client.jar'), '--jarfilter', 'zk', '--outputdir', temp], check=True, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     source = (root/'zk.java').read_text()
     constructor = method(source, 'public zk(ahb ahb2, sv sv2)')
     heading = method(TT.read_text(), 'public void func_70186_c(')
@@ -32,5 +32,5 @@ class qh {static final float[] table=new float[65536];static{for(int i=0;i<65536
     base = 'class zk extends sa {sv g;zk(ahb world){super(world);}' + constructor + 'protected float e(){return 1.5f;}protected float f(){return 0;}public void c(double x,double y,double z,float speed,float noise){} }'
     main = '''public class OriginalShadowbeamOracle extends zk {OriginalShadowbeamOracle(sv p){super(new ahb(),p);v/=10;w/=10;x/=10;}'''+heading+'''public static void main(String[] args){float[][] cases={{0,0},{90,0},{-90,0},{180,0},{45,30},{-135,-60},{359.9f,89.9f}};for(float[] c:cases){sv p=new sv();p.s=12.25;p.t=64;p.u=-7.75;p.y=c[0];p.z=c[1];var b=new OriginalShadowbeamOracle(p);System.out.printf(java.util.Locale.ROOT,"%.9g %.9g %.17g %.17g %.17g %.17g %.17g %.17g%n",c[0],c[1],b.s,b.t,b.u,b.v,b.w,b.x);}}}'''
     (root/'OriginalShadowbeamOracle.java').write_text(stubs+base+main)
-    subprocess.run([JAVA+'javac', str(root/'OriginalShadowbeamOracle.java')], check=True)
-    subprocess.run([JAVA+'java', '-cp', temp, 'OriginalShadowbeamOracle'], check=True)
+    subprocess.run([java_tool('javac'), str(root/'OriginalShadowbeamOracle.java')], check=True)
+    subprocess.run([java_tool('java'), '-cp', temp, 'OriginalShadowbeamOracle'], check=True)

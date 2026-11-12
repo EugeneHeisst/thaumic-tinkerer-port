@@ -10,7 +10,7 @@ target.parent.mkdir(parents=True,exist_ok=True)
 backup=target.read_bytes() if target.exists() else None
 try:
     shutil.copy2(jar,target)
-    env=os.environ.copy();env['JAVA_HOME']='/usr/lib/jvm/java-21-openjdk';env['ALSOFT_DRIVERS']='null'
+    env=os.environ.copy();env['ALSOFT_DRIVERS']='null'
     result=subprocess.run(['timeout','180s','xvfb-run','-a','-s','-screen 0 1280x960x24','./gradlew','runComputerWorldAudit','--console=plain'],env=env,capture_output=True,text=True)
     print(result.stdout,end='');print(result.stderr,end='',file=sys.stderr)
     if result.returncode or 'TT COMPUTER WORLD CLIENT AUDIT: ALL PASS' not in result.stdout: raise SystemExit(result.returncode or 1)

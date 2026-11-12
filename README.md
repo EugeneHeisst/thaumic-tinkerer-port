@@ -22,3 +22,7 @@
 ## Права
 
 Оригинал распространяется по лицензии CC BY-NC-SA 3.0, этот порт — по той же лицензии, см. `LICENSE.txt`.
+
+## Сборка
+
+Нужны Java 21 и JAR базового Thaumcraft. Положите `tc4modern-0.17.179.jar` в `libs/` либо передайте `./gradlew build -Ptc4LocalJar=path/to/tc4modern.jar`. Также поддерживается переменная `TC4_JAR`. Подробности и переносимые пути тестовых инструментов: [docs/building.md](docs/building.md).

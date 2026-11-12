@@ -1,11 +1,12 @@
 """Pixel equality for copied/renamed original textures; excludes split effect sprites."""
+from audit_paths import reference_jar
 from pathlib import Path
 from zipfile import ZipFile
 from PIL import Image
 import io
 root=Path(__file__).resolve().parent.parent
 prefix='assets/ttinkerer/textures/'
-with ZipFile('/home/eugheist/Downloads/ThaumicTinkerer_2.5_1.7.10_164.jar') as jar:
+with ZipFile(str(reference_jar())) as jar:
     normalized=lambda value:value.lower().replace('_','').replace(' ','')
     originals={normalized(name):name for name in jar.namelist() if name.startswith(prefix) and name.endswith('.png')}
     checked=0

@@ -1,4 +1,5 @@
 """Exercise real AE2 movement API only in the isolated native audit server."""
+from audit_paths import AUDIT_DIR, PROJECT_ROOT
 from pathlib import Path
 import json
 import shutil
@@ -8,7 +9,7 @@ import zipfile
 
 if len(sys.argv) not in (3, 4):
     raise SystemExit('Usage: audit-ae2.py AE2.jar GuideME.jar [CC.jar]')
-mods = Path('/tmp/tt-modern-native-audit/mods')
+mods = AUDIT_DIR / 'mods'
 mods.mkdir(parents=True, exist_ok=True)
 targets = [mods / name for name in ('ae2-audit.jar', 'guideme-audit.jar', 'cc-tweaked-audit.jar')][:len(sys.argv)-1]
 backups = {p: p.read_bytes() if p.exists() else None for p in targets}
@@ -24,10 +25,10 @@ try:
             if archive.testzip() is not None:
                 raise SystemExit('Corrupt optional runtime JAR')
         shutil.copy2(source, target)
-    result = subprocess.run([sys.executable, 'tools/audit-server.py'], capture_output=True, text=True)
+    result = subprocess.run([sys.executable, 'tools/audit-server.py'], cwd=PROJECT_ROOT, capture_output=True, text=True)
     print(result.stdout, end='')
     print(result.stderr, end='', file=sys.stderr)
-    log = Path('/tmp/tt-modern-native-audit/audit.log').read_text()
+    log = (AUDIT_DIR / 'audit.log').read_text()
     for line in log.splitlines():
         if 'TT AE2 SPATIAL CELL AUDIT:' in line or 'TT AE2 MOVABLE AUDIT:' in line or 'TT AE2 LOCOMOTIVE AUDIT:' in line:
             print(line)

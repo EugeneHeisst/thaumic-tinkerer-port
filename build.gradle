@@ -1,10 +1,21 @@
 plugins { id 'java-library'; id 'net.neoforged.moddev' version '2.0.148' }
-version = '0.1.14'
+version = '0.1.15'
 group = 'dev.eugheist'
 base { archivesName = 'thaumic-tinkerer-modern' }
 java.toolchain.languageVersion = JavaLanguageVersion.of(21)
 neoForge { version = '21.1.256'; parchment { mappingsVersion = '2024.11.17'; minecraftVersion = '1.21.1' } }
-dependencies { compileOnly files('/home/eugheist/Project/thaumcraft4-modern/versions/0.17.179/tc4modern-0.17.179.jar') }
+// Local dependency overrides work with an untracked libs/ directory or explicit paths.
+def localJar = { String propertyName, String environmentName, String defaultPath ->
+    def configured = providers.gradleProperty(propertyName)
+        .orElse(providers.environmentVariable(environmentName)).getOrElse(defaultPath)
+    def dependency = file(configured)
+    if (!dependency.isFile()) {
+        throw new GradleException("Missing dependency ${dependency.name}. Set -P${propertyName}=path/to/file.jar or ${environmentName}; see README.md.")
+    }
+    dependency
+}
+def tc4Jar = localJar('tc4LocalJar', 'TC4_JAR', 'libs/tc4modern-0.17.179.jar')
+dependencies { compileOnly files(tc4Jar) }
 neoForge {
     runs {
         enchanterClientAudit {
@@ -58,7 +69,7 @@ neoForge {
     }
     mods { ttinkerer { sourceSet sourceSets.main } }
 }
-dependencies { runtimeOnly files('/home/eugheist/Project/thaumcraft4-modern/versions/0.17.179/tc4modern-0.17.179.jar') }
+dependencies { runtimeOnly files(tc4Jar) }
 
 repositories { maven { url = 'https://api.modrinth.com/maven'; content { includeGroup 'maven.modrinth' } } }
 dependencies { compileOnly 'maven.modrinth:cc-tweaked:1ewzHZYg' }

@@ -1,10 +1,16 @@
+from audit_paths import AUDIT_DIR, PROJECT_ROOT, SERVER_DIR, built_mod_jar, java_tool
 from pathlib import Path
 import shutil,subprocess,time
-r=Path('/home/eugheist/thaumcraft4-server');t=Path('/tmp/tt-modern-native-audit');t.mkdir(exist_ok=True);(t/'mods').mkdir(exist_ok=True)
+r=SERVER_DIR;t=AUDIT_DIR
+if not (r/'libraries').is_dir():raise SystemExit('Set TT_SERVER_DIR to a prepared NeoForge server with libraries/ and mods/.')
+if r==t:raise SystemExit('TT_AUDIT_DIR must differ from TT_SERVER_DIR.')
+t.mkdir(parents=True,exist_ok=True);(t/'mods').mkdir(exist_ok=True)
 if not (t/'libraries').exists():(t/'libraries').symlink_to(r/'libraries',target_is_directory=True)
-for p in (r/'mods').glob('*.jar'):shutil.copy2(p,t/'mods')
-jar=Path('/home/eugheist/thaumic-tinkerer-modern/build/libs/thaumic-tinkerer-modern-0.1.0.jar')
-source=Path('/home/eugheist/thaumic-tinkerer-modern/src/main')
+for p in (t/'mods').glob('thaumic-tinkerer-modern-*.jar'):p.unlink()
+for p in (r/'mods').glob('*.jar'):
+ if not p.name.startswith('thaumic-tinkerer-modern-'):shutil.copy2(p,t/'mods')
+jar=built_mod_jar()
+source=PROJECT_ROOT/'src/main'
 if any(path.stat().st_mtime_ns>jar.stat().st_mtime_ns for path in source.rglob('*') if path.is_file()):raise SystemExit('Refusing stale audit JAR; run ./build.sh successfully first')
 shutil.copy2(jar,t/'mods')
 (t/'eula.txt').write_text('eula=true\n');(t/'server.properties').write_text('server-ip=127.0.0.1\nserver-port=25567\nonline-mode=false\nlevel-name=audit-world\nview-distance=2\nsimulation-distance=2\n')
@@ -34,7 +40,7 @@ success='TT CC LUA AUDIT: ALL PASS' if ccLua else 'TT KAMI STARTUP AUDIT: ALL PA
 try:
  with open(logpath,'w') as log:
   prop='-Dttinkerer.ccLuaAudit=true' if ccLua else '-Dttinkerer.kamiStartupAudit=true' if kamiDisabled else '-Dttinkerer.bedrockConfigAudit=true' if bedrockDisabled else '-Dttinkerer.mirrorsConfigAudit=true' if mirrorsDisabled else '-Dttinkerer.flightConfigAudit=true' if flightDisabled else '-Dttinkerer.fireConfigAudit=true' if fireDisabled else '-Dttinkerer.portAudit=true'
-  p=subprocess.Popen(['/usr/lib/jvm/java-21-openjdk/bin/java','-Xmx1500M',prop,'@libraries/net/neoforged/neoforge/21.1.256/unix_args.txt','nogui'],cwd=t,stdin=subprocess.PIPE,stdout=log,stderr=subprocess.STDOUT,text=True)
+  p=subprocess.Popen([java_tool('java'),'-Xmx1500M',prop,'@libraries/net/neoforged/neoforge/21.1.256/unix_args.txt','nogui'],cwd=t,stdin=subprocess.PIPE,stdout=log,stderr=subprocess.STDOUT,text=True)
   try:
    for i in range(90):
     time.sleep(1);s=logpath.read_text()

@@ -1,5 +1,5 @@
 {
-  "source": "/home/eugheist/Downloads/ThaumicTinkerer_2.5_1.7.10_164.jar",
+  "source": "ThaumicTinkerer_2.5_1.7.10_164.jar",
   "sha256": "7aeb6d77a24c96a05324ba22c34b5a682d468daf8adf3c8540136b417f4727f1",
   "classes": [
     "thaumic/tinkerer/client/core/handler/GemArmorKeyHandler.class",

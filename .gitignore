@@ -5,3 +5,16 @@ run-*/
 related/
 releases/
 versions/
+
+# Local dependencies and generated Python bytecode
+libs/
+__pycache__/
+*.py[cod]
+
+# Local assistant context
+AGENTS.md
+CLAUDE.md
+CLAUDE.local.md
+CODEX_HANDOFF.md
+.claude/
+.codex/

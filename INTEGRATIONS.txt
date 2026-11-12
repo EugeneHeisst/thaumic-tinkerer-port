@@ -1,12 +1,12 @@
 Original build164 optional integration inventory (2026-10-12)
-Source root: /home/eugheist/thaumic-tinkerer-reference/build164
+Reference sources: configure TT_REFERENCE_SOURCE as described in docs/building.md.
 This is a requirement inventory, not a completion claim.
 
 ComputerCraft: base TC4 device drivers, analyzer, golem connector, item/mob
 magnets, transvector interface and Fume turtle tool implemented and tested.
 Animation tablet now exposes its original eight methods; native capability,
 rotation, empty/equipped/busy triggers, persistence and stale isolation pass.
-Actual Lua dispatch passed /tmp/tt-tablet-cc-lua.log; all eight commands verified.
+Actual Lua dispatch passed; all eight commands verified.
 All optional interface/callback
 declarations must be scanned recursively, not just tile/.
 
@@ -38,9 +38,9 @@ support. Native regression verifies it stays intact with its stored jar.
 Modern API candidate verified directly in released AE2 19.2.18 for MC1.21.1,
 Modrinth version KDnFUmMm: BlockEntityMoveStrategies + IBlockEntityMoveStrategy,
 beginMove(entity,registries) returning nullable NBT and completeMove restoring
-a new entity. Runtime /tmp/tt-ae2-19.2.18.jar hash verified against version API.
+a new entity. The runtime artifact hash was verified against the version API.
 Requires GuideME >=21.1.1; tested isolated runtime GuideME21.1.19.
-AE2 optional compile dependency and startup hook added; production untouched.
+AE2 optional compile dependency and startup hook added; the runtime remains optional.
 BlockRPlacer/TileRPlacer exists in source but no registry reference found yet;
 do not add unused original code as gameplay before checking original registry.
 
@@ -81,8 +81,7 @@ both rendered HUD states inspected. Other device HUD cases and a separate
 WTHIT adapter remain unverified/unimplemented respectively. Warp gate original
 labels inverted locked flag; formatter intentionally fixes that misleading text.
 Modern Jade candidate 15.10.6+neoforge, Modrinth version eYz2YBGT, verified version
-metadata for MC1.21.1; hash-verified runtime /tmp/tt-jade-runtime.jar used only in
-isolated checks. Added compile-only dependency and optional metadata.
+metadata for MC1.21.1; a hash-verified runtime artifact used in isolated checks. Added compile-only dependency and optional metadata.
 
 ForgeMultipart detailed inventory: executed MultipartHandler registers 16 micro
 materials: TC customOre meta0,7; woodenDevice6,7; magicalLog0; magicalLeaves0;

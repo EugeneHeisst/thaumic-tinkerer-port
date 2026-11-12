@@ -8,7 +8,7 @@ backup=runtime.read_bytes() if runtime.exists() else None
 try:
     if len(sys.argv)>1:
         runtime.parent.mkdir(parents=True,exist_ok=True);shutil.copy2(Path(sys.argv[1]).resolve(),runtime)
-    env=os.environ.copy();env['JAVA_HOME']='/usr/lib/jvm/java-21-openjdk';env['ALSOFT_DRIVERS']='null'
+    env=os.environ.copy();env['ALSOFT_DRIVERS']='null'
     run=subprocess.run(['timeout','180s','xvfb-run','-a','-s','-screen 0 1280x960x24','./gradlew','runHeldBlocksWorldAudit','--console=plain'],cwd=root,env=env,capture_output=True,text=True)
     print(run.stdout,end='');print(run.stderr,end='')
     if run.returncode or 'TT HELD BLOCKS WORLD CLIENT AUDIT: ALL PASS' not in run.stdout:raise SystemExit(run.returncode or 1)
