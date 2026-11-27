@@ -1,5 +1,5 @@
 plugins { id 'java-library'; id 'net.neoforged.moddev' version '2.0.148' }
-version = '0.1.16'
+version = '0.1.17'
 group = 'dev.eugheist'
 base { archivesName = 'thaumic-tinkerer-modern' }
 java.toolchain.languageVersion = JavaLanguageVersion.of(21)
@@ -77,3 +77,32 @@ dependencies { compileOnly 'maven.modrinth:cc-tweaked:1ewzHZYg' }
 dependencies { compileOnly 'maven.modrinth:ae2:KDnFUmMm' }
 
 dependencies { compileOnly 'maven.modrinth:jade:eYz2YBGT' }
+
+// Keep the published artifact's NeoForge metadata in sync with its Gradle/release version.
+tasks.named('processResources') {
+    inputs.property('modVersion', project.version.toString())
+    filesMatching('META-INF/neoforge.mods.toml') {
+        expand(version: project.version.toString())
+    }
+}
+
+tasks.register('verifyModMetadata') {
+    group = 'verification'
+    description = 'Verify the runtime JAR identifies this mod and the current release version.'
+    dependsOn tasks.named('jar')
+    doLast {
+        def artifact = tasks.named('jar').get().archiveFile.get().asFile
+        new java.util.zip.ZipFile(artifact).withCloseable { zip ->
+            def entry = zip.getEntry('META-INF/neoforge.mods.toml')
+            if (entry == null) throw new GradleException('Runtime JAR has no NeoForge metadata')
+            def metadata = zip.getInputStream(entry).getText('UTF-8')
+            def id = metadata =~ /(?m)^modId="([^"]+)"/
+            def declaredVersion = metadata =~ /(?m)^version="([^"]+)"/
+            if (!id.find() || id.group(1) != 'ttinkerer')
+                throw new GradleException('Runtime JAR has the wrong mod ID')
+            if (!declaredVersion.find() || declaredVersion.group(1) != project.version.toString())
+                throw new GradleException('Runtime JAR version does not match the release version')
+        }
+    }
+}
+tasks.named('check') { dependsOn tasks.named('verifyModMetadata') }
